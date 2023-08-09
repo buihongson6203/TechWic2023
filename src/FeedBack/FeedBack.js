@@ -25,10 +25,10 @@ const Feedback = () => {
         <h2>Feedback Form</h2>
         <div className="Form">
             <form onSubmit={handleSubmit}>
-                 <label>Comment:</label>
+              <input type="text" placeholder="@Email" />
                 <div className="Comment">
                
-                <textarea value={comment} onChange={handleCommentChange} />
+                <textarea value={comment} placeholder="Comment:" onChange={handleCommentChange} />
                 </div>
                 <button type="submit" className="btn">Send</button>
             </form>
