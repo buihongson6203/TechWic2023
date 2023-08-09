@@ -6,8 +6,8 @@ import React from "react";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 
 import About from "./About";
-import Films from "./Films";
-import Home from "./Home1";
+import Films from "./film/Films";
+import Home from "./home/Home";
 import SiteMap from "./SiteMap";
 import Contact from "./Contact/Contact";
 import Feedback from "./FeedBack/FeedBack";

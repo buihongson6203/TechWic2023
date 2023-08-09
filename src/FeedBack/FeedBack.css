@@ -8,13 +8,15 @@
     background: #000;
     display: flex;
     justify-content: center;
+    padding-top: 150px;
   }
   .Container{
-    width: 40%;
+    width: 50%;
   }
   .Form{
     padding: 30px;
     border: 1px solid #938889;
+    margin-bottom: 40px;
   }
   .feedback-container h2 {
     margin-top: 0;

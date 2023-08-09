@@ -1,7 +1,7 @@
 function Films() {
   return (
-    <div>
-      <h1>Film</h1>
+    <div className="container-film">
+     <div></div>
     </div>
   );
 }
