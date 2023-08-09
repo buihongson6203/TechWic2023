@@ -1,0 +1,46 @@
+.container-home {
+  padding: 150px 100px;
+  margin: 0 auto;
+  background: #181616;
+
+  .phim-hot {
+    font-size: 22px;
+    font-weight: 600;
+    color: rgb(207, 98, 58);
+    padding-bottom: 30px;
+  }
+  .wrapper-film {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    padding-bottom: 50px;
+    .item-film {
+        position: relative;
+      .logo {
+        width: 160px;
+        height: 269px;
+        object-fit: cover;
+      }
+      .title {
+        position: absolute;
+        background-color: red;
+        color: #fff;
+        padding: 6px;
+        font-size: 11px;
+        font-weight: 400;
+        border-radius: 5px;
+      }
+      .name{
+        position: absolute;
+        background-color: rgb(112, 110, 110);
+        color: #fff;
+        padding: 6px;
+        font-size: 11px;
+        width: 100%;
+        font-weight: 400;
+        bottom: 0;
+      }
+    }
+  }
+}
