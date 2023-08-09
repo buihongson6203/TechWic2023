@@ -1,5 +1,5 @@
 body{
-    background: #000;
+  background-color: #181616;
 }
 .contact-us-container {
     padding: 40px;
@@ -7,6 +7,7 @@ body{
     display: flex;
     gap: 20px;
     margin-top:150px;
+    padding-bottom: 150px;
   }
 
   .Contact{
