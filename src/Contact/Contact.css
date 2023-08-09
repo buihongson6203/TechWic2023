@@ -2,12 +2,13 @@ body{
     background: #000;
 }
 .contact-us-container {
-    padding: 20px;
+    padding: 40px;
     border-radius: 5px;
-    margin-left: 50px;
     display: flex;
     gap: 20px;
+    margin-top:150px;
   }
+
   .Contact{
     border: 1px solid #000;
     width: 100%;

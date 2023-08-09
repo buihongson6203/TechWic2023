@@ -7,6 +7,9 @@ function Header() {
         <img className="logo" src="/imgs/logo.jpeg" />
         <div className="logo-text">StreamEase</div>
       </div>
+      <div>
+        <input className="input" type="text" placeholder="Search film..."/>
+      </div>
       <ul className="link">
         <li>
           <Link to="/" className="item-link">
