@@ -1,0 +1,28 @@
+[
+    {
+        "ID": 1,
+        "film_id": 1,
+        "Name": "Episode 1: Beginning",
+        "published_date": "09/08/2023",
+        "order": "1"
+    },
+    {
+        "ID": 2,
+        "Name": "Episode 2: ending",
+        "film_id": 1,
+        "published_date": "12/08/2023",
+        "order": "2"
+    },
+    {
+        "ID": 3,
+        "Name": "Insidious 1",
+        "film_id": 4,
+        "published_date": "09/08/2023"
+    },
+    {
+        "ID": 4,
+        "Name": "Fast and Furious 5",
+        "film_id": 2,
+        "published_date": "09/08/2023"
+    }
+]

@@ -1,0 +1,26 @@
+[
+    {
+        "ID": 1,
+        "Name": "Netflix",
+        "logo": "netflix.png",
+        "url": "#"
+    },
+    {
+        "ID": 2,
+        "Name": "HBO Max",
+        "logo": "hbo.png",
+        "url": "#"
+    },
+    {
+        "ID": 3,
+        "Name": "Disney+",
+        "logo": "disney.png",
+        "url": "#"
+    },
+    {
+        "ID": 4,
+        "Name": "Amazon Prime",
+        "logo": "amazon.png",
+        "url": "#"
+    }
+]
