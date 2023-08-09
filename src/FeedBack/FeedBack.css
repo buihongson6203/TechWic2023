@@ -1,0 +1,58 @@
+.feedback-container {
+ 
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    background-color: #f7f7f7;
+    background-color: #181616;
+    display: flex;
+    justify-content: center;
+    padding-top: 150px;
+    padding-bottom: 50px;
+  }
+  .Container{
+    width: 50%;
+  }
+  .Form{
+    padding: 30px;
+    border: 1px solid #938889;
+    margin-bottom: 40px;
+  }
+  .feedback-container h2 {
+    margin-top: 0;
+  }
+  h2{
+    color: whitesmoke;
+  }
+  label{
+    color: whitesmoke;
+  }
+  .feedback-container form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .feedback-container label {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .feedback-container select,
+  .feedback-container textarea {
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #000;
+    border-radius: 3px;
+    width: 100%;
+  }
+  
+  .btn{
+    background: #000;
+    border: 2px solid yellow;
+  }
+  .btn:hover{
+    background: yellow;
+    color: #000;
+  }
+  

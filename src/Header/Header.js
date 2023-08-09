@@ -19,8 +19,8 @@ function Header() {
           </Link>
         </li>
         <li>
-          <Link to="/about" className="item-link">
-            <div>About</div>
+          <Link to="/feedback" className="item-link">
+            <div>Feedback</div>
           </Link>
         </li>
         <li>
@@ -29,8 +29,8 @@ function Header() {
           </Link>
         </li>
         <li>
-          <Link to="/SiteMap" className="item-link">
-            <div>SideMap</div>
+          <Link to="/sitemap" className="item-link">
+            <div>SiteMap</div>
           </Link>
         </li>
       </ul>

@@ -6,10 +6,11 @@ import React from "react";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 
 import About from "./About";
-import Films from "./Films";
-import Home from "./Home1";
+import Films from "./film/Films";
+import Home from "./home/Home";
 import SiteMap from "./SiteMap";
-import Contact from "./Contact";
+import Contact from "./Contact/Contact";
+import Feedback from "./FeedBack/FeedBack";
 
 
 function App() {
@@ -21,9 +22,9 @@ function App() {
           <Routes>
             <Route exact path="/" element={<Home />} />
             <Route exact path="/films" element={<Films />} />
-            <Route exact path="/about" element={<About />} />
+            <Route exact path="/feedback" element={<Feedback />} />     
             <Route exact path="/contact" element={<Contact />} />
-            <Route exact path="/SiteMap" element={<SiteMap />} />
+            <Route exact path="/sitemap" element={<SiteMap />} />
 
           </Routes>
         </div>
