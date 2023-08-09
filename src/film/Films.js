@@ -5,19 +5,77 @@ class Films extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      cateSearch: '',
+      cateSearch: 0,
+      categories: [],
       films: [],
     }
   }
-  componentDidMount = () => {
-    axios.get('./filmList.json')
-    .then((response) => {
-      console.log(response.data);
-    })
-    .catch((error) => {
-      console.log(error);
+
+  handleCateSearchChange = (event) => {
+    let { value } = event.target;
+    this.setState({
+      cateSearch: parseInt(value)
     });
   }
+
+  filterMoviesByCategory = () => {
+    const { films, cateSearch } = this.state;
+    if (cateSearch === 0) {
+      return films; // Không có giá trị tìm kiếm, trả về toàn bộ danh sách phim
+    }
+    
+    // Lọc danh sách phim theo giá trị cateSearch
+    const filteredMovies = films.filter(movie =>
+      movie.cate_id === cateSearch
+    );
+    
+    return filteredMovies;
+  };
+
+  componentDidMount = () => {
+    // get categories
+    axios.get('./categories.json')
+      .then((response) => {
+        let dataCategories = response.data;
+        this.setState({ categories: dataCategories });
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+
+    // get film and numberOfEpisodes film
+    axios.get('./filmList.json')
+      .then((response) => {
+        let dataFilms = response.data;
+
+        axios.get('./filmDetails.json')
+          .then((response) => {
+            let dataFilmDetails = response.data;
+            // console.log(dataFilms);
+            // console.log(dataFilmDetails);
+            dataFilms.forEach(film => {
+              let numberOfEpisodes = 0;
+              dataFilmDetails.forEach(item => {
+                if (item.film_id === film.ID) numberOfEpisodes++;
+              });
+              film.numberOfEpisodes = numberOfEpisodes;
+            });
+
+            this.setState({ films: dataFilms });
+          })
+          .catch((error) => {
+            console.log(error);
+          });
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }
+
+  componentDidUpdate = () => {
+    console.log(this.state);
+  }
+  
   // const films = [
   //   {
   //     id: 1,
@@ -84,66 +142,37 @@ class Films extends Component {
   //   },
   // ];
   render() {
+    const filteredMovies = this.filterMoviesByCategory();
+
     return (
       <div className="container-film">
         <div className="wrapper-seclect">
           <div>
-            <select id="movie-type">
-              <option value="action">Hành động</option>
-              <option value="comedy">Hài</option>
-              <option value="drama">Kịch tính</option>
-              <option value="fantasy">Kỳ ảo</option>
+            <select className="form-control" id="movie-type" onChange={this.handleCateSearchChange}>
+              <option value="0">All</option>
+              {this.state.categories.map(category => (
+                <option key={category.ID} value={category.ID}>{category.Name}</option>
+              ))}
             </select>
           </div>
           <div>
-            <select id="movie-type">
-              <option value="name">A-Z</option>
-              <option value="rating">a-z</option>
-              <option value="year">0-9</option>
+            <select className="form-control" id="movie-type">
+              <option value="0">A-Z</option>
+              <option value="1">a-z</option>
             </select>
           </div>
-          <div>
-            <select id="movie-type">
-              <option value="action">Việt Nam</option>
-              <option value="comedy">Hàn Quốc</option>
-              <option value="drama">Nhật Bản</option>
-              <option value="fantasy">Trung Quốc</option>
-            </select>
-          </div>
-          <div>
-
-          </div>
-          <div>
-            <select id="movie-type">
-              <option value="action">2010-2012</option>
-              <option value="comedy">2013-2015</option>
-              <option value="drama">2015-2020</option>
-              <option value="fantasy">2020-nay</option>
-            </select>
-          </div>
-          <input className="input" type="text" placeholder="Search film..." />
+          <input className="form-control input" type="text" placeholder="Search film..." />
         </div>
 
         <div>
           <div className="wrapper-film">
-            {/* {films.map((item) => (
-              <div className="item-film" key={item.id}>
-                <div className="title">{item.title}</div>
-                <img className="logo" src={item.image} alt={item.name} />
-                <div className="name">{item.name}</div>
+            {filteredMovies.map((item) => (
+              <div className="item-film" key={item.ID}>
+                <div className="title">{item.numberOfEpisodes} episodes</div>
+                <img className="logo" src={'./imgs/film/' + item.image} alt={item.Name} />
+                <div className="name">{item.Name}</div>
               </div>
-            ))} */}
-          </div>
-        </div>
-        <div>
-          <div className="wrapper-film">
-            {/* {films.map((item) => (
-              <div className="item-film" key={item.id}>
-                <div className="title">{item.title}</div>
-                <img className="logo" src={item.image} alt={item.name} />
-                <div className="name">{item.name}</div>
-              </div>
-            ))} */}
+            ))}
           </div>
         </div>
       </div>
