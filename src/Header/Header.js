@@ -27,6 +27,11 @@ function Header() {
             Contact
           </a>
         </li>
+        <li>
+          <a className="item-link" href="#sitemap">
+            Site Map
+          </a>
+        </li>
       </ul>
     </div>
   );
