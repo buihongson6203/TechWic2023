@@ -1,4 +1,5 @@
 import "./Header.css";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 function Header() {
   return (
     <div className="header">
@@ -8,24 +9,29 @@ function Header() {
       </div>
       <ul className="link">
         <li>
-          <a className="item-link" href="#home">
-            Home
-          </a>
+          <Link to="/" className="item-link">
+            <div>Home</div>
+          </Link>
         </li>
         <li>
-          <a className="item-link" href="#film">
-            Films
-          </a>
+          <Link to="/films" className="item-link">
+            <div>Films</div>
+          </Link>
         </li>
         <li>
-          <a className="item-link" href="#about">
-            About
-          </a>
+          <Link to="/about" className="item-link">
+            <div>About</div>
+          </Link>
         </li>
         <li>
-          <a className="item-link" href="#contact">
-            Contact
-          </a>
+          <Link to="/contact" className="item-link">
+            <div>Contact</div>
+          </Link>
+        </li>
+        <li>
+          <Link to="/SiteMap" className="item-link">
+            <div>SideMap</div>
+          </Link>
         </li>
       </ul>
     </div>

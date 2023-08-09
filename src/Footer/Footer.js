@@ -18,15 +18,15 @@ function Footer() {
       <div className="footer-right">
         <div className="name">Our Services</div>
         <div className="address">
-        <i class="fa-solid fa-angle-right"></i>
+        <i className="fa-solid fa-angle-right"></i>
           <div>Tv Show</div>
         </div>
         <div className="address">
-        <i class="fa-solid fa-angle-right"></i>
+        <i className="fa-solid fa-angle-right"></i>
           <div>Green Room</div>
         </div>
         <div className="address">
-        <i class="fa-solid fa-angle-right"></i>
+        <i className="fa-solid fa-angle-right"></i>
           <div>Film Festivals</div>
         </div>
       </div>
