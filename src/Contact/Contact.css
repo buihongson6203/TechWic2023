@@ -15,7 +15,7 @@ body{
     width: 100%;
     padding: 20px;
   }
-  .input input{
+  .input{
     
     width: 45.3%;
   }
@@ -34,7 +34,6 @@ body{
   p{
     color: #938889;
   }
-  input,
   textarea {
     margin: 10px 0;
     padding: 10px;
