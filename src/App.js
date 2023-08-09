@@ -3,7 +3,7 @@ import "./App.css";
 import Footer from "./Footer/Footer";
 import Header from "./Header/Header";
 import React from "react";
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import About from "./About";
 import Films from "./film/Films";
