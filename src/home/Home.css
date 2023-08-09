@@ -1,7 +1,11 @@
 .container-home {
   padding: 150px 100px;
   margin: 0 auto;
+<<<<<<< HEAD
   background-color: #181616;
+=======
+  background: #181616;
+>>>>>>> 4f61231a9506655e17a95ee38087f0d19812fab8
 
   .phim-hot {
     font-size: 22px;
