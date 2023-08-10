@@ -77,7 +77,7 @@ class PriceList extends Component {
                     <div className="BlockLarge">
                         <div className="BlockSmall">
                             {this.state.netflix.map(plan => (
-                                  <div className={`Bundle ${userPurchasedPlansNetflix.includes(plan.ID) ? 'purchased' : ''}`} key={plan.ID}>
+                               <div className={`Bundle ${userPurchasedPlansNetflix.includes(plan.ID) ? 'purchased' : 'not-purchased'}`} key={plan.ID}>
                                     <div className="Title">
                                         <span>{plan.Name}</span>
                                     </div>
@@ -109,7 +109,7 @@ class PriceList extends Component {
                                             </button>
                                         ) : (
                                             <button type="button" onClick={() => this.handleSendClick(plan.ID)}>
-                                                mua
+                                                buy
                                             </button>
                                         )}
                                     </div>
@@ -128,7 +128,7 @@ class PriceList extends Component {
                     <div className="BlockLarge">
                         <div className="BlockSmall">
                             {this.state.hbomax.map(plan => (
-                                  <div className={`Bundle ${userPurchasedPlansHbomax.includes(plan.ID) ? 'purchased' : ''}`} key={plan.ID}>
+                                 <div className={`Bundle ${userPurchasedPlansHbomax.includes(plan.ID) ? 'purchased' : 'not-purchased'}`} key={plan.ID}>
                                     <div className="Title">
                                         <span>{plan.Name}</span>
                                     </div>
@@ -160,7 +160,7 @@ class PriceList extends Component {
                                             </button>
                                         ) : (
                                             <button type="button" onClick={() => this.handleSendClick(plan.ID)}>
-                                               mua
+                                                buy
                                             </button>
                                         )}
                                     </div>
@@ -185,7 +185,7 @@ class PriceList extends Component {
                     <div className="BlockLarge">
                         <div className="BlockSmall">
                             {this.state.disney.map(plan => (
-                                  <div className={`Bundle ${userPurchasedPlansDisney.includes(plan.ID) ? 'purchased' : ''}`} key={plan.ID}>
+                               <div className={`Bundle ${userPurchasedPlansDisney.includes(plan.ID) ? 'purchased' : 'not-purchased'}`} key={plan.ID}>
                                     <div className="Title">
                                         <span>{plan.Name}</span>
                                     </div>
@@ -217,7 +217,7 @@ class PriceList extends Component {
                                             </button>
                                         ) : (
                                             <button type="button" onClick={() => this.handleSendClick(plan.ID)}>
-                                                mua
+                                                buy
                                             </button>
                                         )}
                                     </div>

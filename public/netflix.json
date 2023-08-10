@@ -3,24 +3,24 @@
         "ID": 1,
         "Name": "1 month plan",
         "cost": 0,
-        "button": "da mua"
+        "button": "bought"
     },
     {
         "ID": 2,
         "Name": "3 month plan",
         "cost": 0,
-        "button":"da mua"
+        "button":"bought"
     },
     {
         "ID": 3,
         "Name": "6 month plan",
         "cost": 8,
-        "button":"da mua"
+        "button":"bought"
     },
     {
         "ID": 4,
         "Name": "1 year plan",
         "cost": 10,
-        "button":"da mua"
+        "button":"bought"
     }
 ]

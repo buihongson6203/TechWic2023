@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import "./Header.css"
+import * as icons from 'react-icons/fa';
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const toggleMenu = () => {
@@ -35,6 +36,11 @@ function Header() {
           </Link>
         </li>
         <li>
+          <Link to="/fav" className="item-link" onClick={closeMenu}>
+            <div>Favourite Films</div>
+          </Link>
+        </li>
+        <li>
           <Link to="/feedback" className="item-link" onClick={closeMenu}>
             <div>Feedback</div>
           </Link>
@@ -45,8 +51,13 @@ function Header() {
           </Link>
         </li>
         <li>
-          <Link to="/sitemap" className="item-link">
+          <Link to="/sitemap" className="item-link" onClick={closeMenu}>
             <div>SiteMap</div>
+          </Link>
+        </li>
+        <li>
+          <Link to="/providers" className="item-link" onClick={closeMenu}>
+            <div>Stream Providers</div>
           </Link>
         </li>
         <li>
@@ -54,6 +65,10 @@ function Header() {
             <div>PriceList</div>
           </Link>
         </li>
+        <li>
+          <icons.FaBell/>
+        </li>
+    
       </ul>
     </div>
   );

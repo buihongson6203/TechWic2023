@@ -14,6 +14,7 @@ import Feedback from "./FeedBack/FeedBack";
 import PriceList from "./PriceList/PriceList";
 import DetailFilm from "./detail/DetailFilm";
 
+import FavFilms from "./Favourite/fav_films";
 
 function App() {
   
@@ -30,6 +31,7 @@ function App() {
             <Route exact path="/sitemap" element={<SiteMap />} />
             <Route exact path="/PriceList" element={<PriceList />} />
             <Route exact path="/detail" element={<DetailFilm />} />
+            <Route exact path="/fav" element={<FavFilms />} />
           </Routes>
         </div>
 
