@@ -1,8 +1,7 @@
 
 import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import "./Header.css";
-
+import "./Header.css"
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const toggleMenu = () => {
@@ -14,12 +13,13 @@ function Header() {
   };
   return (
     <div className="header">
-      <Link to="/" className="item-link">
-        <div className="container-logo">
+
+      <div className="container-logo">
+        <Link to="/" className="item-link">
           <img className="logo" src="/imgs/logo.jpeg" />
-          <div className="logo-text">StreamEase</div>
-        </div>
-      </Link>
+        </Link>
+        <div className="logo-text">StreamEase</div>
+      </div>
 
       <i onClick={toggleMenu} class="fa-solid fa-bars"></i>
       <ul className={`link ${isMenuOpen ? "open-menu" : "close-menu"}`}>
@@ -50,7 +50,6 @@ function Header() {
           </Link>
         </li>
       </ul>
-
     </div>
   );
 }
