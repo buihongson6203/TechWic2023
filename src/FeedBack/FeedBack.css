@@ -1,79 +1,90 @@
 .feedback-container {
- 
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #000;
-    border-radius: 5px;
-    background-color: #f7f7f7;
-    background-color: #181616;
-    display: flex;
-    justify-content: center;
-    padding-top: 150px;
-    padding-bottom: 50px;
-  }
-  h2{
-    text-align: center;
-  }
-  .Container{
-    width: 50%;
-    padding: 20px;
-    border: 1px solid #938889;
-  }
-  .Form{
-    padding: 30px;
-  }
-  .feedback-container h2 {
-    margin-top: 0;
-  }
-  h2{
-    color: whitesmoke;
-  }
-  label{
-    color: whitesmoke;
-  }
-  .feedback-container form {
-    display: flex;
-    flex-direction: column;
-  }
+
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  background-color: #f7f7f7;
+  background-color: #181616;
+  display: flex;
+  justify-content: center;
+  padding-top: 150px;
+  padding-bottom: 50px;
+}
+
+h2 {
+  text-align: center;
+}
+
+.Container {
+  width: 50%;
+  padding: 20px;
+  border: 1px solid #938889;
+}
+
+.Form {
+  padding: 30px;
+}
+
+.feedback-container h2 {
+  margin-top: 0;
+}
+
+h2 {
+  color: whitesmoke;
+}
+
+label {
+  color: whitesmoke;
+}
+
+.feedback-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.feedback-container label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.feedback-container select,
+.feedback-container textarea {
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #000;
+  border-radius: 3px;
+  width: 100%;
+}
+
+.btn {
+  background: #000;
+  border: 2px solid yellow;
+}
+
+.btn:hover {
+  background: yellow;
+  color: #000;
+}
+
+.feedback-container h2{
+    color: #fff;
   
-  .feedback-container label {
-    font-weight: bold;
-    margin-bottom: 5px;
-  }
-  
-  .feedback-container select,
-  .feedback-container textarea {
-    padding: 8px;
-    margin-bottom: 15px;
-    border: 1px solid #000;
-    border-radius: 3px;
-    width: 100%;
-  }
-  
-  .btn{
-    background: #000;
-    border: 2px solid yellow;
-  }
-  .btn:hover{
-    background: yellow;
-    color: #000;
-  }
-  
+}
 
 
 
 
 
 
-
-  span.swal2-success-line-tip {
-    top: 38px !important;
-    left: 2px !important;
+span.swal2-success-line-tip {
+  top: 38px !important;
+  left: 2px !important;
 }
 
 span.swal2-success-line-long {
-    right: 0px !important;
-    top: 30px !important;
+  right: 0px !important;
+  top: 30px !important;
 }
 
 
@@ -81,25 +92,26 @@ span.swal2-success-line-long {
 
 
 
-  @media(max-width:450px){
-    .Container{
-      width: 90%;
-    }
+@media(max-width:450px) {
+  .Container {
+    width: 90%;
   }
-  @media(max-width:768px){
-    .Container{
-      width: 90%;
-    }
-  }
-  @media(max-width:991px){
-    .Container{
-      width: 80%;
-    }
-  }
-  @media(max-width:1147px){
-    .Container{
-      width: 80%;
-    }
-  }
+}
 
-  
+@media(max-width:768px) {
+  .Container {
+    width: 90%;
+  }
+}
+
+@media(max-width:991px) {
+  .Container {
+    width: 80%;
+  }
+}
+
+@media(max-width:1147px) {
+  .Container {
+    width: 80%;
+  }
+}
