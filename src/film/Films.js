@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import axios from 'axios';
 import "./Films.css";
 import * as icons from 'react-icons/fa';
@@ -154,7 +155,9 @@ class Films extends Component {
             return (
               <div key={item.ID} className="item-film">
                 <div className="title">{item.numberOfEpisodes} episodes</div>
-                <img className="logo" src={'./imgs/film/' + item.image} alt={item.Name} />
+                <Link to="/detail" className="item-link">
+                  <img className="logo" src={'./imgs/film/' + item.image} alt={item.Name} />
+                </Link>
                 <div className="name">{item.Name}</div>
                 <button className={`position-absolute heart-item ${active}`} onClick={() => this.HandleFavourite(item.ID)}>
                   {active === '' ? <icons.FaRegHeart /> : <icons.FaHeart />}

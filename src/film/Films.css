@@ -16,9 +16,10 @@
     .wrapper-film {
         display: flex;
         align-items: center;
-        justify-content: space-between;
         overflow: hidden;
         padding-bottom: 50px;
+        gap:15px;
+        justify-content: center;
         .item-film {
             position: relative;
           .logo {

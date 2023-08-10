@@ -15,10 +15,13 @@
     }
     .wrapper-film {
         display: flex;
+        padding-bottom: 50px;
         align-items: center;
-        justify-content: space-between;
         overflow: hidden;
         padding-bottom: 50px;
+        justify-content: flex-start;
+        gap:15px;
+
         .item-film {
             position: relative;
           .logo {
