@@ -143,7 +143,7 @@ class Films extends Component {
             </div>
           </div>
           <div className="col-6">
-            <input className="form-control input" type="text" placeholder="Search film..." onKeyPress={this.handleSearch} onChange={this.handleSearch} />
+            <input className="form-control input" type="text" placeholder="Search film..." onKeyDown={this.handleSearch} />
           </div>
         </div>
         <div className="wrapper-film">

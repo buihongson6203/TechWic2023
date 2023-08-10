@@ -3,6 +3,7 @@ import { parse, isAfter, format } from 'date-fns';
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import axios from 'axios';
 import * as icons from 'react-icons/fa';
+import './noti.css';
 
 class Notification extends Component {
     constructor(props) {
@@ -151,13 +152,11 @@ class Notification extends Component {
     render() {
         const { upcomingReleases } = this.state;
         return (
-            <div>
-                <ul>
-                    {upcomingReleases.map((message, index) => (
-                        <li key={index}>{message}</li>
-                    ))}
-                </ul>
-            </div>
+            <ul className="rounded noti-menu">
+                {upcomingReleases.map((message, index) => (
+                    <li key={index}>{message}</li>
+                ))}
+            </ul>
         );
     }
 }

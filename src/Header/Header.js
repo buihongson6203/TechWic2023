@@ -66,7 +66,7 @@ function Header() {
             <div>PriceList</div>
           </Link>
         </li>
-        <li>
+        <li className="position-relative" id="notification">
           <icons.FaBell/>
           <Notification/>
         </li>
