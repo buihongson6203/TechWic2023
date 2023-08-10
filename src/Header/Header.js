@@ -21,9 +21,9 @@ function Header() {
         <div className="logo-text">StreamEase</div>
       </div>
 
-      <i onClick={toggleMenu} class="fa-solid fa-bars"></i>
+      <i onClick={toggleMenu} className="fa-solid fa-bars"></i>
       <ul className={`link ${isMenuOpen ? "open-menu" : "close-menu"}`}>
-        <i onClick={closeMenu} class="fa-solid fa-x"></i>
+        <i onClick={closeMenu} className="fa-solid fa-x"></i>
         <li>
           <Link to="/" className="item-link" onClick={closeMenu}>
             <div>Home</div>
