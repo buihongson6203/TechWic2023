@@ -33,6 +33,11 @@ function Header() {
             <div>SiteMap</div>
           </Link>
         </li>
+        <li>
+          <Link to="/PriceList" className="item-link">
+            <div>PriceList</div>
+          </Link>
+        </li>
       </ul>
     </div>
   );
