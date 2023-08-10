@@ -108,7 +108,7 @@ function SiteMap() {
           </li>
         </ul>
       </section>
-      <section className="links-section">
+      <section className ="links-section">
         <ul>
           <li>
             <Link to="/" className="sitemap-link">
