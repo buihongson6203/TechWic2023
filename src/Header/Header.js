@@ -45,7 +45,7 @@ function Header() {
           </Link>
         </li>
         <li>
-          <Link to="/sitemap" className="item-link">
+          <Link to="/sitemap" className="item-link" onClick={closeMenu}>
             <div>SiteMap</div>
           </Link>
         </li>
