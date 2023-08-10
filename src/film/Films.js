@@ -5,146 +5,136 @@ class Films extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      cateSearch: '',
+      sortByLetter: 'alphabetical',
+      cateSearch: 0,
+      categories: [],
       films: [],
+      search: ''
     }
   }
-  componentDidMount = () => {
-    axios.get('./filmList.json')
-    .then((response) => {
-      console.log(response.data);
-    })
-    .catch((error) => {
-      console.log(error);
+
+  handleCateSearchChange = (event) => {
+    let { value } = event.target;
+    this.setState({
+      cateSearch: parseInt(value)
     });
   }
-  // const films = [
-  //   {
-  //     id: 1,
-  //     title: "Tập 16 vietsub",
-  //     image:
-  //       "https://simg.zalopay.com.vn/zlp-website/assets/phim_moi_chieu_rap_Alienoid_Cuoc_chien_xuyen_khong_72143fde54.jpg",
-  //     name: "Cuộc chiến xuyên không",
-  //   },
-  //   {
-  //     id: 2,
-  //     title: "Tập 14 vietsub",
-  //     image:
-  //       "https://simg.zalopay.com.vn/zlp-website/assets/phim_moi_chieu_rap_Sat_thu_doi_dau_086fc7854a.jpg",
-  //     name: "Sát thủ đối đầu",
-  //   },
-  //   {
-  //     id: 3,
-  //     title: "Tập 24 vietsub",
-  //     image:
-  //       "https://simg.zalopay.com.vn/zlp-website/assets/phim_moi_chieu_rap_Lien_minh_sieu_thu_DC_2726e64fb3.jpg",
-  //     name: "Liên mInh siêu thú",
-  //   },
-  //   {
-  //     id: 4,
-  //     title: "Tập 16 vietsub",
-  //     image:
-  //       "https://simg.zalopay.com.vn/zlp-website/assets/phim_moi_chieu_rap_Dieu_uoc_cuoi_cua_tu_nhan_2037_c80b96b25c.jpg",
-  //     name: "Điều ước của tù nhân",
-  //   },
-  //   {
-  //     id: 5,
-  //     title: "Tập 10 vietsub",
-  //     image:
-  //       "https://simg.zalopay.com.vn/zlp-website/assets/phim_moi_chieu_rap_Dan_choi_khong_so_con_roi_dafbfa57b6.jpg",
-  //     name: "Dân chơi không sợ con rơi",
-  //   },
-  //   {
-  //     id: 6,
-  //     title: "Tập 16 vietsub",
-  //     image:
-  //       "https://simg.zalopay.com.vn/zlp-website/assets/phim_moi_chieu_rap_Chuyen_ma_giang_duong_hoc_ky_2_279956df2c.jpg",
-  //     name: "Chuyện ma giảng đường",
-  //   },
-  //   {
-  //     id: 7,
-  //     title: "Tập 12 vietsub",
-  //     image:
-  //       "https://simg.zalopay.com.vn/zlp-website/assets/phim_moi_chieu_rap_Tham_tu_lung_danh_conan_nang_dau_halloween_062c584d70.jpg",
-  //     name: "Conan",
-  //   },
-  //   {
-  //     id: 8,
-  //     title: "Tập 16 vietsub",
-  //     image:
-  //       "https://simg.zalopay.com.vn/zlp-website/assets/phim_moi_chieu_rap_Alienoid_Cuoc_chien_xuyen_khong_72143fde54.jpg",
-  //     name: "Cuộc chiến xuyên không",
-  //   },
-  //   {
-  //     id: 9,
-  //     title: "Tập 14 vietsub",
-  //     image:
-  //       "https://simg.zalopay.com.vn/zlp-website/assets/phim_moi_chieu_rap_Sat_thu_doi_dau_086fc7854a.jpg",
-  //     name: "Sát thủ đối đầu",
-  //   },
-  // ];
+
+  handleSortTypeChange = (event) => {
+    let { value } = event.target;
+    this.setState({
+      sortByLetter: value
+    });
+  }
+
+  filterFilms = () => {
+    const { films, cateSearch, search, sortByLetter } = this.state;
+    //IF NOT SEARCH OR FILTER, RETURNS ALL THE FILMS
+    // if (search === '') {
+    //   return films;
+    // }
+
+    let filteredMovies = films.filter(movie =>
+      (cateSearch === 0 || movie.cate_id === cateSearch) &&
+      movie.Name.toLowerCase().includes(search.toLowerCase())
+    );
+
+    if (sortByLetter === 'alphabetical') {
+      filteredMovies.sort((a, b) => a.Name.localeCompare(b.Name));
+    } else {
+      filteredMovies.sort((a, b) => b.Name.localeCompare(a.Name));
+    }
+
+    return filteredMovies;
+  };
+
+  componentDidMount = () => {
+    // get categories
+    axios.get('./categories.json')
+      .then((response) => {
+        let dataCategories = response.data;
+        this.setState({ categories: dataCategories });
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+
+    // get film and numberOfEpisodes film
+    axios.get('./filmList.json')
+      .then((response) => {
+        let dataFilms = response.data;
+
+        axios.get('./filmDetails.json')
+          .then((response) => {
+            let dataFilmDetails = response.data;
+            // console.log(dataFilms);
+            // console.log(dataFilmDetails);
+            dataFilms.forEach(film => {
+              let numberOfEpisodes = 0;
+              dataFilmDetails.forEach(item => {
+                if (item.film_id === film.ID) numberOfEpisodes++;
+              });
+              film.numberOfEpisodes = numberOfEpisodes;
+            });
+
+            this.setState({ films: dataFilms });
+          })
+          .catch((error) => {
+            console.log(error);
+          });
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }
+
+  componentDidUpdate = () => {
+    // console.log(this.state);
+  }
+
+  handleSearch = (event) => {
+    if (event.key === 'Enter') {
+      const { value } = event.target;
+      this.setState({ search: value });
+    }
+  }
+
+
   render() {
+    const filteredMovies = this.filterFilms();
+
     return (
       <div className="container-film">
-        <div className="wrapper-seclect">
-          <div>
-            <select id="movie-type">
-              <option value="action">Hành động</option>
-              <option value="comedy">Hài</option>
-              <option value="drama">Kịch tính</option>
-              <option value="fantasy">Kỳ ảo</option>
-            </select>
+        <div className="row wrapper-seclect">
+          <div className="col-6 row">
+            <div className="col-6">
+              <select className="form-control" id="movie-type" onChange={this.handleCateSearchChange}>
+                <option value="0">All</option>
+                {this.state.categories.map(category => (
+                  <option key={category.ID} value={category.ID}>{category.Name}</option>
+                ))}
+              </select>
+            </div>
+            <div className="col-6">
+              <select className="form-control" id="movie-type" onChange={this.handleSortTypeChange}>
+                <option value="alphabetical">A-Z</option>
+                <option value="not alphabetical">Z-A</option>
+              </select>
+            </div>
           </div>
-          <div>
-            <select id="movie-type">
-              <option value="name">A-Z</option>
-              <option value="rating">a-z</option>
-              <option value="year">0-9</option>
-            </select>
-          </div>
-          <div>
-            <select id="movie-type">
-              <option value="action">Việt Nam</option>
-              <option value="comedy">Hàn Quốc</option>
-              <option value="drama">Nhật Bản</option>
-              <option value="fantasy">Trung Quốc</option>
-            </select>
-          </div>
-          <div>
-
-          </div>
-          <div>
-            <select id="movie-type">
-              <option value="action">2010-2012</option>
-              <option value="comedy">2013-2015</option>
-              <option value="drama">2015-2020</option>
-              <option value="fantasy">2020-nay</option>
-            </select>
-          </div>
-          <input className="input" type="text" placeholder="Search film..." />
-        </div>
-
-        <div>
-          <div className="wrapper-film">
-            {/* {films.map((item) => (
-              <div className="item-film" key={item.id}>
-                <div className="title">{item.title}</div>
-                <img className="logo" src={item.image} alt={item.name} />
-                <div className="name">{item.name}</div>
-              </div>
-            ))} */}
+          <div className="col-6">
+            <input className="form-control input" type="text" placeholder="Search film..." onKeyPress={this.handleSearch} onChange={this.handleSearch} />
           </div>
         </div>
-        <div>
-          <div className="wrapper-film">
-            {/* {films.map((item) => (
-              <div className="item-film" key={item.id}>
-                <div className="title">{item.title}</div>
-                <img className="logo" src={item.image} alt={item.name} />
-                <div className="name">{item.name}</div>
-              </div>
-            ))} */}
-          </div>
+        <div className="wrapper-film">
+          {filteredMovies.map((item) => (
+            <div key={item.ID} className="item-film">
+              <div className="title">{item.numberOfEpisodes} episodes</div>
+              <img className="logo" src={'./imgs/film/' + item.image} alt={item.Name} />
+              <div className="name">{item.Name}</div>
+              <div className="position-absolute heart-item">0</div>
+            </div>
+          ))}
         </div>
       </div>
     );
