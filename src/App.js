@@ -3,14 +3,15 @@ import "./App.css";
 import Footer from "./Footer/Footer";
 import Header from "./Header/Header";
 import React from "react";
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import About from "./About";
+// import About from "./About";
 import Films from "./film/Films";
 import Home from "./home/Home";
 import SiteMap from "./SiteMap";
 import Contact from "./Contact/Contact";
 import Feedback from "./FeedBack/FeedBack";
+import DetailFilm from "./detail/DetailFilm";
 
 
 function App() {
@@ -25,7 +26,7 @@ function App() {
             <Route exact path="/feedback" element={<Feedback />} />     
             <Route exact path="/contact" element={<Contact />} />
             <Route exact path="/sitemap" element={<SiteMap />} />
-
+            <Route exact path="/detail" element={<DetailFilm />} />
           </Routes>
         </div>
 
