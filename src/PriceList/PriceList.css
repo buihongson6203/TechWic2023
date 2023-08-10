@@ -14,7 +14,9 @@ h1{
 .ContainerPrice{
     width: 100%;
     padding: 20px;
+    padding-bottom: 50px;
     justify-content: center;
+    background-color: #181616;
     display: flex;
     flex-wrap: wrap;
 }
@@ -40,6 +42,16 @@ h1{
 }
 p{
     font-size: 11px;
+}
+.name-title{ 
+    color: red;
+    padding-bottom: 10px;
+}
+.btn-buton{
+    padding: 6px;
+    border-radius: 9px;
+    font-size: 10px;
+
 }
 .TitleSmall{
     padding: 15px;

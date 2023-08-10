@@ -15,6 +15,7 @@ class Films extends Component {
       fav_film: []
     }
   }
+  
 
   handleCateSearchChange = (event) => {
     let { value } = event.target;
@@ -144,8 +145,9 @@ class Films extends Component {
               </select>
             </div>
           </div>
-          <div className="col-6">
-            <input className="form-control input" type="text" placeholder="Search film..." onKeyPress={this.handleSearch} onChange={this.handleSearch} />
+          <div className="col-6 input-search">
+            <input className=" input1" type="text" placeholder="Search film..." onKeyPress={this.handleSearch} onChange={this.handleSearch} />
+            <icons.FaSearch className="search"/>
           </div>
         </div>
         <div className="wrapper-film">
@@ -155,7 +157,7 @@ class Films extends Component {
             return (
               <div key={item.ID} className="item-film">
                 <div className="title">{item.numberOfEpisodes} episodes</div>
-                <Link to="/detail" className="item-link">
+                <Link to="/fav" className="item-link" >
                   <img className="logo" src={'./imgs/film/' + item.image} alt={item.Name} />
                 </Link>
                 <div className="name">{item.Name}</div>

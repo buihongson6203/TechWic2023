@@ -15,7 +15,7 @@ const PriceList = () => {
   return (
     <div className="ContainerPrice">
         <div className="price-list">
-            <h1>NetFlix</h1>
+            <h1 className='name-title'>NetFlix</h1>
             <div className="BlockLarge">
                 <div className="BlockSmall">
                     <div className="Bundle">
@@ -27,7 +27,7 @@ const PriceList = () => {
                         </div>
                         <div className="TitleSmall">
                             <div >
-                                <p className="active">Standard 4K image quality</p>
+                                <p className="">Standard 4K image quality</p>
                             </div>
                             <div >
                                 <p>No ads</p>
@@ -43,8 +43,8 @@ const PriceList = () => {
                             </div>
                         </div>
                         <div className="button" onClick={handleSendClick}>
-                            <button type="submit">
-                                by now
+                            <button type="submit" className='btn-buton'>
+                                buy now
                             </button>
                         </div>
                     </div>
@@ -72,9 +72,9 @@ const PriceList = () => {
                                 <p>Optimum usage time</p>
                             </div>
                         </div>
-                        <div className="button">
-                            <button type="submit" onClick={handleSendClick}>
-                                by now
+                        <div className="button" onClick={handleSendClick}>
+                            <button type="submit" className='btn-buton'>
+                                buy now
                             </button>
                         </div>
                     </div>
@@ -102,9 +102,9 @@ const PriceList = () => {
                                 <p>Optimum usage time</p>
                             </div>
                         </div>
-                        <div className="button">
-                            <button type="submit" onClick={handleSendClick}>
-                                by now
+                        <div className="button" onClick={handleSendClick}>
+                            <button type="submit" className='btn-buton'>
+                                buy now
                             </button>
                         </div>
                     </div>
@@ -132,9 +132,9 @@ const PriceList = () => {
                                 <p>Optimum usage time</p>
                             </div>
                         </div>
-                        <div className="button">
-                            <button type="submit" onClick={handleSendClick}>
-                                by now
+                        <div className="button" onClick={handleSendClick}>
+                            <button type="submit" className='btn-buton'>
+                                buy now
                             </button>
                         </div>
                     </div>
@@ -146,7 +146,7 @@ const PriceList = () => {
             {/* hbo */}
 
             <div className="price-list">
-            <h1>Hbomax</h1>
+            <h1 className='name-title'>Hbomax</h1>
             <div className="BlockLarge">
                 <div className="BlockSmall">
                     <div className="Bundle">
@@ -174,8 +174,8 @@ const PriceList = () => {
                             </div>
                         </div>
                         <div className="button" onClick={handleSendClick}>
-                            <button type="submit">
-                                by now
+                            <button type="submit" className='btn-buton'>
+                                buy now
                             </button>
                         </div>
                     </div>
@@ -203,9 +203,9 @@ const PriceList = () => {
                                 <p>Optimum usage time</p>
                             </div>
                         </div>
-                        <div className="button">
-                            <button type="submit" onClick={handleSendClick}>
-                                by now
+                        <div className="button" onClick={handleSendClick}>
+                            <button type="submit" className='btn-buton'>
+                                buy now
                             </button>
                         </div>
                     </div>
@@ -233,9 +233,9 @@ const PriceList = () => {
                                 <p>Optimum usage time</p>
                             </div>
                         </div>
-                        <div className="button">
-                            <button type="submit" onClick={handleSendClick}>
-                                by now
+                        <div className="button" onClick={handleSendClick}>
+                            <button type="submit" className='btn-buton'>
+                                buy now
                             </button>
                         </div>
                     </div>
@@ -263,9 +263,9 @@ const PriceList = () => {
                                 <p>Optimum usage time</p>
                             </div>
                         </div>
-                        <div className="button">
-                            <button type="submit" onClick={handleSendClick}>
-                                by now
+                        <div className="button" onClick={handleSendClick}>
+                            <button type="submit" className='btn-buton'>
+                                buy now
                             </button>
                         </div>
                     </div>
@@ -277,7 +277,7 @@ const PriceList = () => {
                 {/* disney */}
 
             <div className="price-list">
-            <h1>disney</h1>
+            <h1 className='name-title'>Disney</h1>
             <div className="BlockLarge">
                 <div className="BlockSmall">
                     <div className="Bundle">
@@ -305,8 +305,8 @@ const PriceList = () => {
                             </div>
                         </div>
                         <div className="button" onClick={handleSendClick}>
-                            <button type="submit">
-                                by now
+                            <button type="submit" className='btn-buton'>
+                                buy now
                             </button>
                         </div>
                     </div>
@@ -334,9 +334,9 @@ const PriceList = () => {
                                 <p>Optimum usage time</p>
                             </div>
                         </div>
-                        <div className="button">
-                            <button type="submit" onClick={handleSendClick}>
-                                by now
+                        <div className="button" onClick={handleSendClick}>
+                            <button type="submit" className='btn-buton'>
+                                buy now
                             </button>
                         </div>
                     </div>
@@ -364,9 +364,9 @@ const PriceList = () => {
                                 <p>Optimum usage time</p>
                             </div>
                         </div>
-                        <div className="button">
-                            <button type="submit" onClick={handleSendClick}>
-                                by now
+                        <div className="button" onClick={handleSendClick}>
+                            <button type="submit" className='btn-buton'>
+                                buy now
                             </button>
                         </div>
                     </div>
@@ -394,9 +394,9 @@ const PriceList = () => {
                                 <p>Optimum usage time</p>
                             </div>
                         </div>
-                        <div className="button">
-                            <button type="submit" onClick={handleSendClick}>
-                                by now
+                        <div className="button" onClick={handleSendClick}>
+                            <button type="submit" className='btn-buton'>
+                                buy now
                             </button>
                         </div>
                     </div>
