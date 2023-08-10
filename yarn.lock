@@ -8581,7 +8581,7 @@ svgo@^2.7.0:
 
 sweetalert2@^11.7.21:
   version "11.7.21"
-  resolved "https://registry.npmjs.org/sweetalert2/-/sweetalert2-11.7.21.tgz"
+  resolved "https://registry.yarnpkg.com/sweetalert2/-/sweetalert2-11.7.21.tgz#f4f0303bc3236d093a5842154026a711c406d793"
   integrity sha512-7CU2s2FmCrf/NNuHRINN79oaXB6PQbbG7CyZ9itmRuu9Q73ccCyFznFYwXzzxwusOUeLHkH4AlhavIDR2gE8Vw==
 
 symbol-tree@^3.2.4:
