@@ -1,0 +1,53 @@
+
+  .ratings{
+    margin-bottom: 20px;
+  }
+  .pro-large-img img{
+    width: 80%;
+  }
+  .container-detail{
+  
+    padding: 150px 50px 100px;
+    display: flex;
+    gap:40px;
+    background-color: #181616;
+    align-items: center;
+
+  }
+  .update{
+    color: yellow;
+  }
+  .name-film{
+    font-size: 50px;
+    font-weight: 800;
+    color: white;
+    padding-bottom: 10px;
+  }
+  .review{
+    display: flex;
+    gap:20px;
+    align-items: center;
+    color: white;
+    padding-bottom: 15px;
+  }
+  .decripsion{
+    color: white;
+    max-width: 800px;
+  }
+  @media(max-width:768px){
+    .container-detail{
+        display: block;
+    }
+    .img-big{
+       width: 100%;
+        margin: 0 auto;
+        display: flex;
+        object-fit: cover;
+        padding-bottom: 20px;
+    }
+    .name-film{
+        font-size: 30px;
+        font-weight: 700;
+        color: white;
+      }
+  }
