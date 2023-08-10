@@ -2,8 +2,8 @@
     padding: 150px 50px 20px;
     background-color: #181616;
     .input{
-        padding: 16px 140px 16px 18px;
-      }
+      padding: 10px 20px;
+    }
     .wrapper-seclect{
         display: flex;
         gap:20px;

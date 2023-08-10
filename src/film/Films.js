@@ -5,6 +5,7 @@ class Films extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      sortByLetter: 'alphabetical',
       cateSearch: 0,
       categories: [],
       films: [],
@@ -19,17 +20,30 @@ class Films extends Component {
     });
   }
 
-  filterMoviesByCategory = () => {
-    const { films, cateSearch, search } = this.state;
-    //IF NOT SEARCH OR FILTER, RETURNS ALL THE FILMS
-    if (cateSearch === 0 && search === '') {
-      return films;
-    }
+  handleSortTypeChange = (event) => {
+    let { value } = event.target;
+    this.setState({
+      sortByLetter: value
+    });
+  }
 
-    const filteredMovies = films.filter(movie =>
+  filterFilms = () => {
+    const { films, cateSearch, search, sortByLetter } = this.state;
+    //IF NOT SEARCH OR FILTER, RETURNS ALL THE FILMS
+    // if (search === '') {
+    //   return films;
+    // }
+
+    let filteredMovies = films.filter(movie =>
       (cateSearch === 0 || movie.cate_id === cateSearch) &&
       movie.Name.toLowerCase().includes(search.toLowerCase())
     );
+
+    if (sortByLetter === 'alphabetical') {
+      filteredMovies.sort((a, b) => a.Name.localeCompare(b.Name));
+    } else {
+      filteredMovies.sort((a, b) => b.Name.localeCompare(a.Name));
+    }
 
     return filteredMovies;
   };
@@ -75,15 +89,8 @@ class Films extends Component {
   }
 
   componentDidUpdate = () => {
-    console.log(this.state);
+    // console.log(this.state);
   }
-
-
-  handleSearchKeyPress = (event) => {
-    if (event.key === 'Enter') {
-      this.searchFilms();
-    }
-  };
 
   handleSearch = (event) => {
     if (event.key === 'Enter') {
@@ -94,26 +101,30 @@ class Films extends Component {
 
 
   render() {
-    const filteredMovies = this.filterMoviesByCategory();
+    const filteredMovies = this.filterFilms();
 
     return (
       <div className="container-film">
-        <div className="wrapper-seclect">
-          <div>
-            <select className="form-control" id="movie-type" onChange={this.handleCateSearchChange}>
-              <option value="0">All</option>
-              {this.state.categories.map(category => (
-                <option key={category.ID} value={category.ID}>{category.Name}</option>
-              ))}
-            </select>
+        <div className="row wrapper-seclect">
+          <div className="col-6 row">
+            <div className="col-6">
+              <select className="form-control" id="movie-type" onChange={this.handleCateSearchChange}>
+                <option value="0">All</option>
+                {this.state.categories.map(category => (
+                  <option key={category.ID} value={category.ID}>{category.Name}</option>
+                ))}
+              </select>
+            </div>
+            <div className="col-6">
+              <select className="form-control" id="movie-type" onChange={this.handleSortTypeChange}>
+                <option value="alphabetical">A-Z</option>
+                <option value="not alphabetical">Z-A</option>
+              </select>
+            </div>
           </div>
-          <div>
-            <select className="form-control" id="movie-type">
-              <option value="0">A-Z</option>
-              <option value="1">a-z</option>
-            </select>
+          <div className="col-6">
+            <input className="form-control input" type="text" placeholder="Search film..." onKeyPress={this.handleSearch} onChange={this.handleSearch} />
           </div>
-          <input className="form-control input" type="text" placeholder="Search film..." onKeyPress={this.handleSearch} onChange={this.handleSearch} />
         </div>
         <div className="wrapper-film">
           {filteredMovies.map((item) => (
