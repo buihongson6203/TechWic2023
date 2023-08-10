@@ -61,8 +61,14 @@ function Header() {
           </Link>
         </li>
         <li>
+          <Link to="/PriceList" className="item-link">
+            <div>PriceList</div>
+          </Link>
+        </li>
+        <li>
           <icons.FaBell/>
         </li>
+    
       </ul>
     </div>
   );

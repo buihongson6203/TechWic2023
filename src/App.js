@@ -11,11 +11,13 @@ import Home from "./home/Home";
 import SiteMap from "./SiteMap";
 import Contact from "./Contact/Contact";
 import Feedback from "./FeedBack/FeedBack";
+import PriceList from "./PriceList/PriceList";
 import DetailFilm from "./detail/DetailFilm";
 
 import FavFilms from "./Favourite/fav_films";
 
 function App() {
+  
   return (
     <BrowserRouter>
       <div className="App">
@@ -27,6 +29,7 @@ function App() {
             <Route exact path="/feedback" element={<Feedback />} />     
             <Route exact path="/contact" element={<Contact />} />
             <Route exact path="/sitemap" element={<SiteMap />} />
+            <Route exact path="/PriceList" element={<PriceList />} />
             <Route exact path="/detail" element={<DetailFilm />} />
             <Route exact path="/fav" element={<FavFilms />} />
           </Routes>

@@ -1,0 +1,126 @@
+.BlockSmall{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+h1{
+    text-align: center;
+    color: blueviolet;
+    margin-bottom: 20px;
+}
+.price-list{
+    margin-top: 130px;
+}
+.ContainerPrice{
+    width: 100%;
+    padding: 20px;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+.active {
+    color: white;
+}
+.Bundle{
+    border: 1px solid grey;
+    width: 200px;
+    border-radius: 10px;
+}
+.Title{
+    height: 35px;
+    text-align: center;
+    padding: 5px;
+    background: #444444 ;
+    border-radius: 10px;
+}
+.price{
+    height: 35px;
+    text-align: center;
+    padding: 10px;
+}
+p{
+    font-size: 11px;
+}
+.TitleSmall{
+    padding: 15px;
+}
+.TitleSmall div {
+    padding: 6px;
+    text-align: center;
+    border-bottom: 1px solid #444444;
+}
+
+.button{
+
+    text-align: center;
+    padding: 10px;
+}
+.button button {
+
+    background: #000;
+    border: 1px solid yellow;
+}
+.button button:hover{
+    background: yellow;
+    color: #000;
+}
+
+
+span.swal2-success-line-tip {
+    top: 38px !important;
+    left: 2px !important;
+}
+
+span.swal2-success-line-long {
+    right: 0px !important;
+    top: 30px !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:450px){
+    .ContainerPrice{
+        margin-left: 40px;
+    }
+    .BlockSmall{
+        flex-direction: column;
+    }
+    .Bundle{
+        width: 280px;
+    }
+}
+
+
+@media (max-width:768px){
+    .ContainerPrice{
+        margin-left: 40px;
+    }
+    .BlockSmall{
+        flex-wrap: wrap;
+    }
+    .Bundle{
+        width: 280px;
+    }
+}
+
+
+@media (max-width:991px){
+    .ContainerPrice{
+        margin-left: 40px;
+    }
+    .BlockSmall{
+        flex-wrap: wrap;
+    }
+    .Bundle{
+        width: 280px;
+    }
+}
