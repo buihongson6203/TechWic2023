@@ -13,6 +13,7 @@ import Contact from "./Contact/Contact";
 import Feedback from "./FeedBack/FeedBack";
 import DetailFilm from "./detail/DetailFilm";
 
+import FavFilms from "./Favourite/fav_films";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
             <Route exact path="/contact" element={<Contact />} />
             <Route exact path="/sitemap" element={<SiteMap />} />
             <Route exact path="/detail" element={<DetailFilm />} />
+            <Route exact path="/fav" element={<FavFilms />} />
           </Routes>
         </div>
 

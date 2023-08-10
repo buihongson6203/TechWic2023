@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from 'axios';
 import "./Films.css";
+import * as icons from 'react-icons/fa';
 class Films extends Component {
   constructor(props) {
     super(props);
@@ -9,7 +10,8 @@ class Films extends Component {
       cateSearch: 0,
       categories: [],
       films: [],
-      search: ''
+      search: '',
+      fav_film: []
     }
   }
 
@@ -49,6 +51,10 @@ class Films extends Component {
   };
 
   componentDidMount = () => {
+    let fav_films = localStorage.getItem('fav_films') ? JSON.parse(localStorage.getItem('fav_films')) : [];
+    this.setState({
+      fav_film: fav_films
+    })
     // get categories
     axios.get('./categories.json')
       .then((response) => {
@@ -89,7 +95,7 @@ class Films extends Component {
   }
 
   componentDidUpdate = () => {
-    // console.log(this.state);
+    // console.log(this.state.fav_film)
   }
 
   handleSearch = (event) => {
@@ -97,6 +103,21 @@ class Films extends Component {
       const { value } = event.target;
       this.setState({ search: value });
     }
+  }
+
+  HandleFavourite = (ID) => {
+    let fav_films = this.state.fav_film;
+    const index = fav_films.indexOf(ID);
+    if (index > -1) {
+      fav_films.splice(index, 1);
+    } else {
+      fav_films.push(ID);
+    }
+    console.log(fav_films);
+    localStorage.setItem('fav_films', JSON.stringify(fav_films))
+    this.setState({
+      fav_film: fav_films
+    });
   }
 
 
@@ -127,14 +148,20 @@ class Films extends Component {
           </div>
         </div>
         <div className="wrapper-film">
-          {filteredMovies.map((item) => (
-            <div key={item.ID} className="item-film">
-              <div className="title">{item.numberOfEpisodes} episodes</div>
-              <img className="logo" src={'./imgs/film/' + item.image} alt={item.Name} />
-              <div className="name">{item.Name}</div>
-              <div className="position-absolute heart-item">0</div>
-            </div>
-          ))}
+          {filteredMovies.map((item) => {
+            let active = this.state.fav_film.includes(item.ID) ? 'active' : '';
+
+            return (
+              <div key={item.ID} className="item-film">
+                <div className="title">{item.numberOfEpisodes} episodes</div>
+                <img className="logo" src={'./imgs/film/' + item.image} alt={item.Name} />
+                <div className="name">{item.Name}</div>
+                <button className={`position-absolute heart-item ${active}`} onClick={() => this.HandleFavourite(item.ID)}>
+                  {active === '' ? <icons.FaRegHeart /> : <icons.FaHeart />}
+                </button>
+              </div>
+            );
+          })}
         </div>
       </div>
     );
