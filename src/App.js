@@ -13,7 +13,7 @@ import Contact from "./Contact/Contact";
 import Feedback from "./FeedBack/FeedBack";
 import PriceList from "./PriceList/PriceList";
 import DetailFilm from "./detail/DetailFilm";
-
+import Providers from "./Providers/Providers";
 import FavFilms from "./Favourite/fav_films";
 
 function App() {
@@ -32,6 +32,7 @@ function App() {
             <Route exact path="/PriceList" element={<PriceList />} />
             <Route exact path="/detail" element={<DetailFilm />} />
             <Route exact path="/fav" element={<FavFilms />} />
+            <Route exact path="/providers" element={<Providers />} />
           </Routes>
         </div>
 

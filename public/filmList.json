@@ -1,63 +1,4 @@
 [
-<<<<<<< Updated upstream:public/filmLists.json
-    {
-        "ID": 1,
-        "Name": "How i met your mother",
-        "image": "film1.jpg",
-        "cate_id": 3,
-        "Description": "The story is told by the main character - Ted Mosby to his two children about the love story of their parents. When he was 27, Ted felt like getting married after his roommate Marshall became engaged to his best friend from college, Lily after nine years of dating. With the help of 'sex expert' Barney, Ted has embarked on a search for his \"half\". The movie is extremely funny and a great resource for learning to speak English."
-    },
-    {
-        "ID": 2,
-        "Name": "Attack on Titan",
-        "image": "film2.jpg",
-        "cate_id": 1,
-        "Description": "The film revolves around a trio of close friends Eren Jaeger, Mikasa Ackerman and Armin Arlert on their journey to fight against cannibal Titans. In a surprise attack by the Great Shaped Giant, the outermost layer of Maria that protected humans from the Titans was destroyed, the Titans massively invaded the Shiganshina district."
-    },
-    {
-        "ID": 3,
-        "Name": "Insidious 1",
-        "image": "film3.jpg",
-        "cate_id": 4,
-        "Description": "adwkhdka"
-    },
-    {
-        "ID": 4,
-        "Name": "Fast and Furious 5",
-        "image": "film4.jpg",
-        "cate_id": 2,
-        "Description": "klwhdalkdw"
-    },
-    {
-        "ID": 5,
-        "Name": "Cuộc chiến xuyên không",
-        "image": "film5.jpg",
-        "cate_id": 2,
-        "Description": "klwhdavhulkdw"
-    },
-    {
-        "ID": 6,
-        "Name": "Sát thủ đối đầu",
-        "image": "film6.jpg",
-        "cate_id": 2,
-        "Description": "klwhdalkdw"
-    },
-    {
-        "ID": 7,
-        "Name": "The Avengers",
-        "image": "film7.jpg",
-        "cate_id": 2,
-        "Description": "klwhdalkdw"
-    },
-    {
-        "ID": 8,
-        "Name": "FIFTY SHADES FREED",
-        "image": "film8.jpg",
-        "cate_id": 2,
-        "Description": "klwhdalkdw"
-    }
-]
-=======
   {
     "ID": 1,
     "Name": "How i met your mother",
@@ -270,4 +211,3 @@
     "Description": "Secret Love is one of the top best Korean films about emotional love, making many viewers fall in love at first sight. The story revolves around the risky love between Lee Sun Jae, Lee Sun Jae, and Lee Sun Jae. a young pilot, and Oh Hye Won, who helped him realize his natural musical abilities."
   }
 ]
->>>>>>> Stashed changes:public/filmList.json
