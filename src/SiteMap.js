@@ -4,7 +4,7 @@ import "./SiteMap.css";
 
 function SiteMap() {
   return (
-    <div class="top-section">
+    <div className="top-section">
       <section className="info-section">
         <ul>
           <li>
@@ -108,7 +108,7 @@ function SiteMap() {
           </li>
         </ul>
       </section>
-      <section class="links-section">
+      <section className="links-section">
         <ul>
           <li>
             <Link to="/" className="sitemap-link">
