@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import "./Header.css"
 import * as icons from 'react-icons/fa';
+import Notification from "../Component/noti";
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const toggleMenu = () => {
@@ -67,8 +68,8 @@ function Header() {
         </li>
         <li>
           <icons.FaBell/>
+          <Notification/>
         </li>
-    
       </ul>
     </div>
   );
