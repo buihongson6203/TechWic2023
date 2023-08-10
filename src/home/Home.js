@@ -6,7 +6,7 @@ function Home() {
       title: "Tập 16 vietsub",
       image:
         "https://simg.zalopay.com.vn/zlp-website/assets/phim_moi_chieu_rap_Alienoid_Cuoc_chien_xuyen_khong_72143fde54.jpg",
-      name: "Cuộc chiến xuyên không",
+      name: "Cuộc chiến",
     },
     {
       id: 2,
@@ -68,7 +68,7 @@ function Home() {
   return (
     <div className="container-home">
       <div>
-        <div className="phim-hot">Phim Hot</div>
+        <div className="phim-hot">Hot Movies</div>
         <div className="wrapper-film">
           {films.map((item) => (
             <div className="item-film" key={item.id}>
@@ -80,7 +80,7 @@ function Home() {
         </div>
       </div>
       <div>
-        <div className="phim-hot">Bộ phim mới cập nhật</div>
+        <div className="phim-hot">New Movie Update</div>
         <div className="wrapper-film">
           {films.map((item) => (
             <div className="item-film" key={item.id}>
@@ -92,7 +92,7 @@ function Home() {
         </div>
       </div>
       <div>
-        <div className="phim-hot">Phim sắp chiếu</div>
+        <div className="phim-hot">Upcoming Movies</div>
         <div className="wrapper-film">
           {films.map((item) => (
             <div className="item-film" key={item.id}>

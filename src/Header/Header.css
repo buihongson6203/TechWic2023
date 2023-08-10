@@ -14,6 +14,9 @@
   .fa-bars {
     display: none;
   }
+  .fa-x{
+    display: none;
+  }
   .item-link {
     color: #fff;
   }
@@ -190,5 +193,46 @@ a {
   .hamburger.active .bar:nth-child(3) {
     -webkit-transform: translateY(-8px) rotate(-45deg);
     transform: translateY(-8px) rotate(-45deg);
+  }
+}
+@media(max-width: 768px){
+  .header{
+    padding: 15px 20px 15px 20px;
+    .fa-bars{
+      display: block;
+      color: white;
+      font-size: 27px;
+    }
+    .link{
+      display: flex;
+      background-color: #312d2d;
+      box-shadow: 18px 18px 36px 0px rgba(211, 209, 216, 0.25);
+      height: 100vh;
+      flex-direction: column;
+      justify-content: space-between;
+      position: fixed;
+      top: 0;
+      transition: all 0.3s ease-in-out;
+      max-width: 768px;
+      z-index: 300;
+      text-align: center;
+      padding: 50px 24px;
+      flex-direction: column;
+      min-width: 250px;
+      width: 50%;
+    }
+    .open-menu {
+      left: 0;
+    }
+  
+    .close-menu {
+      left: -100%;
+      
+    }
+    .fa-x{
+      display: flex;
+      justify-content: end;
+      font-size: 20px;
+    }
   }
 }

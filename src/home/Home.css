@@ -16,6 +16,7 @@
     justify-content: space-between;
     overflow: hidden;
     padding-bottom: 50px;
+    gap:15px;
     .item-film {
         position: relative;
       .logo {
@@ -44,4 +45,13 @@
       }
     }
   }
+}
+@media(max-width: 768px){
+.container-home{
+  padding: 150px 50px;
+  .wrapper-film{
+    gap:10px;
+    overflow-x: scroll;
+  }
+}
 }
