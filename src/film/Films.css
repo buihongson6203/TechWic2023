@@ -48,3 +48,16 @@
         }
       }
 }
+
+.heart-item {
+  top: 0;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  background-color: red;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

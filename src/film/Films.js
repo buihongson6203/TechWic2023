@@ -132,6 +132,7 @@ class Films extends Component {
               <div className="title">{item.numberOfEpisodes} episodes</div>
               <img className="logo" src={'./imgs/film/' + item.image} alt={item.Name} />
               <div className="name">{item.Name}</div>
+              <div className="position-absolute heart-item">0</div>
             </div>
           ))}
         </div>
