@@ -1,81 +1,6 @@
-/* .sitemap-container {
-  display: flex;
-  background: #181616;
-  padding-bottom: 230px;
-  padding-top: 50px;
-
-
-  font-family: Arial, sans-serif;
-}
-
-.sitemap-section {
-  margin-top: 20px;
-}
-
-.sitemap-list {
-  list-style: none;
-  padding: 0;
-}
-
-.sitemap-link {
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
-  padding: 5px 10px;
-  display: block;
-  transition: background-color 0.3s ease;
-}
-
-p:hover {
-  background-color: #5f5f5f;
-}
-.logo {
-  width: 150px;
-}
-.sitemap {
-  max-width: 320px;
-  align-items: center;
-  display: flex;
-  font-size: 13px;
-  color: #938889;
-}
-.link {
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
-  padding: 5px 10px;
-  display: block;
-  transition: background-color 0.3s ease;
-}
-
-.logo2 {
-  display: flex;
-  gap: 20px;
-}
-.lg {
-  font-family: "Helvetica Neue", sans-serif;
-  font-size: 35px;
-  font-weight: bold;
-  color: white;
-  text-transform: uppercase;
-  letter-spacing: 4px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  margin-bottom: 10px;
-}
 .container {
-  margin: 0 auto;
-  margin-top: 100px;
-  gap: 200px;
-  display: flex;
-  padding-top: 60px;
-} */
-* {
-  padding: 0;
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  color: rgb(194, 189, 189);
+  background-color: #181616;
 }
-
 nav {
   text-align: center;
   padding: 15px 0;
@@ -87,7 +12,12 @@ nav {
 main {
   height: calc(100vh - 400px);
   background: rgb(56, 56, 90);
-  background: radial-gradient(circle, rgba(56, 56, 90, 1) 0%, rgba(21, 21, 80, 1) 35%, rgba(1, 3, 3, 1) 100%);
+  background: radial-gradient(
+    circle,
+    rgba(56, 56, 90, 1) 0%,
+    rgba(21, 21, 80, 1) 35%,
+    rgba(1, 3, 3, 1) 100%
+  );
 }
 
 footer {
@@ -102,12 +32,12 @@ footer {
 .top-section {
   display: flex;
   width: 100%;
+  background-color: #181616;
   justify-content: space-evenly;
   flex-wrap: wrap;
   align-items: center;
-  margin-top: 200px;
-padding: 30px;
-padding-bottom: 250px;
+  padding-top: 150px;
+  padding-bottom: 100px;
 }
 
 .logo1 {
@@ -155,7 +85,7 @@ ul a:hover {
   flex-direction: column;
 }
 
-.subscribe-section form input[type=email] {
+.subscribe-section form input[type="email"] {
   width: 300px;
   height: 30px;
   color: black;
@@ -163,11 +93,11 @@ ul a:hover {
   font-size: 17px;
 }
 
-.subscribe-section form input[type=email]:focus {
+.subscribe-section form input[type="email"]:focus {
   outline: 1.5px solid rgb(219, 153, 26);
 }
 
-.subscribe-section form input[type=submit] {
+.subscribe-section form input[type="submit"] {
   margin: 9px auto;
   padding: 8px 20px;
   font-size: 17px;
@@ -178,7 +108,7 @@ ul a:hover {
   cursor: pointer;
 }
 
-.subscribe-section form input[type=submit]:hover {
+.subscribe-section form input[type="submit"]:hover {
   background-color: rgb(240, 106, 10);
 }
 
@@ -204,14 +134,12 @@ span {
   margin: 10px;
 }
 
-
 /* .text{
   width: 30%;
 } */
-.chia{
-
+.chia {
   display: flex;
 }
-.h2{
+.h2 {
   display: flex;
 }
