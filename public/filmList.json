@@ -13,7 +13,6 @@
     "image": "film2.jpg",
     "cate_id": 1,
     "status": "new",
-
     "Description": "The film revolves around a trio of close friends Eren Jaeger, Mikasa Ackerman and Armin Arlert on their journey to fight against cannibal Titans. In a surprise attack by the Great Shaped Giant, the outermost layer of Maria that protected humans from the Titans was destroyed, the Titans massively invaded the Shiganshina district."
   },
   {
@@ -22,7 +21,6 @@
     "image": "film3.jpg",
     "cate_id": 4,
     "status": "new",
-
     "Description": "adwkhdka"
   },
   {
@@ -31,7 +29,6 @@
     "image": "film4.jpg",
     "cate_id": 2,
     "status": "new",
-
     "Description": "klwhdalkdw"
   },
   {
@@ -40,7 +37,6 @@
     "image": "film5.jpg",
     "cate_id": 2,
     "status": "new",
-
     "Description": "klwhdavhulkdw"
   },
   {
@@ -49,7 +45,6 @@
     "image": "film6.jpg",
     "cate_id": 2,
     "status": "new",
-
     "Description": "klwhdalkdw"
   },
   {
@@ -58,7 +53,6 @@
     "image": "film7.jpg",
     "cate_id": 2,
     "status": "new",
-
     "Description": "klwhdalkdw"
   },
   {
@@ -84,7 +78,6 @@
     "image": "film11.jpg",
     "cate_id": 1,
     "status": "Hot",
-
     "Description": "The film revolves around a trio of close friends Eren Jaeger, Mikasa Ackerman and Armin Arlert on their journey to fight against cannibal Titans. In a surprise attack by the Great Shaped Giant, the outermost layer of Maria that protected humans from the Titans was destroyed, the Titans massively invaded the Shiganshina district."
   },
   {
@@ -93,7 +86,6 @@
     "image": "film13.webp",
     "cate_id": 4,
     "status": "Hot",
-
     "Description": "adwkhdka"
   },
   {
@@ -118,7 +110,6 @@
     "image": "film15.jpg",
     "cate_id": 2,
     "status": "Hot",
-
     "Description": "klwhdalkdw"
   },
   {
@@ -127,7 +118,6 @@
     "image": "film16.webp",
     "cate_id": 2,
     "status": "Hot",
-
     "Description": "klwhdalkdw"
   },
   {
@@ -138,10 +128,6 @@
     "status": "Hot",
     "Description": "klwhdalkdw"
   },
-
-
-
-
   {
     "ID": 17,
     "Name": "Love Alarm 1, 2",
