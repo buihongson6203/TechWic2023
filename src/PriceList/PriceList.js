@@ -73,7 +73,7 @@ class PriceList extends Component {
         return (
             <div className="ContainerPrice">
                 <div className="price-list">
-                    <h1>netflix</h1>
+                    <h1 className='tille-name'>Netflix</h1>
                     <div className="BlockLarge">
                         <div className="BlockSmall">
                             {this.state.netflix.map(plan => (
@@ -124,7 +124,7 @@ class PriceList extends Component {
 
 
 
-                    <h1>hbomax</h1>
+                    <h1 className='tille-name'>Hbomax</h1>
                     <div className="BlockLarge">
                         <div className="BlockSmall">
                             {this.state.hbomax.map(plan => (
@@ -181,7 +181,7 @@ class PriceList extends Component {
 
 
 
-                        <h1>disney</h1>
+                        <h1 className='tille-name'>Disney</h1>
                     <div className="BlockLarge">
                         <div className="BlockSmall">
                             {this.state.disney.map(plan => (

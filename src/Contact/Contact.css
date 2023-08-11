@@ -10,6 +10,7 @@ body{
   padding: 150px 50px;
 }
 
+<<<<<<< HEAD
 .contact-us-container h2{
   color: #fff;
 }
@@ -34,6 +35,63 @@ form {
 }
 span{
   color: whitesmoke;
+=======
+  .Contact{
+    border: 1px solid #000;
+    width: 100%;
+    padding: 20px;
+  }
+  .input{
+    
+    width: 45.3%;
+  }
+  h2 {
+    margin-bottom: 10px;
+    color: #fefefe;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  span{
+    color: whitesmoke;
+  }
+  p{
+    color: #938889;
+  }
+  textarea {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #47464a;
+    border-radius: 5px;
+    background: #262627;
+    color: #938889 ;
+  }
+  textarea{
+    height: 100px;
+  }
+  button {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 75px;
+  }
+  .btn{
+    background: #000;
+    border: 2px solid yellow;
+  }
+  .btn:hover{
+    background: yellow;
+    color: #000;
+  }
+.Information{
+    border: 1px solid #514f4f;
+    padding: 20px;
+>>>>>>> c286510e39b0962f812ea81e3c2182175a98f716
 }
 p{
   color: #938889;
@@ -195,4 +253,7 @@ p{
   input, textarea{
       width: 100%;
   }
+}
+.tille{
+  color: white;
 }
