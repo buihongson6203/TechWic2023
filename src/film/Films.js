@@ -75,12 +75,10 @@ class Films extends Component {
         axios.get('./filmDetails.json')
           .then((response) => {
             let dataFilmDetails = response.data;
-            // console.log(dataFilms);
-            // console.log(dataFilmDetails);
             dataFilms.forEach(film => {
               let numberOfEpisodes = 0;
-              dataFilmDetails.forEach(item => {
-                if (item.film_id === film.ID) numberOfEpisodes++;
+              dataFilmDetails.forEach(filmDetail => {
+                if (filmDetail.film_id === film.ID) numberOfEpisodes++;
               });
               film.numberOfEpisodes = numberOfEpisodes;
             });
@@ -146,7 +144,7 @@ class Films extends Component {
             </div>
           </div>
           <div className="col-6 input-search">
-            <input className=" input1" type="text" placeholder="Search film..." onKeyPress={this.handleSearch} onChange={this.handleSearch} />
+            <input className="form-control input1" type="text" placeholder="Search film..." onKeyDown={this.handleSearch} />
             <icons.FaSearch className="search"/>
           </div>
         </div>

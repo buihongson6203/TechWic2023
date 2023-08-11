@@ -93,12 +93,6 @@
   }
 }
 
-
-
-
-
-
-
 span.swal2-success-line-tip {
   top: 38px !important;
   left: 2px !important;
@@ -107,4 +101,12 @@ span.swal2-success-line-tip {
 span.swal2-success-line-long {
   right: 0px !important;
   top: 30px !important;
+}
+
+#notification {
+  cursor: pointer;
+}
+
+#notification:hover .noti-menu {
+  display: block;
 }
