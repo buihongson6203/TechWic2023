@@ -10,32 +10,6 @@ body{
   padding: 150px 50px;
 }
 
-<<<<<<< HEAD
-.contact-us-container h2{
-  color: #fff;
-}
-
-.Contact{
-  border: 1px solid #938889;
-  width: 100%;
-  padding: 20px;
-}
-.input input{
-  
-  width: 45.5%;
-}
-h2 {
-  margin-bottom: 10px;
-  color: #fefefe;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-}
-span{
-  color: whitesmoke;
-=======
   .Contact{
     border: 1px solid #000;
     width: 100%;
@@ -91,7 +65,6 @@ span{
 .Information{
     border: 1px solid #514f4f;
     padding: 20px;
->>>>>>> 9df3640 (update file film and change backgound header and footer)
 }
 p{
   color: #938889;
@@ -253,4 +226,7 @@ p{
   input, textarea{
       width: 100%;
   }
+}
+.tille{
+  color: white;
 }
