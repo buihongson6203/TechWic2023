@@ -146,15 +146,6 @@ span.swal2-success-line-long {
       width: 280px;
   }
 }
-<<<<<<< HEAD
-}
-@media(max-width: 586px){
-  .logo{
-    width: 120px;
-    height: 260px;
-  }
-  }
-=======
 
 
 @media (max-width:991px){
@@ -168,4 +159,3 @@ span.swal2-success-line-long {
       width: 280px;
   }
 }
->>>>>>> longbranch

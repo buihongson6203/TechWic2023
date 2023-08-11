@@ -85,15 +85,9 @@
   },
   {
     "ID": 11,
-<<<<<<< HEAD
-    "Name": "Singham",
-    "image": "Actions5.jpg",
-    "cate_id": 2,
-=======
     "Name": "What’s Wrong Kim 2018",
     "image": "film13.webp",
     "cate_id": 4,
->>>>>>> longbranch
     "status": "Hot",
     "Description": "An honest small town cop is transported to a big city controlled by a crime boss he once humiliated."
   },
@@ -156,13 +150,8 @@
   },
   {
     "ID": 19,
-<<<<<<< HEAD
-    "Name": "Raat Hone Ko Hai",
-    "image": "Horror1.jpg",
-=======
     "Name": "Moon Lovers: Scarlet ",
     "image": "film20.jpg",
->>>>>>> longbranch
     "cate_id": 4,
     "status": "upcoming",
     "Description": "Enthralling tales of horror involving Indian rural and small-town folklore, spooky myths and haunting urban legends."
@@ -206,10 +195,4 @@
     "status": "upcoming",
     "Description": "When gifted magician Bobo finds himself assailed by hallucinations and seeks professional help, he learns he's being haunted by a sinister spirit."
   }
-<<<<<<< HEAD
-]
-
-
-=======
  ]
->>>>>>> longbranch
