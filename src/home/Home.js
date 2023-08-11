@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./Home.css";
-
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
@@ -33,15 +33,6 @@ function Home() {
       <h1 className="home">Home</h1>
       <div>
         <div className="phim-hot">Hot Movies</div>
-        {/* <div className="wrapper-film">
-          {hotFilms.map((item) => (
-            <div className="item-film" key={item.ID}>
-              <div className="title">{item.episode} episode</div>
-              <img className="logo" src={"./imgs/film/" + item.image} alt={item.Name} />
-              <div className="name">{item.Name}</div>
-            </div>
-          ))}
-        </div> */}
         <Swiper
           slidesPerView={1}
           // spaceBetween={10}
@@ -73,11 +64,12 @@ function Home() {
             return (
               <SwiperSlide key={item.ID} className="item-film">
                 <div className="item-inner">
-                  {/* <div className="title">{item.Name}</div> */}
-                  <div className="logo-wrap">
-                    <img className="logo-slider" src={"./imgs/film/" + item.image} alt={item.Name} />
-                  </div>
-                  <div className="name">{item.Name} <strong className="red">({item.streamingProvider})</strong></div>
+                  <Link to={`/detail/${item.ID}`}>
+                    <div className="logo-wrap">
+                      <img className="logo-slider" src={"./imgs/film/" + item.image} alt={item.Name} />
+                    </div>
+                    <div className="name">{item.Name} <strong className="red">({item.streamingProvider})</strong></div>
+                  </Link>
                 </div>
               </SwiperSlide>
             );
@@ -86,17 +78,6 @@ function Home() {
       </div>
       <div>
         <div className="phim-hot">New Movie Update</div>
-        {/* <div className="wrapper-film">
-          {newFilms.map((item) => (
-            <div className="item-film" key={item.ID}>
-              <div className="title">{item.episode} episode</div>
-              <img className="logo" src={"./imgs/film/" + item.image} alt={item.Name} />
-              <div className="title">{item.Name}</div>
-              <img className="logo-slider" src={"./imgs/film/" + item.image} alt={item.Name} />
-              <div className="name">{item.Name}</div>
-            </div>
-          ))}
-        </div> */}
         <Swiper
           slidesPerView={1}
           // spaceBetween={10}
@@ -128,11 +109,12 @@ function Home() {
             return (
               <SwiperSlide key={item.ID} className="item-film">
                 <div className="item-inner">
-                  {/* <div className="title">{item.Name}</div> */}
-                  <div className="logo-wrap">
-                    <img className="logo-slider" src={"./imgs/film/" + item.image} alt={item.Name} />
-                  </div>
-                  <div className="name">{item.Name} <strong className="red">({item.streamingProvider})</strong></div>
+                  <Link to={`/detail/${item.ID}`}>
+                    <div className="logo-wrap">
+                      <img className="logo-slider" src={"./imgs/film/" + item.image} alt={item.Name} />
+                    </div>
+                    <div className="name">{item.Name} <strong className="red">({item.streamingProvider})</strong></div>
+                  </Link>
                 </div>
               </SwiperSlide>
             );
@@ -141,15 +123,6 @@ function Home() {
       </div>
       <div>
         <div className="phim-hot">Upcoming Movies</div>
-        {/* <div className="wrapper-film">
-          {upcomingFilms.map((item) => (
-            <div className="item-film" key={item.ID}>
-              <div className="title">{item.Name}</div>
-              <img className="logo-slider" src={"./imgs/film/" + item.image} alt={item.Name} />
-              <div className="name">{item.Name}</div>
-            </div>
-          ))}
-        </div> */}
         <Swiper
           slidesPerView={1}
           // spaceBetween={10}
@@ -181,11 +154,12 @@ function Home() {
             return (
               <SwiperSlide key={item.ID} className="item-film">
                 <div className="item-inner">
-                  {/* <div className="title">{item.Name}</div> */}
-                  <div className="logo-wrap">
-                    <img className="logo-slider" src={"./imgs/film/" + item.image} alt={item.Name} />
-                  </div>
-                  <div className="name">{item.Name} <strong className="red">({item.streamingProvider})</strong></div>
+                  <Link to={`/detail/${item.ID}`}>
+                    <div className="logo-wrap">
+                      <img className="logo-slider" src={"./imgs/film/" + item.image} alt={item.Name} />
+                    </div>
+                    <div className="name">{item.Name} <strong className="red">({item.streamingProvider})</strong></div>
+                  </Link>
                 </div>
               </SwiperSlide>
             );
