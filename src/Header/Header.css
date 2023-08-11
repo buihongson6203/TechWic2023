@@ -105,8 +105,17 @@ span.swal2-success-line-long {
 
 #notification {
   cursor: pointer;
+  z-index: 999;
 }
 
-#notification:hover .noti-menu {
-  display: block;
+#notification svg {
+  font-size: 24px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+/* #notification:hover .noti-menu {
+  display: block;
+} */
