@@ -1,0 +1,20 @@
+.noti-menu {
+    padding: 20px;
+    position: absolute;
+    top: calc(100% + 6px);
+    right: 0;
+    width: 400px;
+    color: white;
+    background-color: #333;
+    list-style: none;
+    display: none;
+}
+
+.noti-menu::before {
+    content: "";
+    position: absolute;
+    top: -6px;
+    right: 0;
+    width: 100%;
+    height: 6px;
+}

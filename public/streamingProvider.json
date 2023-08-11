@@ -2,25 +2,25 @@
     {
         "ID": 1,
         "Name": "Netflix",
-        "logo": "netflix.png",
-        "url": "#"
+        "logo": "netflix.jpg",
+        "url": "https://www.netflix.com/signup"
     },
     {
         "ID": 2,
         "Name": "HBO Max",
-        "logo": "hbo.png",
-        "url": "#"
+        "logo": "HBOlogo.jpg",
+        "url": "https://www.hbomax.com/geo-availability"
     },
     {
         "ID": 3,
         "Name": "Disney+",
         "logo": "disney.png",
-        "url": "#"
+        "url": "https://www.preview.disneyplus.com/unavailable"
     },
     {
         "ID": 4,
         "Name": "Amazon Prime",
-        "logo": "amazon.png",
-        "url": "#"
+        "logo": "amazon.jpg",
+        "url": "https://www.amazon.com/gp/prime/pipeline/signup?ie=UTF8&primeCampaignId=primeMobileSignupWhite&renderingType=mobile&showLandingPage=1"
     }
 ]

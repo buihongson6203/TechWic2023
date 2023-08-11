@@ -7,4 +7,30 @@
 a{
   text-decoration: none;
 }
+html {
+  scroll-behavior: smooth;
+}
+.wrapper-film {
+  scrollbar-width: none; /* Ẩn thanh cuộn */
+}
+
+/* Ẩn thanh cuộn cho ngón tay thanh cuộn */
+.wrapper-film::-webkit-scrollbar {
+  display: none; /* Ẩn thanh cuộn */
+}
+
+.headerWrap {
+  align-items: center;
+  background-color: black;
+  display: flex;
+  height: auto;
+  justify-content: space-between;
+  left: 0;
+  padding: 15px 40px 15px 50px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  border-bottom: 1px solid rgb(40, 39, 38);
+  z-index: 300;
+}
 

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './FeedBack.css'; 
+import Swal from 'sweetalert2';
 
 const Feedback = () => {
   const [rating, setRating] = useState(0);
@@ -7,6 +8,14 @@ const Feedback = () => {
 
   const handleRatingChange = (event) => {
     setRating(event.target.value);
+  };
+
+  const handleSendClick = () => {
+    Swal.fire({
+      icon: 'success',
+      title: 'Thanks for sending us feedback',
+      
+    })
   };
 
   const handleCommentChange = (event) => {
@@ -22,15 +31,15 @@ const Feedback = () => {
   return (
     <div className="feedback-container">
       <div className="Container">
-        <h2>Feedback Form</h2>
+        <h2>Feedback </h2>
         <div className="Form">
             <form onSubmit={handleSubmit}>
-                 <label>Comment:</label>
+                 <input className='mb-3' type="text" placeholder='@Email'/>
                 <div className="Comment">
                
-                <textarea value={comment} onChange={handleCommentChange} />
+                <textarea value={comment} placeholder="Comment: " onChange={handleCommentChange} />
                 </div>
-                <button type="submit" className="btn">Send</button>
+                <button type="submit" className="btn btn-warning" onClick={handleSendClick}>Send</button>
             </form>
         </div>
       </div>
