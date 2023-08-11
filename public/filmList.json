@@ -5,6 +5,7 @@
     "image": "Anime2.jpg",
     "cate_id": 1,
     "status": "new",
+    "streamingProvider":"Netflix",
     "Description": "Edward, who was sent to the real world, is working on rocket engineering to return to the old world. At that time, Alphonse found support and began to build rockets. However, the conspiracy of the Thule Association - the mysterious organization was hidden behind."
   },
   {
@@ -13,6 +14,8 @@
     "image": "Anime1.jpg",
     "cate_id": 1,
     "status": "new",
+    "streamingProvider":"Disney+",
+
     "Description": "The next animated film Shirkoa , based on the award-winning short film by director Ishan Shukla, has chosen Asia Argento ( Agony ), Golshifteh Farahani ( Exploiting ) and Jim Sarbh ( Made in Heaven ) to voice her lead roles..."
   },
   {
@@ -20,7 +23,8 @@
     "Name": " Motu Patlu",
     "image": "Anime3.jpg",
     "cate_id": 1,
-    "status": "new",    
+    "status": "new",   
+    "streamingProvider":"HBO Max",
     "Description": "Motu and Patlu, two friends living in Fufuri Nagar, always get themselves into hilarious situations and later rescued merely by luck, using the help from Ghasita Ram, Inspector Chingam and Dr. Jhatka."
   },
   {
@@ -29,6 +33,7 @@
     "image": "Anime4.jpg",
     "cate_id": 1,
     "status": "new",
+    "streamingProvider":"Netflix",
 
     "Description": "klwhdalkdw"
   },
@@ -38,6 +43,8 @@
     "image": "Anime5.jpg",
     "cate_id": 1,
     "status": "new",
+    "streamingProvider":"Disney+",
+
     "Description": " Based on an Indian folk tale, the film tells about a banyan tree deer and its journey."
   },
   {
@@ -46,6 +53,7 @@
     "image": "Anime6.jpg",
     "cate_id": 1,
     "status": "new",
+    "streamingProvider":"Disney+",
 
     "Description": "This movie opens up a magical world in the jungle and the adventures of an interesting group of friends."
   },
@@ -55,6 +63,8 @@
     "image": "Actions1.jpg",
     "cate_id": 2,
     "status": "new",
+    "streamingProvider":"HBO Max",
+
     "Description": "A child from the Mahishmati kingdom is raised by tribal people and one day learns about his royal heritage, his father's bravery in battle and a mission to overthrow the incumbent ruler."
   },
   {
@@ -63,6 +73,8 @@
     "image": "Actions2.jpg",
     "cate_id": 2,
     "status": "new",
+    "streamingProvider":"Amazon Prime",
+
     "Description": "After learning that his father was brutally killed by Bhallaladeva, Mahendra Baahubali raises an army to defeat him and release his mother from the former's captivity."
   },
 
@@ -72,6 +84,8 @@
     "image": "Actions3.jpg",
     "cate_id": 2,
     "status": "Hot",
+    "streamingProvider":"HBO Max",
+
     "Description": "Sahir, a circus entertainer, robs a corrupt bank in Chicago in order to avenge his father's death. However, his troubles increase when Inspector Jai and Ali suspect him of the robbery."
   },
   {
@@ -80,15 +94,18 @@
     "image": "Actions4.jpg",
     "cate_id": 2,
     "status": "Hot",
+    "streamingProvider":"Disney+",
 
     "Description": "DCP DeSilva sees a way to bring to justice the feared head of a criminal empire by recruiting a man named Vijay, who looks exactly like the crime boss. The ruse works too well, and soon Vijay finds his life in danger when DeSilva, the only one who knows his true identity, dies."
   },
   {
     "ID": 11,
-    "Name": "What’s Wrong Kim 2018",
-    "image": "film13.webp",
-    "cate_id": 4,
+    "Name": "Singham",
+    "image": "Actions5.jpg",
+    "cate_id": 2,
     "status": "Hot",
+    "streamingProvider":"Amazon Prime",
+
     "Description": "An honest small town cop is transported to a big city controlled by a crime boss he once humiliated."
   },
   {
@@ -97,6 +114,8 @@
     "image": "Actions6.jpg",
     "cate_id": 2,
     "status": "Hot",
+    "streamingProvider":"Disney+",
+
     "Description": "A guy who is the president of a major computer corporation falls in love with a girl  .."
   },
   {
@@ -105,6 +124,7 @@
     "image": "TVShows1.jpg",
     "cate_id": 3,
     "status": "Hot",
+    "streamingProvider":"Amazon Prime",
 
     "Description": "Set in Mumbai, Sacred Games delves into the complex web of organized crime, corruption, politics and espionage under India's economic recovery. It is a masterpiece of extraordinary wealth and power that intertwines the lives of the privileged, the famous, the poor and the bloodthirsty."
   },
@@ -114,6 +134,8 @@
     "image": "TVShows2.jpg",
     "cate_id": 3,
     "status": "Hot",
+    "streamingProvider":"HBO Max",
+
     "Description": "A shocking incident at a wedding procession ignites a series of events entangling the lives of two families in the lawless city of Mirzapur."
   },
   {
@@ -122,6 +144,8 @@
     "image": "TVShows3.jpg",
     "cate_id": 3,
     "status": "Hot",
+    "streamingProvider":"Amazon Prime",
+
     "Description": "klwhdalkdw"
   },
   {
@@ -138,6 +162,8 @@
     "image": "TVShows5.jpg",
     "cate_id": 3,
     "status": "upcoming",
+    "streamingProvider":"Netflix",
+
     "Description": "klwhA new version of the classic Mahabharata story, with epic battles and action.dalkdw"
   },
   {
@@ -146,14 +172,18 @@
     "image": "TVShows6.jpg",
     "cate_id": 3,
     "status": "upcoming",
+    "streamingProvider":"Disney+",
+
     "Description": "A married girl's relationship is in turmoil when a spirit, who wants her husband dead, enters her body. She then has to struggle to save her husband from the clutches of the supernatural."
   },
   {
     "ID": 19,
-    "Name": "Moon Lovers: Scarlet ",
-    "image": "film20.jpg",
+    "Name": "Raat Hone Ko Hai",
+    "image": "Horror1.jpg",
     "cate_id": 4,
     "status": "upcoming",
+    "streamingProvider":"Netflix",
+
     "Description": "Enthralling tales of horror involving Indian rural and small-town folklore, spooky myths and haunting urban legends."
   },
   {
@@ -162,6 +192,8 @@
     "image": "Horror2.jpg",
     "cate_id": 4,
     "status": "upcoming",
+    "streamingProvider":"Amazon Prime",
+
     "Description": "Based on the backdrop of a beautiful and serene city Mussoorie, the series revolves around a mysterious story of a merciless serial killer 'AKS'. The entire city is in a miff to know about the man behind the endless murders"},
   {
     "ID": 21,
@@ -169,6 +201,8 @@
     "image": "Horror3.jpg",
     "cate_id": 4,
     "status": "upcoming",
+    "streamingProvider":"Netflix",
+
     "Description": "Aryaamaan a ghost buster. His mission was to cast away all kind of negative powers in the world."
   },
   {
@@ -177,6 +211,8 @@
     "image": "Horror4.jpg",
     "cate_id": 4,
     "status": "upcoming",
+    "streamingProvider":"HBO Max",
+
     "Description": "Seven youngsters decide to spend a night in an abandoned haunted hotel. What they mistook as merely rumors, dawns on them to be the truth as they realize they are not alone inside."
   },
   {
@@ -185,6 +221,8 @@
     "image": "Horror5.jpg",
     "cate_id": 4,
     "status": "upcoming",
+    "streamingProvider":"HBO Max",
+
     "Description": "A mythological story about a goddess who created the entire universe. The plot revolves around the consequences when humans build a temple for her first-born."
   },
   {
@@ -193,6 +231,11 @@
     "image": "Horror6.jpg",
     "cate_id": 4,
     "status": "upcoming",
+    "streamingProvider":"Netflix",
+
     "Description": "When gifted magician Bobo finds himself assailed by hallucinations and seeks professional help, he learns he's being haunted by a sinister spirit."
   }
- ]
+]
+
+
+
