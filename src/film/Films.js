@@ -209,7 +209,7 @@ class Films extends Component {
             return (
               <SwiperSlide key={item.ID} className="item-film">
                 <div className="tap">{item.numberOfEpisodes} episodes</div>
-                <Link to="/detail" className="item-link">
+                <Link to={`/detail/${item.ID}`} className="item-link">
                   <img className="logo-slider" src={'./imgs/film/' + item.image} alt={item.Name} />
                 </Link>
                 <div className="name">{item.Name}</div>

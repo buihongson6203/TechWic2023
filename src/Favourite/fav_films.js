@@ -58,6 +58,7 @@ class FavFilms extends React.Component {
 
         return (
             <div className="container-film">
+                <h1 className="favfilm">Favourite Films</h1>
                 <div className="wrapper-film">
                     {films.map((item) => {
                         return (

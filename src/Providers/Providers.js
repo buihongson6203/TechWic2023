@@ -65,6 +65,7 @@ function Providers() {
 
   return (
     <div className="container">
+      <h1 className="provider"> Stream Providers</h1>
       <button className="btn-addnew"
         data-bs-toggle="modal"
         data-bs-target="#addprovider">
