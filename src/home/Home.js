@@ -43,7 +43,7 @@ function Home() {
         </div> */}
         <Swiper
           slidesPerView={1}
-          spaceBetween={10}
+          // spaceBetween={10}
           autoplay={{
             delay: 2500,
             disableOnInteraction: false,
@@ -52,15 +52,15 @@ function Home() {
           breakpoints={{
             640: {
               slidesPerView: 2,
-              spaceBetween: 20,
+              // spaceBetween: 20,
             },
             768: {
               slidesPerView: 4,
-              spaceBetween: 40,
+              // spaceBetween: 40,
             },
             1024: {
               slidesPerView: 5,
-              spaceBetween: 50,
+              // spaceBetween: 50,
             },
           }}
           modules={[Autoplay]}
@@ -71,10 +71,13 @@ function Home() {
 
             return (
               <SwiperSlide key={item.ID} className="item-film">
-                <div className="title">{item.Name}</div>
-                <img className="logo-slider" src={"./imgs/film/" + item.image} alt={item.Name} />
-                <div className="name">{item.Name}({item.streamingProvider})</div>
-
+                <div className="item-inner">
+                  <div className="title">{item.Name}</div>
+                  <div className="logo-wrap">
+                    <img className="logo-slider" src={"./imgs/film/" + item.image} alt={item.Name} />
+                  </div>
+                  <div className="name">{item.Name}({item.streamingProvider})</div>
+                </div>
               </SwiperSlide>
             );
           })}
@@ -95,7 +98,7 @@ function Home() {
         </div> */}
         <Swiper
           slidesPerView={1}
-          spaceBetween={10}
+          // spaceBetween={10}
           autoplay={{
             delay: 2500,
             disableOnInteraction: false,
@@ -104,15 +107,15 @@ function Home() {
           breakpoints={{
             640: {
               slidesPerView: 2,
-              spaceBetween: 20,
+              // spaceBetween: 20,
             },
             768: {
               slidesPerView: 4,
-              spaceBetween: 40,
+              // spaceBetween: 40,
             },
             1024: {
               slidesPerView: 5,
-              spaceBetween: 50,
+              // spaceBetween: 50,
             },
           }}
           modules={[Autoplay]}
@@ -123,9 +126,13 @@ function Home() {
 
             return (
               <SwiperSlide key={item.ID} className="item-film">
-                <div className="title">{item.Name}</div>
-                <img className="logo-slider" src={"./imgs/film/" + item.image} alt={item.Name} />
-                <div className="name">{item.Name}({item.streamingProvider})</div>
+                <div className="item-inner">
+                  <div className="title">{item.Name}</div>
+                  <div className="logo-wrap">
+                    <img className="logo-slider" src={"./imgs/film/" + item.image} alt={item.Name} />
+                  </div>
+                  <div className="name">{item.Name}({item.streamingProvider})</div>
+                </div>
               </SwiperSlide>
             );
           })}
@@ -144,7 +151,7 @@ function Home() {
         </div> */}
         <Swiper
           slidesPerView={1}
-          spaceBetween={10}
+          // spaceBetween={10}
           autoplay={{
             delay: 2500,
             disableOnInteraction: false,
@@ -153,15 +160,15 @@ function Home() {
           breakpoints={{
             640: {
               slidesPerView: 2,
-              spaceBetween: 20,
+              // spaceBetween: 20,
             },
             768: {
               slidesPerView: 4,
-              spaceBetween: 40,
+              // spaceBetween: 40,
             },
             1024: {
               slidesPerView: 5,
-              spaceBetween: 50,
+              // spaceBetween: 50,
             },
           }}
           modules={[Autoplay]}
@@ -172,10 +179,13 @@ function Home() {
 
             return (
               <SwiperSlide key={item.ID} className="item-film">
-                <div className="title">{item.Name}</div>
-                <img className="logo-slider" src={"./imgs/film/" + item.image} alt={item.Name} />
-                <div className="name">{item.Name}({item.streamingProvider})</div>
-
+                <div className="item-inner">
+                  <div className="title">{item.Name}</div>
+                  <div className="logo-wrap">
+                    <img className="logo-slider" src={"./imgs/film/" + item.image} alt={item.Name} />
+                  </div>
+                  <div className="name">{item.Name}({item.streamingProvider})</div>
+                </div>
               </SwiperSlide>
             );
           })}
