@@ -1,8 +1,9 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import axios from 'axios';
 import "./Films.css";
 import * as icons from 'react-icons/fa';
+
 class Films extends Component {
   constructor(props) {
     super(props);
@@ -31,16 +32,16 @@ class Films extends Component {
     });
   }
 
+  normalizeString = (str) => {
+    return str.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, ''); // Chuyển thành chữ thường và loại bỏ dấu
+  }
+
   filterFilms = () => {
     const { films, cateSearch, search, sortByLetter } = this.state;
-    //IF NOT SEARCH OR FILTER, RETURNS ALL THE FILMS
-    // if (search === '') {
-    //   return films;
-    // }
 
     let filteredMovies = films.filter(movie =>
       (cateSearch === 0 || movie.cate_id === cateSearch) &&
-      movie.Name.toLowerCase().includes(search.toLowerCase())
+      this.normalizeString(movie.Name).includes(this.normalizeString(search))
     );
 
     if (sortByLetter === 'alphabetical') {
@@ -101,7 +102,8 @@ class Films extends Component {
   handleSearch = (event) => {
     if (event.key === 'Enter') {
       const { value } = event.target;
-      this.setState({ search: value });
+      const normalizedSearch = this.normalizeString(value);
+      this.setState({ search: normalizedSearch });
     }
   }
 
@@ -119,6 +121,7 @@ class Films extends Component {
       fav_film: fav_films
     });
   }
+
 
 
   render() {

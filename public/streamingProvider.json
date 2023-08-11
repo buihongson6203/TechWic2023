@@ -2,13 +2,13 @@
     {
         "ID": 1,
         "Name": "Netflix",
-        "logo": "netflix.png",
+        "logo": "netflix.jpg",
         "url": "#"
     },
     {
         "ID": 2,
         "Name": "HBO Max",
-        "logo": "hbo.png",
+        "logo": "HBOlogo.jpg",
         "url": "#"
     },
     {
@@ -20,7 +20,7 @@
     {
         "ID": 4,
         "Name": "Amazon Prime",
-        "logo": "amazon.png",
+        "logo": "amazon.jpg",
         "url": "#"
     }
 ]
