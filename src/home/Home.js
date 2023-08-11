@@ -72,7 +72,7 @@ function Home() {
             return (
               <SwiperSlide key={item.ID} className="item-film">
                 <div className="item-inner">
-                  <div className="title">{item.Name}</div>
+                  {/* <div className="title">{item.Name}</div> */}
                   <div className="logo-wrap">
                     <img className="logo-slider" src={"./imgs/film/" + item.image} alt={item.Name} />
                   </div>
@@ -127,7 +127,7 @@ function Home() {
             return (
               <SwiperSlide key={item.ID} className="item-film">
                 <div className="item-inner">
-                  <div className="title">{item.Name}</div>
+                  {/* <div className="title">{item.Name}</div> */}
                   <div className="logo-wrap">
                     <img className="logo-slider" src={"./imgs/film/" + item.image} alt={item.Name} />
                   </div>
@@ -180,7 +180,7 @@ function Home() {
             return (
               <SwiperSlide key={item.ID} className="item-film">
                 <div className="item-inner">
-                  <div className="title">{item.Name}</div>
+                  {/* <div className="title">{item.Name}</div> */}
                   <div className="logo-wrap">
                     <img className="logo-slider" src={"./imgs/film/" + item.image} alt={item.Name} />
                   </div>
