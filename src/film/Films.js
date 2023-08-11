@@ -1,16 +1,19 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import axios from 'axios';
-import "./Films.css";
+
 import * as icons from 'react-icons/fa';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 
+
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
+
 // import required modules
 import {Autoplay } from 'swiper/modules';
+import './Films.css';
 
 class Films extends Component {
   constructor(props) {
@@ -138,46 +141,7 @@ class Films extends Component {
 
     return (
       <div className="container-film">
-        <div className="row wrapper-seclect">
-          <div className="col-6 row">
-            <div className="col-6">
-              <select className="form-control" id="movie-type" onChange={this.handleCateSearchChange}>
-                <option value="0">genres</option>
-                {this.state.categories.map(category => (
-                  <option key={category.ID} value={category.ID}>{category.Name}</option>
-                ))}
-              </select>
-            </div>
-            <div className="col-6">
-              <select className="form-control" id="movie-type" onChange={this.handleSortTypeChange}>
-                <option value="alphabetical">A-Z</option>
-                <option value="not alphabetical">Z-A</option>
-              </select>
-            </div>
-          </div>
-          <div className="col-6 input-search">
-            <input className="form-control input1" type="text" placeholder="Search film..." onKeyDown={this.handleSearch} />
-            <icons.FaSearch className="search"/>
-          </div>
-        </div>
-        <div className="wrapper-film">
-          {filteredMovies.map((item) => {
-            let active = this.state.fav_film.includes(item.ID) ? 'active' : '';
-
-            return (
-              <div key={item.ID} className="item-film">
-                <div className="title">{item.numberOfEpisodes} episodes</div>
-                <Link to={`/detail/${item.ID}`} className="item-link" >
-                  <img className="logo" src={'./imgs/film/' + item.image} alt={item.Name} />
-                </Link>
-                <div className="name">{item.Name}</div>
-                <button className={`position-absolute heart-item ${active}`} onClick={() => this.HandleFavourite(item.ID)}>
-                  {active === '' ? <icons.FaRegHeart /> : <icons.FaHeart />}
-                </button>
-              </div>
-            );
-          })}
-        </div>
+        
         <Swiper
           slidesPerView={1}
           spaceBetween={10}
@@ -187,17 +151,17 @@ class Films extends Component {
           }}
           
           breakpoints={{
-            640: {
+            450:{
               slidesPerView: 2,
-              spaceBetween: 20,
+            },
+            640: {
+              slidesPerView: 3,
             },
             768: {
               slidesPerView: 4,
-              spaceBetween: 40,
             },
             1024: {
               slidesPerView: 5,
-              spaceBetween: 50,
             },
           }}
           modules={[Autoplay]}
@@ -208,12 +172,12 @@ class Films extends Component {
 
             return (
               <SwiperSlide key={item.ID} className="item-film">
-                <div>{item.numberOfEpisodes} episodes</div>
+                <div className="episodes">{item.numberOfEpisodes} episodes</div>
                 <Link to="/detail" className="item-link">
                   <img className="logo" src={'./imgs/film/' + item.image} alt={item.Name} />
                 </Link>
-                <div className="name">{item.Name}</div>
-                <button className={`position-absolute heart-item ${active}`} onClick={() => this.HandleFavourite(item.ID)}>
+                <div className="title">{item.Name}</div>
+                <button className={` heart-item ${active}`} onClick={() => this.HandleFavourite(item.ID)}>
                   {active === '' ? <icons.FaRegHeart /> : <icons.FaHeart />}
                 </button>
               </SwiperSlide>

@@ -9,7 +9,7 @@ function SiteMap() {
         <ul>
           <li>
             <Link to="/" className="sitemap-link">
-              <h2> Phim hay</h2>
+              <h2> home</h2>
             </Link>
           </li>
           <li>

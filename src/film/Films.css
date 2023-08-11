@@ -6,10 +6,28 @@
     padding: 10px 20px 10px 50px;
     width: 70%;
   }
+  /* button .heart-item {
+    /* haha */
+    /* top: 25px !important;
+    position: absolute;
+    right: 34px !important;
+} */ 
 
+.episodes{
+  color: white;
+  font-size: 10px;
+  width: 63px;
+  height: 28px;
+  background: red;
+  border-radius: 5px;
+  padding: 6px;
+  top: 28px;
+  position: relative;
+}
   .input-search {
     position: relative;
   }
+  
 
   .search {
     position: absolute;
@@ -73,8 +91,9 @@
 }
 
 .heart-item {
-  top: 0;
-  right: 10px;
+  top: 28px !important;
+  position: absolute;
+  right: 45px !important;
   width: 30px;
   height: 30px;
   background-color: white;
@@ -87,4 +106,14 @@
 
 .heart-item.active {
   color: red;
+}
+
+.title{
+  background-color: rgb(112, 110, 110);
+  color: #fff;
+  padding: 6px;
+  font-size: 11px;
+  width:79%;
+  font-weight: 400;
+  bottom: 0;
 }
