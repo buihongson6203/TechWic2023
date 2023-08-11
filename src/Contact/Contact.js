@@ -28,7 +28,7 @@ const ContactUs = () => {
     <div className="contact-us-container">
       
       <div className="Contact">
-      <h2>Contact Us</h2>
+      <h2 className='tille'>Contact Us</h2>
         <form onSubmit={handleSubmit}>
             
                 <input

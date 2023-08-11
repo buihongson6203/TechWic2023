@@ -9,7 +9,7 @@ import { useState } from "react";
 // import About from "./About";
 import Films from "./film/Films";
 import Home from "./home/Home";
-import SiteMap from "./SiteMap";
+import SiteMap from "./SiteMap/SiteMap";
 import Contact from "./Contact/Contact";
 import Feedback from "./FeedBack/FeedBack";
 import PriceList from "./PriceList/PriceList";

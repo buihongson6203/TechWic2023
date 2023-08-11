@@ -68,6 +68,13 @@ p{
     font-size: 10px;
 
 }
+.date{
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    padding-bottom: 10px;
+    font-size: 12px;
+}
 .TitleSmall{
     padding: 15px;
 }
@@ -76,22 +83,37 @@ p{
     text-align: center;
     border-bottom: 1px solid #444444;
 }
+ .button-buy{
+    margin: 0 auto;
+    display: flex;
+    padding: 6px;
+    border-radius: 3px;
+    justify-content: center;
+    background: #000;
+    border: 1px solid yellow;
+    margin-bottom: 20px;
+    cursor: pointer;
+} 
+.button-buy:hover{
+    background: yellow;
+    color: #000;
+}  
 
-.button{
+/* .button-buy{
 
     text-align: center;
-    padding: 10px;
-}
-.button button {
+    margin-bottom: 20px;
+} */
+/* .button-buy button {
 
     background: #000;
     border: 1px solid yellow;
     border-radius: 5px;
 }
-.button button:hover{
+.button-buy button:hover{
     background: yellow;
     color: #000;
-}
+} */ 
 
 
 span.swal2-success-line-tip {
@@ -104,13 +126,28 @@ span.swal2-success-line-long {
     top: 30px !important;
 }
 
+
+
+/* 
 .purchased {
     opacity: 0.4; 
-}
+  } */
+  
+  .not-purchased {
+    /* background-color: lightcoral;  */
+  }
+  
+
+
+
+
+
+
+
 @media (max-width:450px){
-    .ContainerPrice{
+    /* .ContainerPrice{
         margin-left: 40px;
-    }
+    } */
     .BlockSmall{
         flex-direction: column;
     }
@@ -121,9 +158,9 @@ span.swal2-success-line-long {
 
 
 @media (max-width:768px){
-    .ContainerPrice{
+    /* .ContainerPrice{
         margin-left: 40px;
-    }
+    } */
     .BlockSmall{
         flex-wrap: wrap;
     }
@@ -134,13 +171,16 @@ span.swal2-success-line-long {
 
 
 @media (max-width:991px){
-    .ContainerPrice{
+    /* .ContainerPrice{
         margin-left: 40px;
-    }
+    } */
     .BlockSmall{
         flex-wrap: wrap;
     }
     .Bundle{
         width: 280px;
     }
+}
+.tille-name{
+    color: #E50914;
 }

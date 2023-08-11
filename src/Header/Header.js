@@ -62,7 +62,7 @@ function Header() {
           </Link>
         </li>
         <li>
-          <Link to="/PriceList" className="item-link">
+          <Link to="/PriceList" className="item-link" onClick={closeMenu}>
             <div>PriceList</div>
           </Link>
         </li>

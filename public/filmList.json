@@ -100,7 +100,7 @@
   },
   {
     "ID": 11,
-    "Name": "What’s Wrong with Secretary Kim 2018",
+    "Name": "What’s Wrong with  ...",
     "image": "film13.webp",
     "cate_id": 4,
     "status": "Hot",
@@ -183,17 +183,16 @@
   },
   {
     "ID": 19,
-    "Name": "Moon Lovers: Scarlet Heart Ryeo",
+    "Name": "Moon Lovers: Scarlet...",
     "image": "film20.jpg",
     "cate_id": 4,
     "status": "upcoming",
     "episode": 33,
-
     "Description": "adwkhdka"
   },
   {
     "ID": 20,
-    "Name": "The moon embracing the sun",
+    "Name": "The moon embracing...",
     "image": "film21.avif",
     "cate_id": 2,
     "status": "upcoming",
@@ -203,7 +202,7 @@
   },
   {
     "ID": 21,
-    "Name": "Descendants of the Sun 2016",
+    "Name": "Descendants of the...",
     "image": "film22.jpg",
     "cate_id": 2,
     "status": "upcoming",

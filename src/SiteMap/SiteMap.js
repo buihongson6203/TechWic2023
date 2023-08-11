@@ -9,67 +9,32 @@ function SiteMap() {
         <ul>
           <li>
             <Link to="/" className="sitemap-link">
-              <h3> Phim hay</h3>
-             
+              <h2> Phim hay</h2>
             </Link>
           </li>
           <li>
-            <Link to="/films" className="link">
-              <p> Phim Âu Mỹ</p>
+            <Link to="/films" >
+              <p className="link"> Phim Âu Mỹ</p>
             </Link>
           </li>
           <li>
-            <Link to="/feedback" className="link">
-              <p> Phim Hàn Quốc</p>
+            <Link to="/feedback">
+              <p  className="link"> Phim Hàn Quốc</p>
             </Link>
           </li>
           <li>
-            <Link to="/contact" className="link">
-              <p> Phim Trung Quốc</p>
+            <Link to="/contact" >
+              <p className="link"> Phim Trung Quốc</p>
             </Link>
           </li>
           <li>
-            <Link to="/sitemap" className="link">
-              <p> Phim Nhật Bản</p>
+            <Link to="/sitemap" >
+              <p className="link"> Phim Nhật Bản</p>
             </Link>
           </li>
           <li>
-            <Link to="/sitemap" className="link">
-              <p> Phim Thái Lan</p>
-            </Link>
-          </li>
-        </ul>
-      </section>
-      <section className="info-section">
-        <ul>
-          <li>
-            <Link to="/" className="sitemap-link">
-              <h3> Thể loại </h3>
-            </Link>
-          </li>
-          <li>
-            <Link to="/films" className="link">
-              <p> Phim Âu Mỹ</p>
-            </Link>
-          </li>
-          <li>
-            <Link to="/feedback" className="link">
-              <p> Phim Hàn Quốc</p>
-            </Link>
-          </li>
-          <li>
-            <Link to="/contact" className="link">
-              <p> Phim Trung Quốc</p>
-            </Link>
-          </li>
-          <li>
-            <Link to="/sitemap" className="link">
-              <p> Phim Nhật Bản</p>
-            </Link>
-          </li>
-          <li>
-            <Link to="/sitemap" className="link">
-              <p> Phim Thái Lan</p>
+            <Link to="/sitemap" >
+              <p className="link"> Phim Thái Lan</p>
             </Link>
           </li>
         </ul>
@@ -78,32 +43,66 @@ function SiteMap() {
         <ul>
           <li>
             <Link to="/" className="sitemap-link">
-              <h3>Phim hay</h3>
+              <h2> Thể loại </h2>
             </Link>
           </li>
           <li>
-            <Link to="/films" className="link">
-              <p> Phim Âu Mỹ</p>
+            <Link to="/films" >
+              <p className="link"> Phim Âu Mỹ</p>
             </Link>
           </li>
           <li>
-            <Link to="/feedback" className="link">
-              <p> Phim Hàn Quốc</p>
+            <Link to="/feedback">
+              <p  className="link"> Phim Hàn Quốc</p>
             </Link>
           </li>
           <li>
-            <Link to="/contact" className="link">
-              <p> Phim Trung Quốc</p>
+            <Link to="/contact" >
+              <p className="link"> Phim Trung Quốc</p>
             </Link>
           </li>
           <li>
-            <Link to="/sitemap" className="link">
-              <p> Phim Nhật Bản</p>
+            <Link to="/sitemap" >
+              <p className="link"> Phim Nhật Bản</p>
             </Link>
           </li>
           <li>
-            <Link to="/sitemap" className="link">
-              <p> Phim Thái Lan</p>
+            <Link to="/sitemap" >
+              <p className="link"> Phim Thái Lan</p>
+            </Link>
+          </li>
+        </ul>
+      </section>
+      <section className="info-section">
+        <ul>
+          <li>
+            <Link to="/" className="sitemap-link">
+              <h2>Phim hay</h2>
+            </Link>
+          </li>
+          <li>
+            <Link to="/films" >
+              <p className="link"> Phim Âu Mỹ</p>
+            </Link>
+          </li>
+          <li>
+            <Link to="/feedback" >
+              <p className="link"> Phim Hàn Quốc</p>
+            </Link>
+          </li>
+          <li>
+            <Link to="/contact" >
+              <p className="link"> Phim Trung Quốc</p>
+            </Link>
+          </li>
+          <li>
+            <Link to="/sitemap" >
+              <p className="link" > Phim Nhật Bản</p>
+            </Link>
+          </li>
+          <li>
+            <Link to="/sitemap">
+              <p  className="link"> Phim Thái Lan</p>
             </Link>
           </li>
         </ul>
@@ -112,32 +111,32 @@ function SiteMap() {
         <ul>
           <li>
             <Link to="/" className="sitemap-link">
-              <h3>Phim mới</h3>
+              <h2>Phim mới</h2>
             </Link>
           </li>
           <li>
-            <Link to="/films" className="link">
-              <p> Phim Khoa Học</p>
+            <Link to="/films" >
+              <p className="link"> Phim Khoa Học</p>
             </Link>
           </li>
           <li>
-            <Link to="/feedback" className="link">
-              <p> Phim Kinh Dị</p>
+            <Link to="/feedback">
+              <p  className="link"> Phim Kinh Dị</p>
             </Link>
           </li>
           <li>
-            <Link to="/contact" className="link">
-              <p> Phim Chiếu Rạp</p>
+            <Link to="/contact" >
+              <p className="link"> Phim Chiếu Rạp</p>
             </Link>
           </li>
           <li>
-            <Link to="/sitemap" className="link">
-              <p> Phim Hình Sự</p>
+            <Link to="/sitemap">
+              <p  className="link"> Phim Hình Sự</p>
             </Link>
           </li>
           <li>
-            <Link to="/sitemap" className="link">
-              <p> Phim Hành Động</p>
+            <Link to="/sitemap" >
+              <p  className="link"> Phim Hành Động</p>
             </Link>
           </li>
         </ul>
