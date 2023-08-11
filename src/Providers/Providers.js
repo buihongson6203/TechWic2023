@@ -155,7 +155,7 @@ function Providers() {
                 Close
               </button>
               <button type="button" className="btn btn-primary" onClick={saveChanges}>
-                Save changes
+                Save 
               </button>
             </div>
           </div>
@@ -207,7 +207,7 @@ function Providers() {
                 Close
               </button>
               <button type="button" className="btn btn-primary" onClick={addProvider}>
-                Add Provider
+                Add 
               </button>
             </div>
           </div>
