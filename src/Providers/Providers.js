@@ -38,11 +38,7 @@ function Providers() {
               <td>{entry.ID}</td>
               <td>{entry.Name}</td>
               <td>
-<<<<<<< HEAD
-              <img className="logo2" src={"./imgs/film/" + entry.logo} alt={entry.Name} />
-=======
                 <img className="logo" src={"./imgs/film/" + entry.logo} alt={entry.Name} />
->>>>>>> b01dd6c045c11d51fb877a824b1c0aa20263662c
               </td>
               <td>
                 <a href={entry.url} target="_blank" rel="noopener noreferrer">

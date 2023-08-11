@@ -68,6 +68,13 @@ p{
     font-size: 10px;
 
 }
+.date{
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    padding-bottom: 10px;
+    font-size: 12px;
+}
 .TitleSmall{
     padding: 15px;
 }
@@ -121,10 +128,10 @@ span.swal2-success-line-long {
 
 
 
-
+/* 
 .purchased {
     opacity: 0.4; 
-  }
+  } */
   
   .not-purchased {
     /* background-color: lightcoral;  */
