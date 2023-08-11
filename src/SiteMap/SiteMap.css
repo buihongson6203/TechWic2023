@@ -61,6 +61,7 @@ p:hover {
 .top-section {
   display: flex;
   width: 100%;
+  background-color: #181616;
   justify-content: space-evenly;
   flex-wrap: wrap;
   align-items: center;
