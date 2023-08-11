@@ -36,7 +36,7 @@ function DetailFilm(props) {
       <div className="detail" key={plan.ID}>
         <div className="image">
           <img
-            src={plan.linkimage}
+            src={'../imgs/film/' + plan.image}
             alt={plan.Name}
             className="img-big"
           />
