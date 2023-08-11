@@ -3,6 +3,15 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import axios from 'axios';
 import "./Films.css";
 import * as icons from 'react-icons/fa';
+
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/pagination';
+// import required modules
+import {Autoplay } from 'swiper/modules';
+
 class Films extends Component {
   constructor(props) {
     super(props);
@@ -133,7 +142,7 @@ class Films extends Component {
           <div className="col-6 row">
             <div className="col-6">
               <select className="form-control" id="movie-type" onChange={this.handleCateSearchChange}>
-                <option value="0">All</option>
+                <option value="0">genres</option>
                 {this.state.categories.map(category => (
                   <option key={category.ID} value={category.ID}>{category.Name}</option>
                 ))}
@@ -158,7 +167,7 @@ class Films extends Component {
             return (
               <div key={item.ID} className="item-film">
                 <div className="title">{item.numberOfEpisodes} episodes</div>
-                <Link to="/detail" className="item-link" >
+                <Link to={`/detail/${item.ID}`} className="item-link" >
                   <img className="logo" src={'./imgs/film/' + item.image} alt={item.Name} />
                 </Link>
                 <div className="name">{item.Name}</div>
@@ -169,6 +178,48 @@ class Films extends Component {
             );
           })}
         </div>
+        <Swiper
+          slidesPerView={1}
+          spaceBetween={10}
+          autoplay={{
+            delay: 2500,
+            disableOnInteraction: false,
+          }}
+          
+          breakpoints={{
+            640: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            768: {
+              slidesPerView: 4,
+              spaceBetween: 40,
+            },
+            1024: {
+              slidesPerView: 5,
+              spaceBetween: 50,
+            },
+          }}
+          modules={[Autoplay]}
+          className="mySwiper"
+        >
+          {filteredMovies.map((item) => {
+            let active = this.state.fav_film.includes(item.ID) ? 'active' : '';
+
+            return (
+              <SwiperSlide key={item.ID} className="item-film">
+                <div>{item.numberOfEpisodes} episodes</div>
+                <Link to="/detail" className="item-link">
+                  <img className="logo" src={'./imgs/film/' + item.image} alt={item.Name} />
+                </Link>
+                <div className="name">{item.Name}</div>
+                <button className={`position-absolute heart-item ${active}`} onClick={() => this.HandleFavourite(item.ID)}>
+                  {active === '' ? <icons.FaRegHeart /> : <icons.FaHeart />}
+                </button>
+              </SwiperSlide>
+            );
+          })}
+        </Swiper>
       </div>
     );
   }
