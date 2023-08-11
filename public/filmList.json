@@ -1,4 +1,4 @@
- [
+[
   {
     "ID": 1,
     "Name": "How i met your mother",
@@ -89,7 +89,7 @@
   },
   {
     "ID": 11,
-    "Name": "What’s Wrong with Secretary Kim 2018",
+    "Name": "What’s Wrong Kim 2018",
     "image": "film13.webp",
     "cate_id": 4,
     "status": "Hot",
@@ -161,7 +161,7 @@
   },
   {
     "ID": 19,
-    "Name": "Moon Lovers: Scarlet Heart Ryeo",
+    "Name": "Moon Lovers: Scarlet ",
     "image": "film20.jpg",
     "cate_id": 4,
     "status": "upcoming",
@@ -211,5 +211,3 @@
     "Description": "Secret Love is one of the top best Korean films about emotional love, making many viewers fall in love at first sight. The story revolves around the risky love between Lee Sun Jae, Lee Sun Jae, and Lee Sun Jae. a young pilot, and Oh Hye Won, who helped him realize his natural musical abilities."
   }
  ]
- 
-

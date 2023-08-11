@@ -139,7 +139,7 @@ class Films extends Component {
           <div className="col-6 row">
             <div className="col-6">
               <select className="form-control" id="movie-type" onChange={this.handleCateSearchChange}>
-                <option value="0">All</option>
+                <option value="0">genres</option>
                 {this.state.categories.map(category => (
                   <option key={category.ID} value={category.ID}>{category.Name}</option>
                 ))}
@@ -164,7 +164,7 @@ class Films extends Component {
             return (
               <div key={item.ID} className="item-film">
                 <div className="title">{item.numberOfEpisodes} episodes</div>
-                <Link to="/detail" className="item-link" >
+                <Link to={`/detail/${item.ID}`} className="item-link" >
                   <img className="logo" src={'./imgs/film/' + item.image} alt={item.Name} />
                 </Link>
                 <div className="name">{item.Name}</div>
