@@ -1,9 +1,8 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import axios from 'axios';
 import "./Films.css";
 import * as icons from 'react-icons/fa';
-
 class Films extends Component {
   constructor(props) {
     super(props);
@@ -32,16 +31,16 @@ class Films extends Component {
     });
   }
 
-  normalizeString = (str) => {
-    return str.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, ''); // Chuyển thành chữ thường và loại bỏ dấu
-  }
-
   filterFilms = () => {
     const { films, cateSearch, search, sortByLetter } = this.state;
+    //IF NOT SEARCH OR FILTER, RETURNS ALL THE FILMS
+    // if (search === '') {
+    //   return films;
+    // }
 
     let filteredMovies = films.filter(movie =>
       (cateSearch === 0 || movie.cate_id === cateSearch) &&
-      this.normalizeString(movie.Name).includes(this.normalizeString(search))
+      movie.Name.toLowerCase().includes(search.toLowerCase())
     );
 
     if (sortByLetter === 'alphabetical') {
@@ -102,8 +101,7 @@ class Films extends Component {
   handleSearch = (event) => {
     if (event.key === 'Enter') {
       const { value } = event.target;
-      const normalizedSearch = this.normalizeString(value);
-      this.setState({ search: normalizedSearch });
+      this.setState({ search: value });
     }
   }
 
@@ -115,13 +113,15 @@ class Films extends Component {
     } else {
       fav_films.push(ID);
     }
-    console.log(fav_films);
-    localStorage.setItem('fav_films', JSON.stringify(fav_films))
+    this.props.setSharedFavFilmsState(fav_films);
+  
     this.setState({
       fav_film: fav_films
     });
-  }
+    window.dispatchEvent( new Event('storage') )
+    localStorage.setItem('fav_films', JSON.stringify(fav_films))
 
+  }
 
 
   render() {
