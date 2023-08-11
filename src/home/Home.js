@@ -26,7 +26,7 @@ function Home() {
         <div className="wrapper-film">
           {hotFilms.map((item) => (
             <div className="item-film" key={item.ID}>
-              <div className="title">{item.Name}</div>
+              <div className="title">{item.episode} episode</div>
               <img className="logo" src={"./imgs/film/" + item.image} alt={item.Name} />
               <div className="name">{item.Name}</div>
             </div>
@@ -38,7 +38,7 @@ function Home() {
         <div className="wrapper-film">
           {newFilms.map((item) => (
             <div className="item-film" key={item.ID}>
-              <div className="title">{item.Name}</div>
+              <div className="title">{item.episode} episode</div>
               <img className="logo" src={"./imgs/film/" + item.image} alt={item.Name} />
               <div className="name">{item.Name}</div>
             </div>
@@ -50,7 +50,7 @@ function Home() {
         <div className="wrapper-film">
           {upcomingFilms.map((item) => (
             <div className="item-film" key={item.ID}>
-              <div className="title">{item.Name}</div>
+              <div className="title">{item.episode} episode</div>
               <img className="logo" src={"./imgs/film/" + item.image} alt={item.Name} />
               <div className="name">{item.Name}</div>
             </div>

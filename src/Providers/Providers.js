@@ -1,16 +1,16 @@
-
 import React, { useState, useEffect } from "react";
-import axios from "axios"; // Import axios for making API requests
+import axios from "axios";
 import "./Providers.css";
+import { FaEdit, FaTrash } from 'react-icons/fa';
 
-function Providers() { // Component names should start with an uppercase letter
-  const [providers, setProviders] = useState([]); // State should be named 'providers', not 'provider'
+function Providers() {
+  const [providers, setProviders] = useState([]);
 
   useEffect(() => {
     axios
       .get("/streamingProvider.json")
       .then((response) => {
-        setProviders(response.data); // Corrected variable name
+        setProviders(response.data);
       })
       .catch((error) => {
         console.error("Error fetching providers:", error);
@@ -19,27 +19,43 @@ function Providers() { // Component names should start with an uppercase letter
 
   return (
     <div className="container">
-      <table className="table table-dark table-hover"> {/* 'class' should be 'className' */}
-        <thead>
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">Name</th>
-            <th scope="col">Logo</th>
-            <th scope="col">Link</th> {/* Changed from 'Img' to 'Link' */}
+      <button className="btn-addnew">
+      <a className="link-addnew" href="#">Add new</a>
+      </button>
+      <table className="providers-table">
+        <thead className="status">
+          <tr >
+            <th>STT</th>
+            <th>Name</th>
+            <th>Logo</th>
+            <th>Link</th>
+            <th>Actions</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody className="titlle" >
           {providers.map((entry, index) => (
             <tr key={entry.ID}>
-              <th scope="row">{entry.ID}</th>
+              <td>{entry.ID}</td>
               <td>{entry.Name}</td>
               <td>
+<<<<<<< HEAD
               <img className="logo2" src={"./imgs/film/" + entry.logo} alt={entry.Name} />
+=======
+                <img className="logo" src={"./imgs/film/" + entry.logo} alt={entry.Name} />
+>>>>>>> b01dd6c045c11d51fb877a824b1c0aa20263662c
               </td>
               <td>
                 <a href={entry.url} target="_blank" rel="noopener noreferrer">
                   Link
                 </a>
+              </td>
+              <td className="btn-all">
+                <button type="button" className="btn btn-secondary">
+                  <FaEdit />
+                </button>
+                <button type="button" className="btn btn-secondary">
+                  <FaTrash />
+                </button>
               </td>
             </tr>
           ))}
@@ -49,4 +65,4 @@ function Providers() { // Component names should start with an uppercase letter
   );
 }
 
-export default Providers; // Make sure to export the corrected component name
+export default Providers;

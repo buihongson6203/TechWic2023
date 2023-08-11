@@ -157,7 +157,7 @@ class Films extends Component {
 
             return (
               <div key={item.ID} className="item-film">
-                <div className="title">{item.numberOfEpisodes} episodes</div>
+                <div className="title">{item.episode} episodes</div>
                 <Link to="/detail" className="item-link" >
                   <img className="logo" src={'./imgs/film/' + item.image} alt={item.Name} />
                 </Link>

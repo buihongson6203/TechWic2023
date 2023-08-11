@@ -1,11 +1,12 @@
 [
   {
     "ID": 1,
-    "Name": "How i met your mother",
+    "Name": "How I Met Your Mother",
     "image": "film1.jpg",
     "cate_id": 3,
     "status": "new",
-    "Description": "The story is told by the main character - Ted Mosby to his two children about the love story of their parents. When he was 27, Ted felt like getting married after his roommate Marshall became engaged to his best friend from college, Lily after nine years of dating. With the help of 'sex expert' Barney, Ted has embarked on a search for his \"half\". The movie is extremely funny and a great resource for learning to speak English."
+    "episode": 12,
+    "Description": "The story is told by the main character - Ted Mosby to his two children about the love story of their parents. When he was 27, Ted felt like getting married after his roommate Marshall became engaged to his best friend from college, Lily after nine years of dating. With the help of 'sex expert' Barney, Ted has embarked on a search for his 'half'. The movie is extremely funny and a great resource for learning to speak English."
   },
   {
     "ID": 2,
@@ -13,7 +14,7 @@
     "image": "film2.jpg",
     "cate_id": 1,
     "status": "new",
-
+    "episode": 25,
     "Description": "The film revolves around a trio of close friends Eren Jaeger, Mikasa Ackerman and Armin Arlert on their journey to fight against cannibal Titans. In a surprise attack by the Great Shaped Giant, the outermost layer of Maria that protected humans from the Titans was destroyed, the Titans massively invaded the Shiganshina district."
   },
   {
@@ -22,7 +23,8 @@
     "image": "film3.jpg",
     "cate_id": 4,
     "status": "new",
-
+    "episode": 4,
+    
     "Description": "adwkhdka"
   },
   {
@@ -31,6 +33,7 @@
     "image": "film4.jpg",
     "cate_id": 2,
     "status": "new",
+    "episode": 21,
 
     "Description": "klwhdalkdw"
   },
@@ -40,6 +43,7 @@
     "image": "film5.jpg",
     "cate_id": 2,
     "status": "new",
+    "episode": 21,
 
     "Description": "klwhdavhulkdw"
   },
@@ -49,6 +53,7 @@
     "image": "film6.jpg",
     "cate_id": 2,
     "status": "new",
+    "episode": 21,
 
     "Description": "klwhdalkdw"
   },
@@ -58,6 +63,7 @@
     "image": "film7.jpg",
     "cate_id": 2,
     "status": "new",
+    "episode": 34,
 
     "Description": "klwhdalkdw"
   },
@@ -67,6 +73,8 @@
     "image": "film8.jpg",
     "cate_id": 2,
     "status": "new",
+    "episode": 27,
+
     "Description": "klwhdalkdw"
   },
 
@@ -76,6 +84,8 @@
     "image": "film12.jpg",
     "cate_id": 3,
     "status": "Hot",
+    "episode": 23,
+
     "Description": "The Big Bang Theory - Season 12 là bộ phim kể về Một người phụ nữ mới đến ở một h/căn hộ đối diện với hai nhà vật lý xuất sắc nhưng vụng về về mặt xã hội cho họ thấy họ biết rất ít về cuộc sống bên ngoài phòng thí nghiệm."
   },
   {
@@ -84,6 +94,7 @@
     "image": "film11.jpg",
     "cate_id": 1,
     "status": "Hot",
+    "episode": 24,
 
     "Description": "The film revolves around a trio of close friends Eren Jaeger, Mikasa Ackerman and Armin Arlert on their journey to fight against cannibal Titans. In a surprise attack by the Great Shaped Giant, the outermost layer of Maria that protected humans from the Titans was destroyed, the Titans massively invaded the Shiganshina district."
   },
@@ -93,6 +104,7 @@
     "image": "film13.webp",
     "cate_id": 4,
     "status": "Hot",
+    "episode": 21,
 
     "Description": "adwkhdka"
   },
@@ -102,6 +114,8 @@
     "image": "film12.webp",
     "cate_id": 2,
     "status": "Hot",
+    "episode": 31,
+
     "Description": "klwhdalkdw"
   },
   {
@@ -110,6 +124,8 @@
     "image": "film14.webp",
     "cate_id": 2,
     "status": "Hot",
+    "episode": 12,
+
     "Description": "You Came From the Stars is rated as the best-selling Korean romantic drama of all time, with excellent script and acting, ranking in the list of the best romantic and comedy films. Korea."
   },
   {
@@ -118,6 +134,7 @@
     "image": "film15.jpg",
     "cate_id": 2,
     "status": "Hot",
+    "episode": 21,
 
     "Description": "klwhdalkdw"
   },
@@ -127,6 +144,7 @@
     "image": "film16.webp",
     "cate_id": 2,
     "status": "Hot",
+    "episode": 11,
 
     "Description": "klwhdalkdw"
   },
@@ -136,9 +154,10 @@
     "image": "film17.webp",
     "cate_id": 2,
     "status": "Hot",
+    "episode": 41,
+
     "Description": "klwhdalkdw"
   },
-
 
 
 
@@ -148,6 +167,8 @@
     "image": "film18.jpg",
     "cate_id": 3,
     "status": "upcoming",
+    "episode": 21,
+
     "Description": "Love Alarm is a Korean school drama set in a world that uses a smart app called Love Alarm. This application allows users to detect people who like them within a radius of 10 km."
   },
   {
@@ -156,6 +177,7 @@
     "image": "film19.webp",
     "cate_id": 1,
     "status": "upcoming",
+    "episode": 35,
 
     "Description": "Hospital Playlist 2, the best Korean psychological drama about love, most prominent in 2021, is still causing a fever with the audience and cannot leave the top 10 list of good movies on Netflix."
   },
@@ -165,6 +187,7 @@
     "image": "film20.jpg",
     "cate_id": 4,
     "status": "upcoming",
+    "episode": 33,
 
     "Description": "adwkhdka"
   },
@@ -174,6 +197,8 @@
     "image": "film21.avif",
     "cate_id": 2,
     "status": "upcoming",
+    "episode": 30,
+
     "Description": "The Moon Embracing the Sun is one of the famous Korean romantic movies not to be missed. With a combination of romantic and historical plot, the film has captured the hearts of the audience."
   },
   {
@@ -182,6 +207,8 @@
     "image": "film22.jpg",
     "cate_id": 2,
     "status": "upcoming",
+    "episode": 27,
+
     "Description": "After completing his military service, Song Jong Ki returned to the small screen with the hit Korean romantic drama Descendants of the Sun, which quickly became a phenomenon throughout Asia."
   },
   {
@@ -190,24 +217,28 @@
     "image": "film23.jpg",
     "cate_id": 2,
     "status": "upcoming",
+    "episode": 21,
 
     "Description": "Sassy Girl - Sassy Girl is in the top of the best Korean movies about love, emotional humor based on a true story that is popular on the internet. When the boy Kyun Woo, innocent and a bit goofy, runs into a drunken sassy girl."
   },
   {
     "ID": 23,
-    "Name": " Reply 1988",
+    "Name": "Reply 1988",
     "image": "film24.jpg",
     "cate_id": 2,
     "status": "upcoming",
-
+    "episode": 20,
     "Description": "The movie Reply 1988 directed by Shin Won Ho continues to delight TV viewers after the success of Reply 1997 and Reply 1994. This is not just a love triangle between Sung Duk-sun and two friends. Kim Jung-hwan and Choi Taek in the Sang Mun Dong neighborhood, but also a meaningful family love work about neighborliness and humanity."
   },
   {
     "ID": 24,
-    "Name": "Secret love affair",
+    "Name": "Secret Love Affair",
     "image": "film25.jpg",
     "cate_id": 2,
     "status": "upcoming",
-    "Description": "Secret Love is one of the top best Korean films about emotional love, making many viewers fall in love at first sight. The story revolves around the risky love between Lee Sun Jae, Lee Sun Jae, and Lee Sun Jae. a young pilot, and Oh Hye Won, who helped him realize his natural musical abilities."
+    "episode": 16,
+    "Description": "Secret Love is one of the top best Korean films about emotional love, making many viewers fall in love at first sight. The story revolves around the risky love between Lee Sun Jae, a young pianist, and Oh Hye Won, who helped him realize his natural musical abilities."
   }
 ]
+
+
