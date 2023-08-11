@@ -20,6 +20,14 @@ h1{
   display: flex;
   flex-wrap: wrap;
 }
+.logo-slider{
+  width: 18rem;
+  height: 22rem;
+  object-fit: cover;
+}
+.container-home{
+  padding-top: 150px;
+}
 .active {
   color: white;
 }
@@ -146,15 +154,6 @@ span.swal2-success-line-long {
       width: 280px;
   }
 }
-<<<<<<< HEAD
-}
-@media(max-width: 586px){
-  .logo{
-    width: 120px;
-    height: 260px;
-  }
-  }
-=======
 
 
 @media (max-width:991px){
@@ -168,4 +167,3 @@ span.swal2-success-line-long {
       width: 280px;
   }
 }
->>>>>>> longbranch
