@@ -13,6 +13,9 @@
           padding: 10px 20px;
         }
     }
+    .favfilm{
+      color: white;
+    }
     .wrapper-film {
         display: flex;
         padding-bottom: 50px;
@@ -26,7 +29,7 @@
         .item-film {
             position: relative;
           .logo {
-            width: 160px;
+            width: 200px;
             height: 269px;
             object-fit: cover;
           }

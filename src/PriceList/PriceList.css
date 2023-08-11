@@ -98,7 +98,10 @@ p{
     background: yellow;
     color: #000;
 }  
-
+.price{
+    color: white;
+    margin-bottom: 50px;
+}
 /* .button-buy{
 
     text-align: center;

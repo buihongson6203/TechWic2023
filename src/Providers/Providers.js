@@ -65,6 +65,7 @@ function Providers() {
 
   return (
     <div className="container">
+      <h1 className="provider"> Stream Providers</h1>
       <button className="btn-addnew"
         data-bs-toggle="modal"
         data-bs-target="#addprovider">
@@ -155,7 +156,7 @@ function Providers() {
                 Close
               </button>
               <button type="button" className="btn btn-primary" onClick={saveChanges}>
-                Save changes
+                Save 
               </button>
             </div>
           </div>
@@ -165,7 +166,7 @@ function Providers() {
         <div className="modal-dialog">
           <div className="modal-content">
             <div className="modal-header">
-              <h1 className="modal-title fs-5" id="exampleModalLabel">Add Provider</h1>
+              <h1 className="modal-title fs-5" id="exampleModalLabel">Add </h1>
               <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div className="modal-body">
@@ -207,7 +208,7 @@ function Providers() {
                 Close
               </button>
               <button type="button" className="btn btn-primary" onClick={addProvider}>
-                Add Provider
+                Add 
               </button>
             </div>
           </div>

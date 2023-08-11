@@ -10,7 +10,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 // import required modules
-import {Autoplay } from 'swiper/modules';
+import { Autoplay } from 'swiper/modules';
 
 class Films extends Component {
   constructor(props) {
@@ -24,7 +24,7 @@ class Films extends Component {
       fav_film: []
     }
   }
-  
+
 
   handleCateSearchChange = (event) => {
     let { value } = event.target;
@@ -123,11 +123,11 @@ class Films extends Component {
       fav_films.push(ID);
     }
     this.props.setSharedFavFilmsState(fav_films);
-  
+
     this.setState({
       fav_film: fav_films
     });
-    window.dispatchEvent( new Event('storage') )
+    window.dispatchEvent(new Event('storage'))
     localStorage.setItem('fav_films', JSON.stringify(fav_films))
 
   }
@@ -157,27 +157,9 @@ class Films extends Component {
           </div>
           <div className="col-6 input-search">
             <input className="form-control input1" type="text" placeholder="Search film..." onKeyDown={this.handleSearch} />
-            <icons.FaSearch className="search"/>
+            <icons.FaSearch className="search" />
           </div>
         </div>
-        {/* <div className="wrapper-film">
-          {filteredMovies.map((item) => {
-            let active = this.state.fav_film.includes(item.ID) ? 'active' : '';
-
-            return (
-              <div key={item.ID} className="item-film">
-                <div className="title">{item.numberOfEpisodes} episodes</div>
-                <Link to={`/detail/${item.ID}`} className="item-link" >
-                  <img className="logo" src={'./imgs/film/' + item.image} alt={item.Name} />
-                </Link>
-                <div className="name">{item.Name}</div>
-                <button className={`position-absolute heart-item ${active}`} onClick={() => this.HandleFavourite(item.ID)}>
-                  {active === '' ? <icons.FaRegHeart /> : <icons.FaHeart />}
-                </button>
-              </div>
-            );
-          })}
-        </div> */}
         <Swiper
           slidesPerView={1}
           spaceBetween={10}
@@ -185,19 +167,19 @@ class Films extends Component {
             delay: 2500,
             disableOnInteraction: false,
           }}
-          
+
           breakpoints={{
             640: {
               slidesPerView: 2,
-              spaceBetween: 20,
+              // spaceBetween: 20,
             },
             768: {
               slidesPerView: 4,
-              spaceBetween: 40,
+              // spaceBetween: 40,
             },
             1024: {
               slidesPerView: 5,
-              spaceBetween: 50,
+              // spaceBetween: 50,
             },
           }}
           modules={[Autoplay]}
@@ -208,14 +190,16 @@ class Films extends Component {
 
             return (
               <SwiperSlide key={item.ID} className="item-film">
-                <div className="tap">{item.numberOfEpisodes} episodes</div>
-                <Link to="/detail" className="item-link">
-                  <img className="logo-slider" src={'./imgs/film/' + item.image} alt={item.Name} />
-                </Link>
-                <div className="name">{item.Name}</div>
-                <button className={`position-absolute heart-itemm ${active}`} onClick={() => this.HandleFavourite(item.ID)}>
-                  {active === '' ? <icons.FaRegHeart /> : <icons.FaHeart />}
-                </button>
+                <div className="item-inner poisiton-relative">
+                  <div className="tap">{item.numberOfEpisodes} episodes</div>
+                  <Link to={`/detail/${item.ID}`} className="item-link">
+                    <img className="logo-slider" src={'./imgs/film/' + item.image} alt={item.Name} />
+                  </Link>
+                  <div className="name">{item.Name} <strong className="red">({item.streamingProvider})</strong></div>
+                  <button className={`position-absolute heart-itemm ${active}`} onClick={() => this.HandleFavourite(item.ID)}>
+                    {active === '' ? <icons.FaRegHeart /> : <icons.FaHeart />}
+                  </button>
+                </div>
               </SwiperSlide>
             );
           })}

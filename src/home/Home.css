@@ -3,42 +3,79 @@
   margin: 0 auto;
   background-color: #181616;
   background: #181616;
-  .item-film .item-inner{
-    padding: 0px 15px;
+
+  .item-film .item-inner {
+    padding: 0px 7.5px;
   }
+
+  .home {
+    color: white;
+  }
+
   .phim-hot {
     font-size: 22px;
     font-weight: 600;
     color: rgb(207, 98, 58);
     padding-bottom: 30px;
   }
-  .logo-slider{
-    width: 100%;
-    height: 20rem;
-    object-fit: cover;
+
+  .logo-wrap {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    padding-top: 100%;
   }
-  .swiper-wrapper{
+
+  .logo-slider {
+    /* width: 100%;
+    height: 20rem;
+    object-fit: cover; */
+    width: 100%;
+    transition: all 0.35s ease-out 0s;
+    -webkit-transition: all 0.35s ease-out 0s;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    object-fit: cover;
+    margin: auto;
+  }
+
+  .swiper-wrapper {
     padding-bottom: 10px;
   }
-  .name{
+
+  .name {
     color: #fff;
     font-size: 14px;
     padding-top: 10px;
+    position: absolute;
+    background-color: rgb(112, 110, 110);
+    color: #fff;
+    padding: 6px;
+    width: calc(100% - 15px);
+    font-weight: 400;
+    bottom: 0;
   }
+
   .wrapper-film {
     display: flex;
     align-items: center;
     justify-content: space-between;
     overflow: hidden;
     padding-bottom: 50px;
-    gap:15px;
+    gap: 15px;
+
     .item-film {
-        position: relative;
+      position: relative;
+
       .logo {
         width: 160px;
         height: 269px;
         object-fit: cover;
       }
+
       .title {
         position: absolute;
         background-color: red;
@@ -48,7 +85,8 @@
         font-weight: 400;
         border-radius: 5px;
       }
-      .name{
+
+      .name {
         position: absolute;
         background-color: rgb(112, 110, 110);
         color: #fff;
@@ -61,18 +99,25 @@
     }
   }
 }
-@media(max-width: 768px){
-.container-home{
-  padding: 150px 50px;
-  .wrapper-film{
-    gap:10px;
-    overflow-x: scroll;
+
+@media(max-width: 768px) {
+  .container-home {
+    padding: 150px 50px;
+
+    .wrapper-film {
+      gap: 10px;
+      overflow-x: scroll;
+    }
   }
 }
-}
-@media(max-width: 586px){
-  .logo{
+
+@media(max-width: 586px) {
+  .logo {
     width: 120px;
     height: 260px;
   }
-  }
+}
+
+.red {
+  color: red;
+}
