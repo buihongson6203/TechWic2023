@@ -17,7 +17,8 @@
         display: flex;
         padding-bottom: 50px;
         align-items: center;
-        overflow: hidden;
+        /* overflow: hidden; */
+        overflow-x: scroll;
         padding-bottom: 50px;
         justify-content: flex-start;
         gap:15px;

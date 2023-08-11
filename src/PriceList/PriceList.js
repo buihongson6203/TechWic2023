@@ -104,11 +104,11 @@ class PriceList extends Component {
                                     <div className="button">
                                        
                                         {userPurchasedPlansNetflix.includes(plan.ID) ? (
-                                            <button type="button" disabled>
+                                            <button type="button" className='button-buy' disabled>
                                                 {plan.button}
                                             </button>
                                         ) : (
-                                            <button type="button" onClick={() => this.handleSendClick(plan.ID)}>
+                                            <button type="button" className='button-buy' onClick={() => this.handleSendClick(plan.ID)}>
                                                 buy
                                             </button>
                                         )}
@@ -155,11 +155,11 @@ class PriceList extends Component {
                                     <div className="button">
                                        
                                         {userPurchasedPlansHbomax.includes(plan.ID) ? (
-                                            <button type="button" disabled>
+                                            <button type="button" className='button-buy' disabled>
                                                 {plan.button}
                                             </button>
                                         ) : (
-                                            <button type="button" onClick={() => this.handleSendClick(plan.ID)}>
+                                            <button type="button" className='button-buy' onClick={() => this.handleSendClick(plan.ID)}>
                                                 buy
                                             </button>
                                         )}
@@ -212,11 +212,11 @@ class PriceList extends Component {
                                     <div className="button">
                                        
                                         {userPurchasedPlansDisney.includes(plan.ID) ? (
-                                            <button type="button" disabled>
+                                            <button type="button" className='button-buy' disabled>
                                                 {plan.button}
                                             </button>
                                         ) : (
-                                            <button type="button" onClick={() => this.handleSendClick(plan.ID)}>
+                                            <button type="button" className='button-buy' onClick={() => this.handleSendClick(plan.ID)}>
                                                 buy
                                             </button>
                                         )}

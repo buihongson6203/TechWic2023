@@ -55,3 +55,9 @@
   }
 }
 }
+@media(max-width: 586px){
+  .logo{
+    width: 120px;
+    height: 260px;
+  }
+  }

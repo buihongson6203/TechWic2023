@@ -34,7 +34,7 @@ function Providers() { // Component names should start with an uppercase letter
               <th scope="row">{entry.ID}</th>
               <td>{entry.Name}</td>
               <td>
-              <img className="logo" src={"./imgs/film/" + entry.logo} alt={entry.Name} />
+              <img className="logo2" src={"./imgs/film/" + entry.logo} alt={entry.Name} />
               </td>
               <td>
                 <a href={entry.url} target="_blank" rel="noopener noreferrer">
