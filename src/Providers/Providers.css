@@ -24,7 +24,7 @@
     background-color: #f2f2f2;
 }
 
-.logo {
+.logo-prv {
     max-width: 150px;
 }
 
@@ -76,7 +76,4 @@
 .link-addnew{
     color: white;
     text-decoration: none;
-}
-.mb-1{
-    color: #000;
 }
