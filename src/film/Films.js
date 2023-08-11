@@ -1,16 +1,19 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import axios from 'axios';
-import "./Films.css";
+
 import * as icons from 'react-icons/fa';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 
+
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
+
 // import required modules
 import {Autoplay } from 'swiper/modules';
+import './Films.css';
 
 class Films extends Component {
   constructor(props) {
@@ -187,17 +190,17 @@ class Films extends Component {
           }}
           
           breakpoints={{
-            640: {
+            450:{
               slidesPerView: 2,
-              spaceBetween: 20,
+            },
+            640: {
+              slidesPerView: 3,
             },
             768: {
               slidesPerView: 4,
-              spaceBetween: 40,
             },
             1024: {
               slidesPerView: 5,
-              spaceBetween: 50,
             },
           }}
           modules={[Autoplay]}

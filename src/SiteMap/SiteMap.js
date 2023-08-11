@@ -9,7 +9,7 @@ function SiteMap() {
         <ul>
           <li>
             <Link to="/" className="sitemap-link">
-              <h2> Phim hay</h2>
+              <h2> home</h2>
             </Link>
           </li>
           <li>
@@ -42,35 +42,31 @@ function SiteMap() {
       <section className="info-section">
         <ul>
           <li>
-            <Link to="/" className="sitemap-link">
-              <h2> Thể loại </h2>
+            <Link to="/films" className="sitemap-link">
+              <h2> Genres </h2>
             </Link>
           </li>
           <li>
             <Link to="/films" >
-              <p className="link"> Phim Âu Mỹ</p>
+              <p className="link"> Actions</p>
             </Link>
           </li>
           <li>
             <Link to="/feedback">
-              <p  className="link"> Phim Hàn Quốc</p>
+              <p  className="link"> Anime</p>
             </Link>
           </li>
           <li>
             <Link to="/contact" >
-              <p className="link"> Phim Trung Quốc</p>
+              <p className="link"> TV Shows</p>
             </Link>
           </li>
           <li>
             <Link to="/sitemap" >
-              <p className="link"> Phim Nhật Bản</p>
+              <p className="link"> Horror</p>
             </Link>
           </li>
-          <li>
-            <Link to="/sitemap" >
-              <p className="link"> Phim Thái Lan</p>
-            </Link>
-          </li>
+          
         </ul>
       </section>
       <section className="info-section">
