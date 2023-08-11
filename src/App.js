@@ -51,9 +51,9 @@ function App() {
             <Route exact path="/contact" element={<Contact />} />
             <Route exact path="/sitemap" element={<SiteMap />} />
             <Route exact path="/PriceList" element={<PriceList />} />
-            <Route exact path="/detail" element={<DetailFilm />} />
             <Route exact path="/providers" element={<Providers />} />
-            <Route exact path="/fav" element={<FavFilms setSharedFavFilmsState={setSharedFavFilmsState} />} />
+            <Route exact path="/fav" element={<FavFilms   setSharedFavFilmsState={setSharedFavFilmsState} />} />
+            <Route exact path="/detail/:id" element={<DetailFilm />} />
           </Routes>
 
         </div>

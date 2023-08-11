@@ -1,59 +1,152 @@
-.container-home {
-  padding: 150px 100px;
-  margin: 0 auto;
+.BlockSmall{
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+h1{
+  text-align: center;
+  color: blueviolet;
+  margin-bottom: 20px;
+}
+.price-list{
+  margin-top: 130px;
+}
+.ContainerPrice{
+  width: 100%;
+  padding: 20px;
+  padding-bottom: 50px;
+  justify-content: center;
   background-color: #181616;
-  background: #181616;
+  display: flex;
+  flex-wrap: wrap;
+}
+.active {
+  color: white;
+}
+.Bundle{
+  border: 1px solid grey;
+  width: 200px;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
 
-  .phim-hot {
-    font-size: 22px;
-    font-weight: 600;
-    color: rgb(207, 98, 58);
-    padding-bottom: 30px;
+.Bundle.disable::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.BlockLarge {
+  margin-bottom: 50px;
+}
+.Title{
+  height: 35px;
+  text-align: center;
+  padding: 5px;
+  background: #444444 ;
+  border-radius: 10px;
+}
+.price{
+  height: 35px;
+  text-align: center;
+  padding: 10px;
+}
+p{
+  font-size: 11px;
+}
+.name-title{ 
+  color: red;
+  padding-bottom: 10px;
+}
+.btn-buton{
+  padding: 6px;
+  border-radius: 9px;
+  font-size: 10px;
+
+}
+.TitleSmall{
+  padding: 15px;
+}
+.TitleSmall div {
+  padding: 6px;
+  text-align: center;
+  border-bottom: 1px solid #444444;
+}
+
+.button{
+
+  text-align: center;
+  padding: 10px;
+}
+.button button {
+
+  background: #000;
+  border: 1px solid yellow;
+  border-radius: 5px;
+}
+.button button:hover{
+  background: yellow;
+  color: #000;
+}
+
+
+span.swal2-success-line-tip {
+  top: 38px !important;
+  left: 2px !important;
+}
+
+span.swal2-success-line-long {
+  right: 0px !important;
+  top: 30px !important;
+}
+
+
+
+
+.purchased {
+  opacity: 0.4; 
+}
+
+.not-purchased {
+  /* background-color: lightcoral;  */
+}
+
+
+
+
+
+
+
+
+@media (max-width:450px){
+  .ContainerPrice{
+      margin-left: 40px;
   }
-  .wrapper-film {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    overflow: hidden;
-    padding-bottom: 50px;
-    gap:15px;
-    .item-film {
-        position: relative;
-      .logo {
-        width: 160px;
-        height: 269px;
-        object-fit: cover;
-      }
-      .title {
-        position: absolute;
-        background-color: red;
-        color: #fff;
-        padding: 6px;
-        font-size: 11px;
-        font-weight: 400;
-        border-radius: 5px;
-      }
-      .name{
-        position: absolute;
-        background-color: rgb(112, 110, 110);
-        color: #fff;
-        padding: 6px;
-        font-size: 11px;
-        width: 100%;
-        font-weight: 400;
-        bottom: 0;
-      }
-    }
+  .BlockSmall{
+      flex-direction: column;
+  }
+  .Bundle{
+      width: 280px;
   }
 }
-@media(max-width: 768px){
-.container-home{
-  padding: 150px 50px;
-  .wrapper-film{
-    gap:10px;
-    overflow-x: scroll;
+
+
+@media (max-width:768px){
+  .ContainerPrice{
+      margin-left: 40px;
+  }
+  .BlockSmall{
+      flex-wrap: wrap;
+  }
+  .Bundle{
+      width: 280px;
   }
 }
+<<<<<<< HEAD
 }
 @media(max-width: 586px){
   .logo{
@@ -61,3 +154,18 @@
     height: 260px;
   }
   }
+=======
+
+
+@media (max-width:991px){
+  .ContainerPrice{
+      margin-left: 40px;
+  }
+  .BlockSmall{
+      flex-wrap: wrap;
+  }
+  .Bundle{
+      width: 280px;
+  }
+}
+>>>>>>> longbranch
