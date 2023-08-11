@@ -154,6 +154,8 @@
     "image": "TVShows4.jpg",
     "cate_id": 3,
     "status": "Hot",
+    "streamingProvider":"Amazon Prime",
+
     "Description": "A variety TV show about complex cases and how the investigative team solves them."
   },
   {

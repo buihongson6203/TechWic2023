@@ -13,17 +13,17 @@ function SiteMap() {
         <tr>
           <th>
             <Link to="/" className="sitemap-link">
-              <h2 style={headingStyle}>Home</h2>
+              <h3 style={headingStyle}>Home</h3>
             </Link>
           </th>
           <th className="center">
             <Link to="/films" className="sitemap-link">
-              <h2 style={headingStyle}>Category</h2>
+              <h3 style={headingStyle}>Category</h3>
             </Link>
           </th>
           <th>
             <Link to="/films" className="sitemap-link">
-              <h2 style={headingStyle}>Category</h2>
+              <h3 style={headingStyle}>Supplier</h3>
             </Link>
           </th>
         </tr>

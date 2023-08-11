@@ -59,7 +59,9 @@ p:hover {
   background-color: black;
   user-select: none;
 }
-
+table{
+  width: 80%;
+}
 .top-section {
   display: flex;
   width: 100%;
@@ -67,8 +69,8 @@ p:hover {
   justify-content: space-evenly;
   flex-wrap: wrap;
   align-items: center;
-  padding-top: 150px;
-  padding-bottom: 120px;
+  padding-top: 180px;
+  padding-bottom: 200px;
   background-color: #181616;
 
 }
@@ -167,12 +169,7 @@ span {
   margin: 10px;
 }
 
-.center{
-  padding-right: 450px;
-  padding-left: 450px;
-
-
-}
+table
 h2{
      text-align: none;
 
