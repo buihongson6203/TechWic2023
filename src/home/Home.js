@@ -73,7 +73,7 @@ function Home() {
               <SwiperSlide key={item.ID} className="item-film">
                 <div className="title">{item.Name}</div>
                 <img className="logo-slider" src={"./imgs/film/" + item.image} alt={item.Name} />
-                <div className="name">{item.Name}</div>
+                <div className="name">{item.Name}({item.streamingProvider})</div>
 
               </SwiperSlide>
             );
@@ -125,7 +125,7 @@ function Home() {
               <SwiperSlide key={item.ID} className="item-film">
                 <div className="title">{item.Name}</div>
                 <img className="logo-slider" src={"./imgs/film/" + item.image} alt={item.Name} />
-                <div className="name">{item.Name}</div>
+                <div className="name">{item.Name}({item.streamingProvider})</div>
               </SwiperSlide>
             );
           })}
@@ -174,7 +174,7 @@ function Home() {
               <SwiperSlide key={item.ID} className="item-film">
                 <div className="title">{item.Name}</div>
                 <img className="logo-slider" src={"./imgs/film/" + item.image} alt={item.Name} />
-                <div className="name">{item.Name}</div>
+                <div className="name">{item.Name}({item.streamingProvider})</div>
 
               </SwiperSlide>
             );
