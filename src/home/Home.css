@@ -3,7 +3,9 @@
   margin: 0 auto;
   background-color: #181616;
   background: #181616;
-
+  .item-film .item-inner{
+    padding: 0px 15px;
+  }
   .phim-hot {
     font-size: 22px;
     font-weight: 600;
@@ -11,7 +13,7 @@
     padding-bottom: 30px;
   }
   .logo-slider{
-    width: 16rem;
+    width: 100%;
     height: 20rem;
     object-fit: cover;
   }
