@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./PriceList.css";
-
+import moment from "moment";
 import Swal from "sweetalert2";
 import axios from "axios";
 
@@ -16,7 +16,12 @@ class PriceList extends Component {
       disney: [],
     };
   }
-
+  getCurrentDatePlus6Months(month) {
+    const currentDate = new Date();
+    const sixMonthsLater = new Date(currentDate);
+    sixMonthsLater.setMonth(currentDate.getMonth() + month);
+    return sixMonthsLater.toLocaleDateString();
+  }
   componentDidMount = () => {
     axios
       .get("./netflix.json")
@@ -48,7 +53,7 @@ class PriceList extends Component {
     const userPurchasedPlansNetflix = [1];
     this.setState({ userPurchasedPlansNetflix });
 
-    const userPurchasedPlansHbomax = [5];
+    const userPurchasedPlansHbomax = [];
     this.setState({ userPurchasedPlansHbomax });
 
     const userPurchasedPlansDisney = [];
@@ -58,24 +63,6 @@ class PriceList extends Component {
   handleSendClick = (planID) => {
     const { netflix, hbomax, disney } = this.state;
 
-    const convertDateToExpired = (plan) => {
-      return {
-        ...plan,
-        expired: plan.date,
-      };
-    };
-
-    const updatedNetflixPlans = netflix.map((plan) =>
-      plan.ID === planID ? convertDateToExpired(plan) : plan
-    );
-
-    const updatedHbomaxPlans = hbomax.map((plan) =>
-      plan.ID === planID ? convertDateToExpired(plan) : plan
-    );
-
-    const updatedDisneyPlans = disney.map((plan) =>
-      plan.ID === planID ? convertDateToExpired(plan) : plan
-    );
     this.setState((prevState) => ({
       userPurchasedPlansNetflix: [
         ...prevState.userPurchasedPlansNetflix,
@@ -138,11 +125,17 @@ class PriceList extends Component {
                     </div>
                   </div>
                   <div className="date">
-                    <span>
-                      {userPurchasedPlansNetflix.includes(plan.ID)
-                        ? `${plan.date}`
-                        : `${plan.expired}$`}
-                    </span>
+                  <span>
+  {userPurchasedPlansNetflix.includes(plan.ID)
+    ? plan.dealine
+    : ''}
+</span>
+                  <span>
+  {userPurchasedPlansNetflix.includes(plan.ID)
+    ? this.getCurrentDatePlus6Months(plan.month)
+    : plan.expired}
+</span>
+
                   </div>
                   <div className="button">
                     {userPurchasedPlansNetflix.includes(plan.ID) ? (
@@ -206,7 +199,16 @@ class PriceList extends Component {
                     </div>
                   </div>
                   <div className="date">
-                    <span>{plan.date}</span>
+                  <span>
+  {userPurchasedPlansHbomax.includes(plan.ID)
+    ? plan.dealine
+    : ''}
+</span>
+                  <span>
+  {userPurchasedPlansHbomax.includes(plan.ID)
+    ? this.getCurrentDatePlus6Months(plan.month)
+    : plan.expired}
+</span>
                   </div>
                   <div className="button">
                     {userPurchasedPlansHbomax.includes(plan.ID) ? (
@@ -270,7 +272,16 @@ class PriceList extends Component {
                     </div>
                   </div>
                   <div className="date">
-                    <span>{plan.date}</span>
+                  <span>
+  {userPurchasedPlansNetflix.includes(plan.ID)
+    ? plan.dealine
+    : ''}
+</span>
+                  <span>
+  {userPurchasedPlansNetflix.includes(plan.ID)
+    ? this.getCurrentDatePlus6Months(plan.month)
+    : plan.expired}
+</span>
                   </div>
                   <div className="button">
                     {userPurchasedPlansDisney.includes(plan.ID) ? (

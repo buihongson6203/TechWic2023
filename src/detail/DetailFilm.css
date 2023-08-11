@@ -4,6 +4,8 @@
   }
    img{
     width: 36rem;
+    height: 27rem;
+    object-fit: cover;
   }
   .container-detail{
   
