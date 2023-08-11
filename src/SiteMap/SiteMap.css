@@ -40,7 +40,6 @@ footer {
   text-decoration: none;
   color: white;
   font-weight: bold;
-  padding: 5px 10px;
   display: block;
   transition: background-color 0.3s ease;
 }
@@ -173,4 +172,8 @@ span {
 }
 .h2 {
   display: flex;
+}
+.link{
+  font-size: 15px;
+
 }
