@@ -7,7 +7,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 // import required modules
-import {Autoplay } from 'swiper/modules';
+import { Autoplay } from 'swiper/modules';
 import axios from "axios";
 function Home() {
   const [films, setFilms] = useState([]);
@@ -28,7 +28,7 @@ function Home() {
   const upcomingFilms = films.filter((item) => item.status === "upcoming");
 
   return (
-    
+
     <div className="container-home">
       <div>
         <div className="phim-hot">Hot Movies</div>
@@ -48,7 +48,7 @@ function Home() {
             delay: 2500,
             disableOnInteraction: false,
           }}
-          
+
           breakpoints={{
             640: {
               slidesPerView: 2,
@@ -67,14 +67,14 @@ function Home() {
           className="mySwiper"
         >
           {hotFilms.map((item) => {
-           
+
 
             return (
               <SwiperSlide key={item.ID} className="item-film">
-                {/* <div>{item.Name} </div> */}
-                <div><img className="logo-slider" src={"./imgs/film/" + item.image} alt={item.Name} /></div>
+                <div className="title">{item.Name}</div>
+                <img className="logo-slider" src={"./imgs/film/" + item.image} alt={item.Name} />
                 <div className="name">{item.Name}</div>
-                
+
               </SwiperSlide>
             );
           })}
@@ -85,13 +85,10 @@ function Home() {
         {/* <div className="wrapper-film">
           {newFilms.map((item) => (
             <div className="item-film" key={item.ID}>
-<<<<<<< HEAD
               <div className="title">{item.episode} episode</div>
               <img className="logo" src={"./imgs/film/" + item.image} alt={item.Name} />
-=======
               <div className="title">{item.Name}</div>
               <img className="logo-slider" src={"./imgs/film/" + item.image} alt={item.Name} />
->>>>>>> longbranch
               <div className="name">{item.Name}</div>
             </div>
           ))}
@@ -103,7 +100,7 @@ function Home() {
             delay: 2500,
             disableOnInteraction: false,
           }}
-          
+
           breakpoints={{
             640: {
               slidesPerView: 2,
@@ -122,14 +119,13 @@ function Home() {
           className="mySwiper"
         >
           {newFilms.map((item) => {
-           
+
 
             return (
               <SwiperSlide key={item.ID} className="item-film">
-                {/* <div>{item.Name} </div> */}
-                <div><img className="logo-slider" src={"./imgs/film/" + item.image} alt={item.Name} /></div>
+                <div className="title">{item.Name}</div>
+                <img className="logo-slider" src={"./imgs/film/" + item.image} alt={item.Name} />
                 <div className="name">{item.Name}</div>
-                
               </SwiperSlide>
             );
           })}
@@ -140,13 +136,8 @@ function Home() {
         {/* <div className="wrapper-film">
           {upcomingFilms.map((item) => (
             <div className="item-film" key={item.ID}>
-<<<<<<< HEAD
-              <div className="title">{item.episode} episode</div>
-              <img className="logo" src={"./imgs/film/" + item.image} alt={item.Name} />
-=======
               <div className="title">{item.Name}</div>
               <img className="logo-slider" src={"./imgs/film/" + item.image} alt={item.Name} />
->>>>>>> longbranch
               <div className="name">{item.Name}</div>
             </div>
           ))}
@@ -158,7 +149,7 @@ function Home() {
             delay: 2500,
             disableOnInteraction: false,
           }}
-          
+
           breakpoints={{
             640: {
               slidesPerView: 2,
@@ -177,14 +168,14 @@ function Home() {
           className="mySwiper"
         >
           {upcomingFilms.map((item) => {
-           
+
 
             return (
               <SwiperSlide key={item.ID} className="item-film">
-                {/* <div>{item.Name} </div> */}
-                <div><img className="logo-slider" src={"./imgs/film/" + item.image} alt={item.Name} /></div>
+                <div className="title">{item.Name}</div>
+                <img className="logo-slider" src={"./imgs/film/" + item.image} alt={item.Name} />
                 <div className="name">{item.Name}</div>
-                
+
               </SwiperSlide>
             );
           })}
