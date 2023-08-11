@@ -3,7 +3,9 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import axios from 'axios';
 import "./Films.css";
 import * as icons from 'react-icons/fa';
-
+import { isAfter, parse } from "date-fns";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
@@ -21,7 +23,10 @@ class Films extends Component {
       categories: [],
       films: [],
       search: '',
-      fav_film: []
+      fav_film: [],
+      favFilms: [],
+      FilmDetails: [],
+      upcomingReleases: []
     }
   }
 
@@ -114,7 +119,78 @@ class Films extends Component {
     }
   }
 
+  notify = (message) => toast(message);
+
+
+  handleStorageChange = () => {
+    let favFilms = this.props.favFilmsSharedState ? this.props.favFilmsSharedState : [];
+
+    this.setState({
+      favFilms: favFilms
+    })
+    axios.get('./filmList.json')
+      .then((response) => {
+        let dataFilms = response.data;
+        axios.get('./filmDetails.json')
+          .then((response) => {
+            let dataFilmDetails = response.data;
+            let favFilmsArr = [];
+
+
+            let dataFilmDetailsFav = [];
+
+            favFilms.forEach((favId) => {
+              dataFilmDetails.forEach(filmDetail => {
+                if (favId === filmDetail.film_id) {
+                  dataFilmDetailsFav.push(filmDetail);
+                }
+              });
+              dataFilms.forEach(film => {
+                if (favId === film.ID) {
+                  favFilmsArr.push(film);
+                }
+              });
+            });
+
+            let lstFilmDetailWithFilm = [];
+
+            favFilmsArr.forEach((favFilm, indexFilm) => {
+              dataFilmDetailsFav.forEach(filmDetail => {
+                // check xem co order khong
+                if (filmDetail.order) {
+                  if (filmDetail.film_id === favFilm.ID) {
+                    lstFilmDetailWithFilm[indexFilm] = {
+                      film: favFilm,
+                      filmDetail: filmDetail
+                    }
+                  }
+                }
+              });
+            });
+
+            let lstRealReleaseMessages = [];
+            lstFilmDetailWithFilm.forEach(item => {
+              const published_date = item.filmDetail.published_date;
+              const parsedDate = parse(published_date, 'dd/MM/yyyy', new Date());
+
+              // So sánh với ngày hiện tại
+
+              if (isAfter(parsedDate, new Date())) {
+                const releaseMessage = `${item.film.Name} ${item.filmDetail.Name} will be published on ${item.filmDetail.published_date}.`;
+                // lstRealReleaseMessages.push(releaseMessage)
+                this.notify(releaseMessage)
+              }
+            });
+            this.setState({ upcomingReleases: lstRealReleaseMessages })
+          })
+          .catch((error) => {
+            console.log(error);
+          });
+      })
+  }
+
   HandleFavourite = (ID) => {
+
     let fav_films = this.state.fav_film;
     const index = fav_films.indexOf(ID);
     if (index > -1) {
@@ -127,8 +203,84 @@ class Films extends Component {
     this.setState({
       fav_film: fav_films
     });
-    window.dispatchEvent(new Event('storage'))
+    window.dispatchEvent( new Event('storage') )
     localStorage.setItem('fav_films', JSON.stringify(fav_films))
+
+      let favFilms = fav_films ?  fav_films : [];
+
+    this.setState({
+      favFilms: fav_films
+    })
+
+    axios.get('./filmList.json')
+        .then((response) => {
+          let dataFilms = response.data;
+          axios.get('./filmDetails.json')
+              .then((response) => {
+                let dataFilmDetails = response.data;
+                let favFilmsArr = [];
+                let dataFilmDetailsFav = [];
+
+                favFilms.forEach((favId) => {
+                  dataFilmDetails.forEach(filmDetail => {
+                    if (favId === filmDetail.film_id) {
+                      dataFilmDetailsFav.push(filmDetail);
+                    }
+                  });
+                  dataFilms.forEach(film => {
+                    if (favId === film.ID) {
+                      favFilmsArr.push(film);
+                    }
+                  });
+                });
+
+                let lstFilmDetailWithFilm = [];
+
+                favFilmsArr.forEach((favFilm, indexFilm) => {
+                  dataFilmDetailsFav.forEach(filmDetail => {
+                    // check xem co order khong
+                    if (filmDetail.order) {
+                      if (filmDetail.film_id === favFilm.ID) {
+                        lstFilmDetailWithFilm[indexFilm] = {
+                          film: favFilm,
+                          filmDetail: filmDetail
+                        }
+                      }
+                    }
+                  });
+                });
+                console.log(lstFilmDetailWithFilm, 'lstFilmDetailWithFilm')
+                  let releaseMessage = ''
+                
+                const chossenFilm = lstFilmDetailWithFilm.filter(item => item.film.ID == ID)[0];
+                  console.log(chossenFilm, ID, 'chossenFilm')
+                  const published_date = chossenFilm.filmDetail.published_date;
+                  const parsedDate = parse(published_date, 'dd/MM/yyyy', new Date());
+                  if (isAfter(parsedDate, new Date())) {
+                      const releaseMessage = `${chossenFilm.film.Name} ${chossenFilm.filmDetail.Name} will be published on ${chossenFilm.filmDetail.published_date}.`;
+                      this.notify(releaseMessage)
+                  }
+
+                // let lstRealReleaseMessages = [];
+                // lstFilmDetailWithFilm.forEach(item => {
+                //   const published_date = item.filmDetail.published_date;
+                //   const parsedDate = parse(published_date, 'dd/MM/yyyy', new Date());
+                //
+                //   // So sánh với ngày hiện tại
+                //   if (isAfter(parsedDate, new Date())) {
+                //     const releaseMessage = `${item.film.Name} ${item.filmDetail.Name} will be published on ${item.filmDetail.published_date}.`;
+                //       this.notify(releaseMessage)
+                //     lstRealReleaseMessages.push(releaseMessage);
+                //   }
+                // });
+                // this.setState({upcomingReleases: lstRealReleaseMessages})
+
+
+              })
+              .catch((error) => {
+                console.log(error);
+              });
+        })
 
   }
 
@@ -160,50 +312,62 @@ class Films extends Component {
             <icons.FaSearch className="search" />
           </div>
         </div>
-        <Swiper
-          slidesPerView={1}
-          spaceBetween={10}
-          autoplay={{
-            delay: 2500,
-            disableOnInteraction: false,
-          }}
+        <div className="wrapper-film-1">
+          <Swiper
+            slidesPerView={1}
+            spaceBetween={10}
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: false,
+            }}
 
-          breakpoints={{
-            640: {
-              slidesPerView: 2,
-              // spaceBetween: 20,
-            },
-            768: {
-              slidesPerView: 4,
-              // spaceBetween: 40,
-            },
-            1024: {
-              slidesPerView: 5,
-              // spaceBetween: 50,
-            },
-          }}
-          modules={[Autoplay]}
-          className="mySwiper"
-        >
-          {filteredMovies.map((item) => {
-            let active = this.state.fav_film.includes(item.ID) ? 'active' : '';
+            breakpoints={{
+              640: {
+                slidesPerView: 2,
+                // spaceBetween: 20,
+              },
+              768: {
+                slidesPerView: 4,
+                // spaceBetween: 40,
+              },
+              1024: {
+                slidesPerView: 5,
+                // spaceBetween: 50,
+              },
+            }}
+            modules={[Autoplay]}
+            className="mySwiper"
+          >
+            {filteredMovies.map((item) => {
+              let active = this.state.fav_film.includes(item.ID) ? 'active' : '';
 
-            return (
-              <SwiperSlide key={item.ID} className="item-film">
-                <div className="item-inner poisiton-relative">
-                  <div className="tap">{item.numberOfEpisodes} episodes</div>
-                  <Link to={`/detail/${item.ID}`} className="item-link">
-                    <img className="logo-slider" src={'./imgs/film/' + item.image} alt={item.Name} />
-                  </Link>
-                  <div className="name">{item.Name} <strong className="red">({item.streamingProvider})</strong></div>
-                  <button className={`position-absolute heart-itemm ${active}`} onClick={() => this.HandleFavourite(item.ID)}>
-                    {active === '' ? <icons.FaRegHeart /> : <icons.FaHeart />}
-                  </button>
-                </div>
-              </SwiperSlide>
-            );
-          })}
-        </Swiper>
+              return (
+                <SwiperSlide key={item.ID} className="item-film">
+                  <div className="item-inner poisiton-relative">
+                    <div className="tap">{item.numberOfEpisodes} episodes</div>
+                    <Link to={`/detail/${item.ID}`} className="item-link">
+                      <img className="logo-slider" src={'./imgs/film/' + item.image} alt={item.Name} />
+                    </Link>
+                    <div className="name">{item.Name} <strong className="red">({item.streamingProvider})</strong></div>
+                    <button className={`position-absolute heart-itemm ${active}`} onClick={() => this.HandleFavourite(item.ID)}>
+                      {active === '' ? <icons.FaRegHeart /> : <icons.FaHeart />}
+                    </button>
+                  </div>
+                </SwiperSlide>
+              );
+            })}
+          </Swiper>
+        </div>
+        <ToastContainer
+          position="top-right"
+          autoClose={5000}
+          hideProgressBar={true}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnHover
+          theme="light"
+        />
       </div>
     );
   }

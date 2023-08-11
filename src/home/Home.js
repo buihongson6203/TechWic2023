@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import "./Home.css";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from 'swiper/react';
-
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -66,7 +65,7 @@ function Home() {
                 <div className="item-inner">
                   <Link to={`/detail/${item.ID}`}>
                     <div className="logo-wrap">
-                      <img className="logo-slider" src={"./imgs/film/" + item.image} alt={item.Name} />
+                      <img className="logo-slider hvr-grow" src={"./imgs/film/" + item.image} alt={item.Name} />
                     </div>
                     <div className="name">{item.Name} <strong className="red">({item.streamingProvider})</strong></div>
                   </Link>
@@ -111,7 +110,7 @@ function Home() {
                 <div className="item-inner">
                   <Link to={`/detail/${item.ID}`}>
                     <div className="logo-wrap">
-                      <img className="logo-slider" src={"./imgs/film/" + item.image} alt={item.Name} />
+                      <img className="logo-slider hvr-grow" src={"./imgs/film/" + item.image} alt={item.Name} />
                     </div>
                     <div className="name">{item.Name} <strong className="red">({item.streamingProvider})</strong></div>
                   </Link>
@@ -156,7 +155,7 @@ function Home() {
                 <div className="item-inner">
                   <Link to={`/detail/${item.ID}`}>
                     <div className="logo-wrap">
-                      <img className="logo-slider" src={"./imgs/film/" + item.image} alt={item.Name} />
+                      <img className="logo-slider hvr-grow" src={"./imgs/film/" + item.image} alt={item.Name} />
                     </div>
                     <div className="name">{item.Name} <strong className="red">({item.streamingProvider})</strong></div>
                   </Link>
