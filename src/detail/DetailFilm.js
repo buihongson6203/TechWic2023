@@ -45,7 +45,7 @@ function DetailFilm(props) {
 
   const plan = filmList[0]; // Get the first element
 
-  console.log(plan);
+  console.log(filmList);
 
   return (
     <div className="container-detail">

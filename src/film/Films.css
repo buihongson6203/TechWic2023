@@ -6,10 +6,23 @@
     padding: 10px 20px 10px 50px;
     width: 70%;
   }
+  .item-link{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    padding-top: 100%;
+  }
   .logo-slider {
-    width: 16rem;
-    height: 20rem;
+    width: 100%;
+    transition: all 0.35s ease-out 0s;
+    -webkit-transition: all 0.35s ease-out 0s;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
     object-fit: cover;
+    margin: auto;
   }
   .tap {
     position: absolute;
