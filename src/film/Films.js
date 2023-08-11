@@ -160,7 +160,7 @@ class Films extends Component {
             <icons.FaSearch className="search"/>
           </div>
         </div>
-        <div className="wrapper-film">
+        {/* <div className="wrapper-film">
           {filteredMovies.map((item) => {
             let active = this.state.fav_film.includes(item.ID) ? 'active' : '';
 
@@ -177,7 +177,7 @@ class Films extends Component {
               </div>
             );
           })}
-        </div>
+        </div> */}
         <Swiper
           slidesPerView={1}
           spaceBetween={10}
@@ -208,12 +208,12 @@ class Films extends Component {
 
             return (
               <SwiperSlide key={item.ID} className="item-film">
-                <div>{item.numberOfEpisodes} episodes</div>
+                <div className="tap">{item.numberOfEpisodes} episodes</div>
                 <Link to="/detail" className="item-link">
-                  <img className="logo" src={'./imgs/film/' + item.image} alt={item.Name} />
+                  <img className="logo-slider" src={'./imgs/film/' + item.image} alt={item.Name} />
                 </Link>
                 <div className="name">{item.Name}</div>
-                <button className={`position-absolute heart-item ${active}`} onClick={() => this.HandleFavourite(item.ID)}>
+                <button className={`position-absolute heart-itemm ${active}`} onClick={() => this.HandleFavourite(item.ID)}>
                   {active === '' ? <icons.FaRegHeart /> : <icons.FaHeart />}
                 </button>
               </SwiperSlide>

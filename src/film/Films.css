@@ -6,9 +6,31 @@
     padding: 10px 20px 10px 50px;
     width: 70%;
   }
-
+  .logo-slider {
+    width: 16rem;
+    height: 20rem;
+    object-fit: cover;
+  }
+  .tap {
+    position: absolute;
+    left: 2px;
+    color: red;
+    padding: 4px;
+    font-size: 12px;
+    background-color: #fff;
+    border-radius: 2px;
+  }
   .input-search {
     position: relative;
+  }
+  .swiper-wrapper {
+    padding-bottom: 15px;
+  }
+  .name {
+    color: #fff;
+    font-size: 14px;
+    padding-top: 10px;
+    padding-left: 4px;
   }
 
   .search {
@@ -72,9 +94,9 @@
   }
 }
 
-.heart-item {
-  top: 0;
-  right: 10px;
+.heart-itemm {
+  top: 0px;
+  right: 65px;
   width: 30px;
   height: 30px;
   background-color: white;
