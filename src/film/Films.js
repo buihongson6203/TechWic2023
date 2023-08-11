@@ -122,11 +122,14 @@ class Films extends Component {
     } else {
       fav_films.push(ID);
     }
-    console.log(fav_films);
-    localStorage.setItem('fav_films', JSON.stringify(fav_films))
+    this.props.setSharedFavFilmsState(fav_films);
+  
     this.setState({
       fav_film: fav_films
     });
+    window.dispatchEvent( new Event('storage') )
+    localStorage.setItem('fav_films', JSON.stringify(fav_films))
+
   }
 
 

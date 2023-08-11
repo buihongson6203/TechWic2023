@@ -3,24 +3,36 @@
         "ID": 1,
         "Name": "1 month plan",
         "cost": 0,
-        "button": "bought"
+        "month":1,
+        "button": "bought",
+        "dealine":"Expires"
+
     },
     {
         "ID": 2,
         "Name": "3 month plan",
         "cost": 0,
-        "button":"bought"
+        "month":3,
+        "button":"bought",
+        "dealine":"Expires"
+        
+
     },
     {
         "ID": 3,
         "Name": "6 month plan",
         "cost": 8,
-        "button":"bought"
+        "month":6,
+        "button":"bought",
+        "dealine":"Expires"
+    
     },
     {
         "ID": 4,
         "Name": "1 year plan",
         "cost": 10,
-        "button":"bought"
+        "month":12,
+        "button":"bought",
+        "dealine":"Expires"
     }
 ]

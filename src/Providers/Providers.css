@@ -1,0 +1,82 @@
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 200px 100px 100px 50px;
+}
+
+.providers-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+.providers-table th,
+.providers-table td {
+    padding: 10px;
+}
+
+.providers-table th {
+    background-color: #333;
+    color: #fff;
+}
+
+.providers-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.logo {
+    max-width: 150px;
+}
+
+.btn {
+    padding: 6px 6px;
+    font-size: 10px;
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-right: 10px;
+    justify-content: center;
+}
+
+.btn-secondary {
+    background-color: #ccc;
+    color: #000;
+}
+
+.btn-secondary:hover {
+    background-color: #999;
+    color: #fff;
+}
+
+.btn-secondary:focus {
+    outline: none;
+}
+
+.btn-all {
+    text-align: center;
+}
+
+.titlle {
+    text-align: center;
+}
+
+.status {
+    text-align: center;
+}
+
+.btn-addnew {
+    padding: 10px 4px;
+    background: #6c757d;
+    /* color: white; */
+    border-radius: 4px;
+    margin-bottom: 8px;
+
+}
+.link-addnew{
+    color: white;
+    text-decoration: none;
+}
+.mb-1{
+    color: #000;
+}
