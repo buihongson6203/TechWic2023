@@ -141,7 +141,46 @@ class Films extends Component {
 
     return (
       <div className="container-film">
-        
+        <div className="row wrapper-seclect">
+          <div className="col-6 row">
+            <div className="col-6">
+              <select className="form-control" id="movie-type" onChange={this.handleCateSearchChange}>
+                <option value="0">genres</option>
+                {this.state.categories.map(category => (
+                  <option key={category.ID} value={category.ID}>{category.Name}</option>
+                ))}
+              </select>
+            </div>
+            <div className="col-6">
+              <select className="form-control" id="movie-type" onChange={this.handleSortTypeChange}>
+                <option value="alphabetical">A-Z</option>
+                <option value="not alphabetical">Z-A</option>
+              </select>
+            </div>
+          </div>
+          <div className="col-6 input-search">
+            <input className="form-control input1" type="text" placeholder="Search film..." onKeyDown={this.handleSearch} />
+            <icons.FaSearch className="search"/>
+          </div>
+        </div>
+        {/* <div className="wrapper-film">
+          {filteredMovies.map((item) => {
+            let active = this.state.fav_film.includes(item.ID) ? 'active' : '';
+
+            return (
+              <div key={item.ID} className="item-film">
+                <div className="title">{item.numberOfEpisodes} episodes</div>
+                <Link to={`/detail/${item.ID}`} className="item-link" >
+                  <img className="logo" src={'./imgs/film/' + item.image} alt={item.Name} />
+                </Link>
+                <div className="name">{item.Name}</div>
+                <button className={`position-absolute heart-item ${active}`} onClick={() => this.HandleFavourite(item.ID)}>
+                  {active === '' ? <icons.FaRegHeart /> : <icons.FaHeart />}
+                </button>
+              </div>
+            );
+          })}
+        </div> */}
         <Swiper
           slidesPerView={1}
           spaceBetween={10}
@@ -172,12 +211,12 @@ class Films extends Component {
 
             return (
               <SwiperSlide key={item.ID} className="item-film">
-                <div className="episodes">{item.numberOfEpisodes} episodes</div>
+                <div className="tap">{item.numberOfEpisodes} episodes</div>
                 <Link to="/detail" className="item-link">
-                  <img className="logo" src={'./imgs/film/' + item.image} alt={item.Name} />
+                  <img className="logo-slider" src={'./imgs/film/' + item.image} alt={item.Name} />
                 </Link>
-                <div className="title">{item.Name}</div>
-                <button className={` heart-item ${active}`} onClick={() => this.HandleFavourite(item.ID)}>
+                <div className="name">{item.Name}</div>
+                <button className={`position-absolute heart-itemm ${active}`} onClick={() => this.HandleFavourite(item.ID)}>
                   {active === '' ? <icons.FaRegHeart /> : <icons.FaHeart />}
                 </button>
               </SwiperSlide>

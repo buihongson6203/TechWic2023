@@ -24,8 +24,8 @@
     background-color: #f2f2f2;
 }
 
-.logo {
-    max-width: 170px;
+.logo-prv {
+    max-width: 150px;
 }
 
 .btn {
@@ -76,7 +76,4 @@
 .link-addnew{
     color: white;
     text-decoration: none;
-}
-.mb-1{
-    color: #000;
 }

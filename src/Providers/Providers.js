@@ -84,7 +84,7 @@ function Providers() {
             <tr key={entry.ID}>
               <td>{entry.Name}</td>
               <td>
-                <img className="logo" src={"./imgs/film/" + entry.logo} alt={entry.Name} />
+                <img className="logo-prv" src={"./imgs/film/" + entry.logo} alt={entry.Name} />
               </td>
               <td>
                 <a href={entry.url} target="_blank" rel="noopener noreferrer">
@@ -155,7 +155,7 @@ function Providers() {
                 Close
               </button>
               <button type="button" className="btn btn-primary" onClick={saveChanges}>
-                Save 
+                Save changes
               </button>
             </div>
           </div>
@@ -207,7 +207,7 @@ function Providers() {
                 Close
               </button>
               <button type="button" className="btn btn-primary" onClick={addProvider}>
-                Add 
+                Add Provider
               </button>
             </div>
           </div>

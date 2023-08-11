@@ -2,7 +2,7 @@
   .ratings{
     margin-bottom: 20px;
   }
-   img{
+  .img-big{
     width: 36rem;
     height: 15rem;
     object-fit: cover;
