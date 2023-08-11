@@ -34,12 +34,12 @@ const Feedback = () => {
         <h2>Feedback </h2>
         <div className="Form">
             <form onSubmit={handleSubmit}>
-                 <input type="text" placeholder='@Email'/>
+                 <input className='mb-3' type="text" placeholder='@Email'/>
                 <div className="Comment">
                
                 <textarea value={comment} placeholder="Comment: " onChange={handleCommentChange} />
                 </div>
-                <button type="submit" className="btn" onClick={handleSendClick}>Send</button>
+                <button type="submit" className="btn btn-warning" onClick={handleSendClick}>Send</button>
             </form>
         </div>
       </div>

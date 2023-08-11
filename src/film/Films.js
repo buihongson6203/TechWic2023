@@ -1,6 +1,17 @@
 import React, { Component } from "react";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import axios from 'axios';
 import "./Films.css";
+import * as icons from 'react-icons/fa';
+
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/pagination';
+// import required modules
+import {Autoplay } from 'swiper/modules';
+
 class Films extends Component {
   constructor(props) {
     super(props);
@@ -9,9 +20,11 @@ class Films extends Component {
       cateSearch: 0,
       categories: [],
       films: [],
-      search: ''
+      search: '',
+      fav_film: []
     }
   }
+  
 
   handleCateSearchChange = (event) => {
     let { value } = event.target;
@@ -49,6 +62,10 @@ class Films extends Component {
   };
 
   componentDidMount = () => {
+    let fav_films = localStorage.getItem('fav_films') ? JSON.parse(localStorage.getItem('fav_films')) : [];
+    this.setState({
+      fav_film: fav_films
+    })
     // get categories
     axios.get('./categories.json')
       .then((response) => {
@@ -67,12 +84,10 @@ class Films extends Component {
         axios.get('./filmDetails.json')
           .then((response) => {
             let dataFilmDetails = response.data;
-            // console.log(dataFilms);
-            // console.log(dataFilmDetails);
             dataFilms.forEach(film => {
               let numberOfEpisodes = 0;
-              dataFilmDetails.forEach(item => {
-                if (item.film_id === film.ID) numberOfEpisodes++;
+              dataFilmDetails.forEach(filmDetail => {
+                if (filmDetail.film_id === film.ID) numberOfEpisodes++;
               });
               film.numberOfEpisodes = numberOfEpisodes;
             });
@@ -89,7 +104,7 @@ class Films extends Component {
   }
 
   componentDidUpdate = () => {
-    // console.log(this.state);
+    // console.log(this.state.fav_film)
   }
 
   handleSearch = (event) => {
@@ -97,6 +112,24 @@ class Films extends Component {
       const { value } = event.target;
       this.setState({ search: value });
     }
+  }
+
+  HandleFavourite = (ID) => {
+    let fav_films = this.state.fav_film;
+    const index = fav_films.indexOf(ID);
+    if (index > -1) {
+      fav_films.splice(index, 1);
+    } else {
+      fav_films.push(ID);
+    }
+    this.props.setSharedFavFilmsState(fav_films);
+  
+    this.setState({
+      fav_film: fav_films
+    });
+    window.dispatchEvent( new Event('storage') )
+    localStorage.setItem('fav_films', JSON.stringify(fav_films))
+
   }
 
 
@@ -109,7 +142,7 @@ class Films extends Component {
           <div className="col-6 row">
             <div className="col-6">
               <select className="form-control" id="movie-type" onChange={this.handleCateSearchChange}>
-                <option value="0">All</option>
+                <option value="0">genres</option>
                 {this.state.categories.map(category => (
                   <option key={category.ID} value={category.ID}>{category.Name}</option>
                 ))}
@@ -122,20 +155,71 @@ class Films extends Component {
               </select>
             </div>
           </div>
-          <div className="col-6">
-            <input className="form-control input" type="text" placeholder="Search film..." onKeyPress={this.handleSearch} onChange={this.handleSearch} />
+          <div className="col-6 input-search">
+            <input className="form-control input1" type="text" placeholder="Search film..." onKeyDown={this.handleSearch} />
+            <icons.FaSearch className="search"/>
           </div>
         </div>
-        <div className="wrapper-film">
-          {filteredMovies.map((item) => (
-            <div key={item.ID} className="item-film">
-              <div className="title">{item.numberOfEpisodes} episodes</div>
-              <img className="logo" src={'./imgs/film/' + item.image} alt={item.Name} />
-              <div className="name">{item.Name}</div>
-              <div className="position-absolute heart-item">0</div>
-            </div>
-          ))}
-        </div>
+        {/* <div className="wrapper-film">
+          {filteredMovies.map((item) => {
+            let active = this.state.fav_film.includes(item.ID) ? 'active' : '';
+
+            return (
+              <div key={item.ID} className="item-film">
+                <div className="title">{item.numberOfEpisodes} episodes</div>
+                <Link to={`/detail/${item.ID}`} className="item-link" >
+                  <img className="logo" src={'./imgs/film/' + item.image} alt={item.Name} />
+                </Link>
+                <div className="name">{item.Name}</div>
+                <button className={`position-absolute heart-item ${active}`} onClick={() => this.HandleFavourite(item.ID)}>
+                  {active === '' ? <icons.FaRegHeart /> : <icons.FaHeart />}
+                </button>
+              </div>
+            );
+          })}
+        </div> */}
+        <Swiper
+          slidesPerView={1}
+          spaceBetween={10}
+          autoplay={{
+            delay: 2500,
+            disableOnInteraction: false,
+          }}
+          
+          breakpoints={{
+            640: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            768: {
+              slidesPerView: 4,
+              spaceBetween: 40,
+            },
+            1024: {
+              slidesPerView: 5,
+              spaceBetween: 50,
+            },
+          }}
+          modules={[Autoplay]}
+          className="mySwiper"
+        >
+          {filteredMovies.map((item) => {
+            let active = this.state.fav_film.includes(item.ID) ? 'active' : '';
+
+            return (
+              <SwiperSlide key={item.ID} className="item-film">
+                <div className="tap">{item.numberOfEpisodes} episodes</div>
+                <Link to="/detail" className="item-link">
+                  <img className="logo-slider" src={'./imgs/film/' + item.image} alt={item.Name} />
+                </Link>
+                <div className="name">{item.Name}</div>
+                <button className={`position-absolute heart-itemm ${active}`} onClick={() => this.HandleFavourite(item.ID)}>
+                  {active === '' ? <icons.FaRegHeart /> : <icons.FaHeart />}
+                </button>
+              </SwiperSlide>
+            );
+          })}
+        </Swiper>
       </div>
     );
   }

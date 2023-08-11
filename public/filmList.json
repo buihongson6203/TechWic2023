@@ -1,58 +1,241 @@
 [
-    {
-        "ID": 1,
-        "Name": "How i met your mother",
-        "image": "film1.jpg",
-        "cate_id": 3,
-        "Description": "The story is told by the main character - Ted Mosby to his two children about the love story of their parents. When he was 27, Ted felt like getting married after his roommate Marshall became engaged to his best friend from college, Lily after nine years of dating. With the help of 'sex expert' Barney, Ted has embarked on a search for his \"half\". The movie is extremely funny and a great resource for learning to speak English."
-    },
-    {
-        "ID": 2,
-        "Name": "Attack on Titan",
-        "image": "film2.jpg",
-        "cate_id": 1,
-        "Description": "The film revolves around a trio of close friends Eren Jaeger, Mikasa Ackerman and Armin Arlert on their journey to fight against cannibal Titans. In a surprise attack by the Great Shaped Giant, the outermost layer of Maria that protected humans from the Titans was destroyed, the Titans massively invaded the Shiganshina district."
-    },
-    {
-        "ID": 3,
-        "Name": "Insidious 1",
-        "image": "film3.jpg",
-        "cate_id": 4,
-        "Description": "adwkhdka"
-    },
-    {
-        "ID": 4,
-        "Name": "Fast and Furious 5",
-        "image": "film4.jpg",
-        "cate_id": 2,
-        "Description": "klwhdalkdw"
-    },
-    {
-        "ID": 5,
-        "Name": "Cuộc chiến xuyên không",
-        "image": "film5.jpg",
-        "cate_id": 2,
-        "Description": "klwhdavhulkdw"
-    },
-    {
-        "ID": 6,
-        "Name": "Sát thủ đối đầu",
-        "image": "film6.jpg",
-        "cate_id": 2,
-        "Description": "klwhdalkdw"
-    },
-    {
-        "ID": 7,
-        "Name": "The Avengers",
-        "image": "film7.jpg",
-        "cate_id": 2,
-        "Description": "klwhdalkdw"
-    },
-    {
-        "ID": 8,
-        "Name": "FIFTY SHADES FREED",
-        "image": "film8.jpg",
-        "cate_id": 2,
-        "Description": "klwhdalkdw"
-    }
+  {
+    "ID": 1,
+    "Name": " ALCHEMIST: SHAMBALLA CONQUEROR",
+    "image": "Anime2.jpg",
+    "cate_id": 1,
+    "status": "new",
+    "streamingProvider":"Netflix",
+    "Description": "Edward, who was sent to the real world, is working on rocket engineering to return to the old world. At that time, Alphonse found support and began to build rockets. However, the conspiracy of the Thule Association - the mysterious organization was hidden behind."
+  },
+  {
+    "ID": 2,
+    "Name": "Schirkoa",
+    "image": "Anime1.jpg",
+    "cate_id": 1,
+    "status": "new",
+    "streamingProvider":"Disney+",
+
+    "Description": "The next animated film Shirkoa , based on the award-winning short film by director Ishan Shukla, has chosen Asia Argento ( Agony ), Golshifteh Farahani ( Exploiting ) and Jim Sarbh ( Made in Heaven ) to voice her lead roles..."
+  },
+  {
+    "ID": 3,
+    "Name": " Motu Patlu",
+    "image": "Anime3.jpg",
+    "cate_id": 1,
+    "status": "new",   
+    "streamingProvider":"HBO Max",
+    "Description": "Motu and Patlu, two friends living in Fufuri Nagar, always get themselves into hilarious situations and later rescued merely by luck, using the help from Ghasita Ram, Inspector Chingam and Dr. Jhatka."
+  },
+  {
+    "ID": 4,
+    "Name": "Ramayana",
+    "image": "Anime4.jpg",
+    "cate_id": 1,
+    "status": "new",
+    "streamingProvider":"Netflix",
+
+    "Description": "klwhdalkdw"
+  },
+  {
+    "ID": 5,
+    "Name": "The Banyan Deer",
+    "image": "Anime5.jpg",
+    "cate_id": 1,
+    "status": "new",
+    "streamingProvider":"Disney+",
+
+    "Description": " Based on an Indian folk tale, the film tells about a banyan tree deer and its journey."
+  },
+  {
+    "ID": 6,
+    "Name": "Return of the Jungle",
+    "image": "Anime6.jpg",
+    "cate_id": 1,
+    "status": "new",
+    "streamingProvider":"Disney+",
+
+    "Description": "This movie opens up a magical world in the jungle and the adventures of an interesting group of friends."
+  },
+  {
+    "ID": 7,
+    "Name": "Baahubali: The Beginning",
+    "image": "Actions1.jpg",
+    "cate_id": 2,
+    "status": "new",
+    "streamingProvider":"HBO Max",
+
+    "Description": "A child from the Mahishmati kingdom is raised by tribal people and one day learns about his royal heritage, his father's bravery in battle and a mission to overthrow the incumbent ruler."
+  },
+  {
+    "ID": 8,
+    "Name": "Baahubali 2: The Conclusion",
+    "image": "Actions2.jpg",
+    "cate_id": 2,
+    "status": "new",
+    "streamingProvider":"Amazon Prime",
+
+    "Description": "After learning that his father was brutally killed by Bhallaladeva, Mahendra Baahubali raises an army to defeat him and release his mother from the former's captivity."
+  },
+
+  {
+    "ID": 9,
+    "Name": "Dhoom 3",
+    "image": "Actions3.jpg",
+    "cate_id": 2,
+    "status": "Hot",
+    "streamingProvider":"HBO Max",
+
+    "Description": "Sahir, a circus entertainer, robs a corrupt bank in Chicago in order to avenge his father's death. However, his troubles increase when Inspector Jai and Ali suspect him of the robbery."
+  },
+  {
+    "ID": 10,
+    "Name": "Don",
+    "image": "Actions4.jpg",
+    "cate_id": 2,
+    "status": "Hot",
+    "streamingProvider":"Disney+",
+
+    "Description": "DCP DeSilva sees a way to bring to justice the feared head of a criminal empire by recruiting a man named Vijay, who looks exactly like the crime boss. The ruse works too well, and soon Vijay finds his life in danger when DeSilva, the only one who knows his true identity, dies."
+  },
+  {
+    "ID": 11,
+    "Name": "Singham",
+    "image": "Actions5.jpg",
+    "cate_id": 2,
+    "status": "Hot",
+    "streamingProvider":"Amazon Prime",
+
+    "Description": "An honest small town cop is transported to a big city controlled by a crime boss he once humiliated."
+  },
+  {
+    "ID": 12,
+    "Name": "Ghajini",
+    "image": "Actions6.jpg",
+    "cate_id": 2,
+    "status": "Hot",
+    "streamingProvider":"Disney+",
+
+    "Description": "A guy who is the president of a major computer corporation falls in love with a girl  .."
+  },
+  {
+    "ID": 13,
+    "Name": "Sacred Games",
+    "image": "TVShows1.jpg",
+    "cate_id": 3,
+    "status": "Hot",
+    "streamingProvider":"Amazon Prime",
+
+    "Description": "Set in Mumbai, Sacred Games delves into the complex web of organized crime, corruption, politics and espionage under India's economic recovery. It is a masterpiece of extraordinary wealth and power that intertwines the lives of the privileged, the famous, the poor and the bloodthirsty."
+  },
+  {
+    "ID": 14,
+    "Name": "Mirzapur ",
+    "image": "TVShows2.jpg",
+    "cate_id": 3,
+    "status": "Hot",
+    "streamingProvider":"HBO Max",
+
+    "Description": "A shocking incident at a wedding procession ignites a series of events entangling the lives of two families in the lawless city of Mirzapur."
+  },
+  {
+    "ID": 15,
+    "Name": "Crime Patrol Satark",
+    "image": "TVShows3.jpg",
+    "cate_id": 3,
+    "status": "Hot",
+    "streamingProvider":"Amazon Prime",
+
+    "Description": "klwhdalkdw"
+  },
+  {
+    "ID": 16,
+    "Name": "CID",
+    "image": "TVShows4.jpg",
+    "cate_id": 3,
+    "status": "Hot",
+    "Description": "A variety TV show about complex cases and how the investigative team solves them."
+  },
+  {
+    "ID": 17,
+    "Name": "Mahabharat",
+    "image": "TVShows5.jpg",
+    "cate_id": 3,
+    "status": "upcoming",
+    "streamingProvider":"Netflix",
+
+    "Description": "klwhA new version of the classic Mahabharata story, with epic battles and action.dalkdw"
+  },
+  {
+    "ID": 18,
+    "Name": "Kavach... Kaali Shaktiyon Se",
+    "image": "TVShows6.jpg",
+    "cate_id": 3,
+    "status": "upcoming",
+    "streamingProvider":"Disney+",
+
+    "Description": "A married girl's relationship is in turmoil when a spirit, who wants her husband dead, enters her body. She then has to struggle to save her husband from the clutches of the supernatural."
+  },
+  {
+    "ID": 19,
+    "Name": "Raat Hone Ko Hai",
+    "image": "Horror1.jpg",
+    "cate_id": 4,
+    "status": "upcoming",
+    "streamingProvider":"Netflix",
+
+    "Description": "Enthralling tales of horror involving Indian rural and small-town folklore, spooky myths and haunting urban legends."
+  },
+  {
+    "ID": 20,
+    "Name": "13 Mussoorie",
+    "image": "Horror2.jpg",
+    "cate_id": 4,
+    "status": "upcoming",
+    "streamingProvider":"Amazon Prime",
+
+    "Description": "Based on the backdrop of a beautiful and serene city Mussoorie, the series revolves around a mysterious story of a merciless serial killer 'AKS'. The entire city is in a miff to know about the man behind the endless murders"},
+  {
+    "ID": 21,
+    "Name": "Ssshhhh... Phir Koi Hai",
+    "image": "Horror3.jpg",
+    "cate_id": 4,
+    "status": "upcoming",
+    "streamingProvider":"Netflix",
+
+    "Description": "Aryaamaan a ghost buster. His mission was to cast away all kind of negative powers in the world."
+  },
+  {
+    "ID": 22,
+    "Name": "Horror Story",
+    "image": "Horror4.jpg",
+    "cate_id": 4,
+    "status": "upcoming",
+    "streamingProvider":"HBO Max",
+
+    "Description": "Seven youngsters decide to spend a night in an abandoned haunted hotel. What they mistook as merely rumors, dawns on them to be the truth as they realize they are not alone inside."
+  },
+  {
+    "ID": 23,
+    "Name": "Tumbbad",
+    "image": "Horror5.jpg",
+    "cate_id": 4,
+    "status": "upcoming",
+    "streamingProvider":"HBO Max",
+
+    "Description": "A mythological story about a goddess who created the entire universe. The plot revolves around the consequences when humans build a temple for her first-born."
+  },
+  {
+    "ID": 24,
+    "Name": "Ek Thi Daayan",
+    "image": "Horror6.jpg",
+    "cate_id": 4,
+    "status": "upcoming",
+    "streamingProvider":"Netflix",
+
+    "Description": "When gifted magician Bobo finds himself assailed by hallucinations and seeks professional help, he learns he's being haunted by a sinister spirit."
+  }
 ]
+
+
+

@@ -2,8 +2,10 @@
   .ratings{
     margin-bottom: 20px;
   }
-  .pro-large-img img{
-    width: 80%;
+  .img-big{
+    width: 36rem;
+    height: 27rem;
+    object-fit: cover;
   }
   .container-detail{
   
@@ -13,6 +15,45 @@
     background-color: #181616;
     align-items: center;
 
+  }
+  .image{
+    height: 425px;
+  }
+  .more{
+    color: white;
+    width: 86px;
+    margin-top: 10px;
+    border-top: 1px solid white;
+}
+  
+  .Episodes button{
+    width: 30px;
+    top: 10;
+    height: 27px;
+    margin-top: 10px;
+    font-size: 10px;
+    font-weight: 400;
+    margin-right: 6px;
+    padding: 0px;
+    border-radius: 5px;
+    /* align-items: center; */
+    /* display: flex; */
+    background: black;
+    /* top: 10px; */
+  }
+  .watch input{
+    margin-top: 10px;
+    width: 70px;
+    height: 36px;
+    font-size: 10px;
+    font-weight: 600;
+    color: #000;
+    background: yellow;
+    border-radius: 6px;
+}
+  .watchIcon{
+    margin-left: 10px;
+    color: white;
   }
   .update{
     color: yellow;

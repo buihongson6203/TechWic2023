@@ -2,6 +2,8 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import "./Header.css"
+import * as icons from 'react-icons/fa';
+import Notification from "../Component/noti";
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const toggleMenu = () => {
@@ -21,9 +23,9 @@ function Header() {
         <div className="logo-text">StreamEase</div>
       </div>
 
-      <i onClick={toggleMenu} class="fa-solid fa-bars"></i>
+      <i onClick={toggleMenu} className="fa-solid fa-bars"></i>
       <ul className={`link ${isMenuOpen ? "open-menu" : "close-menu"}`}>
-        <i onClick={closeMenu} class="fa-solid fa-x"></i>
+        <i onClick={closeMenu} className="fa-solid fa-x"></i>
         <li>
           <Link to="/" className="item-link" onClick={closeMenu}>
             <div>Home</div>
@@ -32,6 +34,11 @@ function Header() {
         <li>
           <Link to="/films" className="item-link" onClick={closeMenu}>
             <div>Films</div>
+          </Link>
+        </li>
+        <li>
+          <Link to="/fav" className="item-link" onClick={closeMenu}>
+            <div>Favourite Films</div>
           </Link>
         </li>
         <li>
@@ -45,8 +52,18 @@ function Header() {
           </Link>
         </li>
         <li>
-          <Link to="/sitemap" className="item-link">
+          <Link to="/sitemap" className="item-link" onClick={closeMenu}>
             <div>SiteMap</div>
+          </Link>
+        </li>
+        <li>
+          <Link to="/providers" className="item-link" onClick={closeMenu}>
+            <div>Stream Providers</div>
+          </Link>
+        </li>
+        <li>
+          <Link to="/PriceList" className="item-link" onClick={closeMenu}>
+            <div>PriceList</div>
           </Link>
         </li>
       </ul>

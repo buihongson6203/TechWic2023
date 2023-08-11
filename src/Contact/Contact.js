@@ -28,34 +28,34 @@ const ContactUs = () => {
     <div className="contact-us-container">
       
       <div className="Contact">
-      <h2>Contact Us</h2>
+      <h2 className='tille'>Contact Us</h2>
         <form onSubmit={handleSubmit}>
             
                 <input
                 type="text"
-                placeholder="Your Name"
+                placeholder="Your Name" className='mb-3'
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 />
                 <input
                 type="text"
-                placeholder="subject"
+                placeholder="subject"  className='mb-3'
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 />
             
             <input
             type="email"
-            placeholder="Your Email"
+            placeholder="Your Email"  className='mb-3'
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             />
             <textarea
-            placeholder="Your Message"
+            placeholder="Your Message" className='mb-3'
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             ></textarea>
-            <button type="submit" className="btn" onClick={handleSendClick}>Send</button>
+            <button type="submit" className="btn btn-warning" onClick={handleSendClick}>Send</button>
         </form>
       </div>
       <div className="Map">
