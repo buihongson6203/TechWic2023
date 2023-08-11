@@ -30,6 +30,8 @@ function DetailFilm(props) {
           .catch((err) => {
             console.log(err);
           });
+
+
         }
       })
       .catch((err) => {
@@ -43,7 +45,8 @@ function DetailFilm(props) {
   }
 
   const plan = filmList[0]; // Get the first element
-  console.log(category);
+
+  console.log(category.foundCategory.Name    );
 
   return (
     <div className="container-detail">
@@ -59,14 +62,14 @@ function DetailFilm(props) {
       <div>
         <div className="name-film">{plan.Name}</div>
         <div className="review">
-          <div>Category: {category.foundCategory.Name}<strong></strong></div>
+          <div>Category:  {category ? category.foundCategory.Name : <strong>No Category Found</strong>}<strong></strong></div>
         </div>
         <div className="decripsion">
           {plan.Description}
         </div>
-        <div className="more">
-          watch more
-        </div>
+        {/* <div className="more">
+          <div>Category: {category.foundCategory.Name}<strong></strong></div>
+        </div> */}
         <div className="Episodes">
           <button type="button"> 2</button>
           <button type="button"> 3</button>
