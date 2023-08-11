@@ -41,7 +41,6 @@ function App() {
             <icons.FaBell />
             <Notification favFilmsSharedState={favFilmsSharedState} />
           </div>
-          
         </div>
 
         <div>
