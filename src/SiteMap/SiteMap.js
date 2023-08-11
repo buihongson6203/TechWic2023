@@ -5,6 +5,7 @@ import "./SiteMap.css";
 function SiteMap() {
   return (
     <div className="top-section">
+      <h1 className="sitemap">Site Map</h1>
       <section className="info-section">
         <ul>
           <li>
@@ -14,27 +15,27 @@ function SiteMap() {
           </li>
           <li>
             <Link to="/films" >
-              <p className="link"> Phim Âu Mỹ</p>
+              <p className="link"> Films</p>
             </Link>
           </li>
           <li>
-            <Link to="/feedback">
-              <p  className="link"> Phim Hàn Quốc</p>
+            <Link to="/fav">
+              <p  className="link">Favourite Films</p>
             </Link>
           </li>
           <li>
-            <Link to="/contact" >
-              <p className="link"> Phim Trung Quốc</p>
+            <Link to="/FeedBack" >
+              <p className="link"> FeedBack</p>
             </Link>
           </li>
           <li>
-            <Link to="/sitemap" >
-              <p className="link"> Phim Nhật Bản</p>
+            <Link to="/Contact" >
+              <p className="link"> Contact</p>
             </Link>
           </li>
           <li>
-            <Link to="/sitemap" >
-              <p className="link"> Phim Thái Lan</p>
+            <Link to="/Providers" >
+              <p className="link"> Stream Providers</p>
             </Link>
           </li>
         </ul>

@@ -6,6 +6,9 @@
   .item-film .item-inner{
     padding: 0px 15px;
   }
+ .home {
+    color: white;
+  }
   .phim-hot {
     font-size: 22px;
     font-weight: 600;

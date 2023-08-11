@@ -30,6 +30,7 @@ function Home() {
   return (
 
     <div className="container-home">
+      <h1 className="home">Home</h1>
       <div>
         <div className="phim-hot">Hot Movies</div>
         {/* <div className="wrapper-film">

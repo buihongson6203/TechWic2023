@@ -84,7 +84,9 @@ class PriceList extends Component {
 
     return (
       <div className="ContainerPrice">
+        
         <div className="price-list">
+        <h1 className="price">Price List</h1>
           <h1 className="tille-name">Netflix</h1>
           <div className="BlockLarge">
             <div className="BlockSmall">
