@@ -212,7 +212,7 @@ class Films extends Component {
                 <Link to={`/detail/${item.ID}`} className="item-link">
                   <img className="logo-slider" src={'./imgs/film/' + item.image} alt={item.Name} />
                 </Link>
-                <div className="name">{item.Name}</div>
+                <div className="name">{item.Name} <strong className="red">({item.streamingProvider})</strong></div>
                 <button className={`position-absolute heart-itemm ${active}`} onClick={() => this.HandleFavourite(item.ID)}>
                   {active === '' ? <icons.FaRegHeart /> : <icons.FaHeart />}
                 </button>

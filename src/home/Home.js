@@ -77,7 +77,7 @@ function Home() {
                   <div className="logo-wrap">
                     <img className="logo-slider" src={"./imgs/film/" + item.image} alt={item.Name} />
                   </div>
-                  <div className="name">{item.Name}({item.streamingProvider})</div>
+                  <div className="name">{item.Name} <strong className="red">({item.streamingProvider})</strong></div>
                 </div>
               </SwiperSlide>
             );
@@ -132,7 +132,7 @@ function Home() {
                   <div className="logo-wrap">
                     <img className="logo-slider" src={"./imgs/film/" + item.image} alt={item.Name} />
                   </div>
-                  <div className="name">{item.Name}({item.streamingProvider})</div>
+                  <div className="name">{item.Name} <strong className="red">({item.streamingProvider})</strong></div>
                 </div>
               </SwiperSlide>
             );
@@ -185,7 +185,7 @@ function Home() {
                   <div className="logo-wrap">
                     <img className="logo-slider" src={"./imgs/film/" + item.image} alt={item.Name} />
                   </div>
-                  <div className="name">{item.Name}({item.streamingProvider})</div>
+                  <div className="name">{item.Name} <strong className="red">({item.streamingProvider})</strong></div>
                 </div>
               </SwiperSlide>
             );
