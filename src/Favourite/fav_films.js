@@ -28,7 +28,6 @@ class FavFilms extends React.Component {
                                 if (item.film_id === film.ID) numberOfEpisodes++;
                             });
                             film.numberOfEpisodes = numberOfEpisodes;
-                            console.log(film);
                         });
                         const filteredFilms = dataFilms.filter(film => favFilms.includes(film.ID));
 
@@ -48,6 +47,9 @@ class FavFilms extends React.Component {
             let FilmsUpdate = this.state.films.filter(film => this.state.favFilms.includes(film.ID));
             this.setState({ films: FilmsUpdate });
         });
+        console.log(updatedFavFilms);
+        this.props.setSharedFavFilmsState(updatedFavFilms);
+        window.dispatchEvent(new Event('storage'))
         localStorage.setItem('fav_films', JSON.stringify(updatedFavFilms));
     };
 

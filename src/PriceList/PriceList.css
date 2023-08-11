@@ -104,24 +104,9 @@ span.swal2-success-line-long {
     top: 30px !important;
 }
 
-
-
-
 .purchased {
     opacity: 0.4; 
-  }
-  
-  .not-purchased {
-    /* background-color: lightcoral;  */
-  }
-  
-
-
-
-
-
-
-
+}
 @media (max-width:450px){
     .ContainerPrice{
         margin-left: 40px;
