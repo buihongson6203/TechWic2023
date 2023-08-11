@@ -1,0 +1,11 @@
+.noti-menu {
+    padding: 20px;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 400px;
+    color: white;
+    background-color: #333;
+    list-style: none;
+    display: none;
+}

@@ -27,6 +27,21 @@ h1{
     border: 1px solid grey;
     width: 200px;
     border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.Bundle.disable::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.BlockLarge {
+    margin-bottom: 50px;
 }
 .Title{
     height: 35px;
@@ -71,6 +86,7 @@ p{
 
     background: #000;
     border: 1px solid yellow;
+    border-radius: 5px;
 }
 .button button:hover{
     background: yellow;
@@ -91,7 +107,14 @@ span.swal2-success-line-long {
 
 
 
-
+.purchased {
+    opacity: 0.4; 
+  }
+  
+  .not-purchased {
+    /* background-color: lightcoral;  */
+  }
+  
 
 
 
