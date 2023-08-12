@@ -34,7 +34,9 @@ const Feedback = () => {
         <h2>Feedback </h2>
         <div className="Form">
             <form onSubmit={handleSubmit}>
-                 <input className='mb-3' type="text" placeholder='@Email'/>
+                 <input className='mb-3' type="text" placeholder='your name'/>
+                 <input className='mb-3' type="text" placeholder='subject'/>
+                 <input className='mb-3' type="text" placeholder='your email'/>
                 <div className="Comment">
                
                 <textarea value={comment} placeholder="Comment: " onChange={handleCommentChange} />

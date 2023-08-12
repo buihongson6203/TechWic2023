@@ -57,6 +57,7 @@ button {
 .btn{
   background: #000;
   border: 2px solid yellow;
+  color: white;
 }
 .btn:hover{
   background: yellow;

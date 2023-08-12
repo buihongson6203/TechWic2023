@@ -342,15 +342,15 @@ class Films extends Component {
             breakpoints={{
               640: {
                 slidesPerView: 2,
-                // spaceBetween: 20,
+                spaceBetween: 20,
               },
               768: {
                 slidesPerView: 4,
-                // spaceBetween: 40,
+                spaceBetween: 40,
               },
               1024: {
                 slidesPerView: 5,
-                // spaceBetween: 50,
+                spaceBetween: 50,
               },
             }}
             modules={[Autoplay]}
@@ -362,7 +362,12 @@ class Films extends Component {
               return (
                 <SwiperSlide key={item.ID} className="item-film">
                   <div className="item-inner poisiton-relative">
-                    <div className="tap">{item.numberOfEpisodes} episodes</div>
+                  {item.numberOfEpisodes === 0 ? (
+  <div className="tap">Individual</div>
+) : (
+  <div className="tap">{item.numberOfEpisodes} episodes</div>
+)}
+
                     <Link to={`/detail/${item.ID}`} className="item-link">
                       <img className="logo-slider" src={'./imgs/film/' + item.image} alt={item.Name} />
                     </Link>

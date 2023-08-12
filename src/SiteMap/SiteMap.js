@@ -22,7 +22,7 @@ function SiteMap() {
             </Link>
           </th>
           <th>
-            <Link to="/films" className="sitemap-link">
+            <Link to="/PriceList" className="sitemap-link">
               <h3 style={headingStyle}>Supplier</h3>
             </Link>
           </th>
@@ -39,7 +39,7 @@ function SiteMap() {
             </Link>
           </th>
           <th>
-            <Link to="/films" className="link">
+            <Link to="/PriceList" className="link">
               <p className="P">Netflix</p>
             </Link>
           </th>
@@ -56,7 +56,7 @@ function SiteMap() {
             </Link>
           </th>
           <th>
-            <Link to="/films" className="link">
+            <Link to="/PriceList" className="link">
               <p className="P" >HBO Max</p>
             </Link>
           </th>
@@ -74,7 +74,7 @@ function SiteMap() {
             </Link>
           </th>
           <th>
-            <Link to="/films" className="link">
+            <Link to="/PriceList" className="link">
               <p className="P">Disney+</p>
             </Link>
           </th>
@@ -91,7 +91,7 @@ function SiteMap() {
             </Link>
           </th>
           <th>
-            <Link to="/films " className="link">
+            <Link to="/PriceList " className="link">
               <p className="P">Amazon Prime</p>
             </Link>
           </th>

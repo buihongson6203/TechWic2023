@@ -31,18 +31,7 @@ const ContactUs = () => {
       <h2 className='tille'>Contact Us</h2>
         <form onSubmit={handleSubmit}>
             
-                <input
-                type="text"
-                placeholder="Your Name" className='mb-3'
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                />
-                <input
-                type="text"
-                placeholder="subject"  className='mb-3'
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                />
+                
             
             <input
             type="email"
