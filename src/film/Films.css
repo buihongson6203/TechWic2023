@@ -35,6 +35,9 @@
     border-radius: 2px;
     z-index: 2;
   }
+  .wrapper-film-1{
+    margin-top: 100px;
+  }
   .input-search {
     position: relative;
   }
