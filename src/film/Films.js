@@ -7,7 +7,8 @@ import { isAfter, parse } from "date-fns";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Swiper, SwiperSlide } from 'swiper/react';
-
+import { INCREMENT , GET, DECREMENT} from "../redux/Action";
+import { connect } from "react-redux";
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -26,7 +27,8 @@ class Films extends Component {
       fav_film: [],
       favFilms: [],
       FilmDetails: [],
-      upcomingReleases: []
+      upcomingReleases: [],
+      noti_data: []
     }
   }
 
@@ -189,12 +191,28 @@ class Films extends Component {
       })
   }
 
+  handleIncrement(data) {
+    this.props.INCREMENT(data);
+  }
+
+  handleDecrement(data) {
+    this.props.DECREMENT(data);
+  }
+
+
   HandleFavourite = (ID) => {
 
     let fav_films = this.state.fav_film;
+    let noti_data = localStorage.getItem('noti_data') ? JSON.parse(localStorage.getItem('noti_data')) : [];
     const index = fav_films.indexOf(ID);
     if (index > -1) {
       fav_films.splice(index, 1);
+      const ud = noti_data.filter((item) => item.film.ID !== ID)
+
+      console.log(noti_data, ID , ud, 'alo')
+      localStorage.setItem('noti_data', JSON.stringify(ud))
+
+      this.handleDecrement(ID)
     } else {
       fav_films.push(ID);
     }
@@ -249,32 +267,32 @@ class Films extends Component {
                     }
                   });
                 });
-                console.log(lstFilmDetailWithFilm, 'lstFilmDetailWithFilm')
                   let releaseMessage = ''
-                
+
                 const chossenFilm = lstFilmDetailWithFilm.filter(item => item.film.ID == ID)[0];
-                  console.log(chossenFilm, ID, 'chossenFilm')
                   const published_date = chossenFilm.filmDetail.published_date;
                   const parsedDate = parse(published_date, 'dd/MM/yyyy', new Date());
                   if (isAfter(parsedDate, new Date())) {
                       const releaseMessage = `${chossenFilm.film.Name} ${chossenFilm.filmDetail.Name} will be published on ${chossenFilm.filmDetail.published_date}.`;
                       this.notify(releaseMessage)
+                    let dataUpadate = {message: releaseMessage, filmDetail: chossenFilm.filmDetail, film : chossenFilm.film}
+                    this.handleIncrement(dataUpadate)
                   }
 
-                // let lstRealReleaseMessages = [];
-                // lstFilmDetailWithFilm.forEach(item => {
-                //   const published_date = item.filmDetail.published_date;
-                //   const parsedDate = parse(published_date, 'dd/MM/yyyy', new Date());
-                //
-                //   // So sánh với ngày hiện tại
-                //   if (isAfter(parsedDate, new Date())) {
-                //     const releaseMessage = `${item.film.Name} ${item.filmDetail.Name} will be published on ${item.filmDetail.published_date}.`;
-                //       this.notify(releaseMessage)
-                //     lstRealReleaseMessages.push(releaseMessage);
-                //   }
-                // });
-                // this.setState({upcomingReleases: lstRealReleaseMessages})
+                let lstRealReleaseMessages = [];
+                lstFilmDetailWithFilm.forEach(item => {
+                  const published_date = item.filmDetail.published_date;
+                  const parsedDate = parse(published_date, 'dd/MM/yyyy', new Date());
 
+                  // So sánh với ngày hiện tại
+                  if (isAfter(parsedDate, new Date())) {
+                    const releaseMessage = `${item.film.Name} ${item.filmDetail.Name} will be published on ${item.filmDetail.published_date}.`;
+                    let dataUpadate = {message: releaseMessage, filmDetail: item.filmDetail, film : item.film}
+                    lstRealReleaseMessages.push(dataUpadate);
+                  }
+                });
+                this.setState({upcomingReleases: lstRealReleaseMessages})
+                localStorage.setItem('noti_data', JSON.stringify(lstRealReleaseMessages))
 
               })
               .catch((error) => {
@@ -372,4 +390,4 @@ class Films extends Component {
     );
   }
 }
-export default Films;
+export default connect(null, { INCREMENT, GET, DECREMENT })(Films) ;

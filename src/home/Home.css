@@ -24,6 +24,7 @@
     position: relative;
     overflow: hidden;
     padding-top: 100%;
+    background: #000;
   }
 
   .logo-slider {

@@ -5,7 +5,7 @@ import Header from "./Header/Header";
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useState } from "react";
-
+import {Provider} from "react-redux";
 // import About from "./About";
 import Films from "./film/Films";
 import Home from "./home/Home";
@@ -19,7 +19,7 @@ import FavFilms from "./Favourite/fav_films";
 import Notification from "./Component/noti";
 import * as icons from 'react-icons/fa';
 import './Component/noti.css';
-
+import store from "./redux/store";
 function App() {
 
   const favFilms = JSON.parse(localStorage.getItem("fav_films"));
@@ -32,6 +32,7 @@ function App() {
   };
 
   return (
+    <Provider store={store}>
     <BrowserRouter>
       <div className="App">
         <div className="headerWrap">
@@ -62,6 +63,7 @@ function App() {
         <Footer />
       </div>
     </BrowserRouter>
+    </Provider>
   );
 }
 
