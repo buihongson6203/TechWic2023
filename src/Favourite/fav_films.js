@@ -81,16 +81,18 @@ class FavFilms extends React.Component {
                 <div className="wrapper-film">
                     {films.map((item) => {
                         return (
-                            <Link to={`/detail/${item.ID}`} className="link-film" key={item.ID}>
-                                <div key={item.ID} className="item-film">
+
+                            <div key={item.ID} className="item-film">
+                                <Link to={`/detail/${item.ID}`} className="link-film" key={item.ID}>
                                     <div className="title">{item.numberOfEpisodes} episodes</div>
                                     <img className="logo" src={'./imgs/film/' + item.image} alt={item.Name} />
                                     <div className="name">{item.Name}</div>
-                                    <button className="position-absolute heart-item active" onClick={() => this.handleRemoveFavFilm(item.ID)}>
-                                        <icons.FaHeart />
-                                    </button>
-                                </div>
-                            </Link>
+                                </Link>
+                                <button className="position-absolute heart-item active" onClick={() => this.handleRemoveFavFilm(item.ID)}>
+                                    <icons.FaHeart />
+                                </button>
+                            </div>
+
                         );
                     })}
                 </div>
