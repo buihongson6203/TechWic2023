@@ -2,54 +2,231 @@
     {
         "ID": 1,
         "film_id": 1,
-        "Name": "Episode 1: Beginning",
+        "Name": "Episode 1",
         "published_date": "09/08/2023",
         "order": 1,
         "linkimage":"https://simg.zalopay.com.vn/zlp-website/assets/phim_moi_chieu_rap_Alienoid_Cuoc_chien_xuyen_khong_72143fde54.jpg"
     },
     {
         "ID": 2,
-        "Name": "Episode 2: ending",
+        "Name": "Episode 2",
         "film_id": 1,
         "published_date": "15/08/2023",
         "order": 2,
         "linkimage":"https://simg.zalopay.com.vn/zlp-website/assets/phim_moi_chieu_rap_Alienoid_Cuoc_chien_xuyen_khong_72143fde54.jpg"
     },
-    
     {
         "ID": 3,
-        "Name": "Insidious 1",
-        "film_id": 4,
-        "published_date": "09/08/2023",
-        "linkimage":"https://simg.zalopay.com.vn/zlp-website/assets/phim_moi_chieu_rap_Alienoid_Cuoc_chien_xuyen_khong_72143fde54.jpg"
-    },
-    {
-        "ID": 4,
-        "Name": "Fast and Furious 5",
-        "film_id": 4,
+        "Name": "Episode 1",
+        "film_id": 3,
         "published_date": "09/08/2023",
         "linkimage":"https://simg.zalopay.com.vn/zlp-website/assets/phim_moi_chieu_rap_Alienoid_Cuoc_chien_xuyen_khong_72143fde54.jpg",
         "order": 1
     },
     {
-        "ID": 5,
-        "Name": "Episode 2: How is all ended",
-        "film_id": 4,
-        "published_date": "13/08/2023",
+        "ID": 4,
+        "Name": "Episode 2",
+        "film_id": 3,
+        "published_date": "16/08/2023",
+        "linkimage":"https://simg.zalopay.com.vn/zlp-website/assets/phim_moi_chieu_rap_Alienoid_Cuoc_chien_xuyen_khong_72143fde54.jpg",
         "order": 2
     },
     {
-        "ID": 6,
-        "Name": "Reply 1988 episode 1",
+        "ID": 5,
+        "Name": "Episode 3",
         "film_id": 3,
-        "published_date": "12/08/2023",
+        "published_date": "20/08/2023",
+        "linkimage":"https://simg.zalopay.com.vn/zlp-website/assets/phim_moi_chieu_rap_Alienoid_Cuoc_chien_xuyen_khong_72143fde54.jpg",
+        "order": 3
+    },
+    {
+        "ID": 6,
+        "Name": "Episode 1",
+        "film_id": 5,
+        "published_date": "02/08/2023",
         "order": 1
     },
     {
         "ID": 7,
-        "Name": "Reply 1988 episode 2",
-        "film_id": 3,
+        "Name": "Episode 2",
+        "film_id": 5,
         "published_date": "15/08/2023",
+        "order": 2
+    },
+    {
+        "ID": 8,
+        "Name": "Episode 1",
+        "film_id": 7,
+        "published_date": "19/08/2023",
+        "linkimage":"https://simg.zalopay.com.vn/zlp-website/assets/phim_moi_chieu_rap_Alienoid_Cuoc_chien_xuyen_khong_72143fde54.jpg",
         "order": 1
+    },
+    {
+        "ID": 9,
+        "Name": "Episode 2",
+        "film_id": 7,
+        "published_date": "22/08/2023",
+        "linkimage":"https://simg.zalopay.com.vn/zlp-website/assets/phim_moi_chieu_rap_Alienoid_Cuoc_chien_xuyen_khong_72143fde54.jpg",
+        "order": 2
+    },
+    {
+        "ID": 10,
+        "Name": "Episode 3",
+        "film_id": 7,
+        "published_date": "25/08/2023",
+        "linkimage":"https://simg.zalopay.com.vn/zlp-website/assets/phim_moi_chieu_rap_Alienoid_Cuoc_chien_xuyen_khong_72143fde54.jpg",
+        "order": 3
+    },
+    {
+        "ID": 11,
+        "Name": "Episode 1",
+        "film_id": 9,
+        "published_date": "02/08/2023",
+        "order": 1
+    },
+    {
+        "ID": 12,
+        "Name": "Episode 2",
+        "film_id": 9,
+        "published_date": "29/08/2023",
+        "order": 2
+    },
+    {
+        "ID": 13,
+        "Name": "Episode 1",
+        "film_id": 11,
+        "published_date": "19/08/2023",
+        "linkimage":"https://simg.zalopay.com.vn/zlp-website/assets/phim_moi_chieu_rap_Alienoid_Cuoc_chien_xuyen_khong_72143fde54.jpg",
+        "order": 1
+    },
+    {
+        "ID": 14,
+        "Name": "Episode 2",
+        "film_id": 11,
+        "published_date": "22/08/2023",
+        "linkimage":"https://simg.zalopay.com.vn/zlp-website/assets/phim_moi_chieu_rap_Alienoid_Cuoc_chien_xuyen_khong_72143fde54.jpg",
+        "order": 2
+    },
+    {
+        "ID": 15,
+        "Name": "Episode 3",
+        "film_id": 11,
+        "published_date": "25/08/2023",
+        "linkimage":"https://simg.zalopay.com.vn/zlp-website/assets/phim_moi_chieu_rap_Alienoid_Cuoc_chien_xuyen_khong_72143fde54.jpg",
+        "order": 3
+    },
+    {
+        "ID": 16,
+        "Name": "Episode 1",
+        "film_id": 13,
+        "published_date": "02/08/2023",
+        "order": 1
+    },
+    {
+        "ID": 17,
+        "Name": "Episode 2",
+        "film_id": 13,
+        "published_date": "29/08/2023",
+        "order": 2
+    },
+    {
+        "ID": 18,
+        "Name": "Episode 1",
+        "film_id": 15,
+        "published_date": "19/08/2023",
+        "linkimage":"https://simg.zalopay.com.vn/zlp-website/assets/phim_moi_chieu_rap_Alienoid_Cuoc_chien_xuyen_khong_72143fde54.jpg",
+        "order": 1
+    },
+    {
+        "ID": 19,
+        "Name": "Episode 2",
+        "film_id": 15,
+        "published_date": "22/08/2023",
+        "linkimage":"https://simg.zalopay.com.vn/zlp-website/assets/phim_moi_chieu_rap_Alienoid_Cuoc_chien_xuyen_khong_72143fde54.jpg",
+        "order": 2
+    },
+    {
+        "ID": 20,
+        "Name": "Episode 3",
+        "film_id": 15,
+        "published_date": "25/08/2023",
+        "linkimage":"https://simg.zalopay.com.vn/zlp-website/assets/phim_moi_chieu_rap_Alienoid_Cuoc_chien_xuyen_khong_72143fde54.jpg",
+        "order": 3
+    },
+    {
+        "ID": 21,
+        "Name": "Episode 1",
+        "film_id": 17,
+        "published_date": "02/08/2023",
+        "order": 1
+    },
+    {
+        "ID": 22,
+        "Name": "Episode 2",
+        "film_id": 17,
+        "published_date": "29/08/2023",
+        "order": 2
+    },
+    {
+        "ID": 23,
+        "Name": "Episode 1",
+        "film_id": 19,
+        "published_date": "19/08/2023",
+        "linkimage":"https://simg.zalopay.com.vn/zlp-website/assets/phim_moi_chieu_rap_Alienoid_Cuoc_chien_xuyen_khong_72143fde54.jpg",
+        "order": 1
+    },
+    {
+        "ID": 24,
+        "Name": "Episode 2",
+        "film_id": 19,
+        "published_date": "22/08/2023",
+        "linkimage":"https://simg.zalopay.com.vn/zlp-website/assets/phim_moi_chieu_rap_Alienoid_Cuoc_chien_xuyen_khong_72143fde54.jpg",
+        "order": 2
+    },
+    {
+        "ID": 25,
+        "Name": "Episode 3",
+        "film_id": 19,
+        "published_date": "25/08/2023",
+        "linkimage":"https://simg.zalopay.com.vn/zlp-website/assets/phim_moi_chieu_rap_Alienoid_Cuoc_chien_xuyen_khong_72143fde54.jpg",
+        "order": 3
+    },
+    {
+        "ID": 26,
+        "Name": "Episode 1",
+        "film_id": 21,
+        "published_date": "19/08/2023",
+        "linkimage":"https://simg.zalopay.com.vn/zlp-website/assets/phim_moi_chieu_rap_Alienoid_Cuoc_chien_xuyen_khong_72143fde54.jpg",
+        "order": 1
+    },
+    {
+        "ID": 27,
+        "Name": "Episode 2",
+        "film_id": 21,
+        "published_date": "22/08/2023",
+        "linkimage":"https://simg.zalopay.com.vn/zlp-website/assets/phim_moi_chieu_rap_Alienoid_Cuoc_chien_xuyen_khong_72143fde54.jpg",
+        "order": 2
+    },
+    {
+        "ID": 28,
+        "Name": "Episode 3",
+        "film_id": 21,
+        "published_date": "25/08/2023",
+        "linkimage":"https://simg.zalopay.com.vn/zlp-website/assets/phim_moi_chieu_rap_Alienoid_Cuoc_chien_xuyen_khong_72143fde54.jpg",
+        "order": 3
+    },
+    {
+        "ID": 29,
+        "Name": "Episode 1",
+        "film_id": 23,
+        "published_date": "02/08/2023",
+        "order": 1
+    },
+    {
+        "ID": 30,
+        "Name": "Episode 2",
+        "film_id": 23,
+        "published_date": "29/08/2023",
+        "order": 2
     }
 ]
