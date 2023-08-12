@@ -4,7 +4,8 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import axios from 'axios';
 import * as icons from 'react-icons/fa';
 import './noti.css';
-
+import { connect } from "react-redux";
+import { INCREMENT } from "../redux/Action";
 class Notification extends Component {
     constructor(props) {
         super(props);
@@ -86,8 +87,10 @@ class Notification extends Component {
     }
 
     componentDidMount = () => {
+
         window.addEventListener('storage', this.handleStorageChange);
         let favFilms = localStorage.getItem('fav_films') ? JSON.parse(localStorage.getItem('fav_films')) : [];
+        console.log(favFilms, 'favFilms');
 
         // let favFilms = this.props.favFilmsSharedState ? this.props.favFilmsSharedState : [];
         this.setState({
@@ -135,11 +138,11 @@ class Notification extends Component {
                         lstFilmDetailWithFilm.forEach(item => {
                             const published_date = item.filmDetail.published_date;
                             const parsedDate = parse(published_date, 'dd/MM/yyyy', new Date());
-
                             // So sánh với ngày hiện tại
                             if (isAfter(parsedDate, new Date())) {
                                 const releaseMessage = `${item.film.Name} ${item.filmDetail.Name} will be published on ${item.filmDetail.published_date}.`;
-                                lstRealReleaseMessages.push(releaseMessage);
+                                lstRealReleaseMessages.push( {message: releaseMessage, film_id: item.filmDetail.ID})
+
                             }
                         });
                         this.setState({upcomingReleases: lstRealReleaseMessages})
@@ -154,12 +157,25 @@ class Notification extends Component {
         const { upcomingReleases } = this.state;
         return (
             <ul className="rounded noti-menu">
-                {upcomingReleases.map((message, index) => (
-                    <li key={index}>{message}</li>
-                ))}
+
+                {this.props.count}
+
+                {/*{upcomingReleases.map((message, index) => (*/}
+                {/*    <li key={index}>{message.message}</li>*/}
+                {/*))}*/}
             </ul>
         );
     }
 }
 
-export default Notification;
+const mapStateToProps = (state) => {
+    return {
+        count: state
+    };
+};
+
+const mapDispatchToProps = {
+    INCREMENT
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Notification) ;

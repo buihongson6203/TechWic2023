@@ -6,28 +6,57 @@
     padding: 10px 20px 10px 50px;
     width: 70%;
   }
-  /* button .heart-item {
-    /* haha */
-    /* top: 25px !important;
+  .item-link{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    padding-top: 100%;
+  }
+  .logo-slider {
+    width: 100%;
+    transition: all 0.35s ease-out 0s;
+    -webkit-transition: all 0.35s ease-out 0s;
     position: absolute;
-    right: 34px !important;
-} */ 
-
-.episodes{
-  color: white;
-  font-size: 10px;
-  width: 63px;
-  height: 28px;
-  background: red;
-  border-radius: 5px;
-  padding: 6px;
-  top: 28px;
-  position: relative;
-}
+    left: 0px;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    object-fit: cover;
+    margin: auto;
+  }
+  .tap {
+    position: absolute;
+    left: 2px;
+    /* color: red; */
+    padding: 4px;
+    font-size: 12px;
+    background-color: red;
+    color: #fff;
+    border-radius: 2px;
+    z-index: 2;
+  }
+  .wrapper-film-1{
+    margin-top: 100px;
+  }
   .input-search {
     position: relative;
   }
-  
+  .swiper-wrapper {
+    padding-bottom: 15px;
+  }
+  .name {
+    color: #fff;
+    font-size: 14px;
+    padding-top: 10px;
+    padding-left: 4px;
+    position: absolute;
+    background-color: rgb(112, 110, 110);
+    color: #fff;
+    padding: 6px;
+    width: 100%;
+    font-weight: 400;
+    bottom: 0;
+  }
 
   .search {
     position: absolute;
@@ -90,10 +119,9 @@
   }
 }
 
-.heart-item {
-  top: 28px !important;
-  position: absolute;
-  right: 45px !important;
+.heart-itemm {
+  top: 1px;
+    right: 0px;
   width: 30px;
   height: 30px;
   background-color: white;
@@ -106,14 +134,4 @@
 
 .heart-item.active {
   color: red;
-}
-
-.title{
-  background-color: rgb(112, 110, 110);
-  color: #fff;
-  padding: 6px;
-  font-size: 11px;
-  width:79%;
-  font-weight: 400;
-  bottom: 0;
 }

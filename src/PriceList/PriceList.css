@@ -132,12 +132,12 @@ span.swal2-success-line-long {
 
 
 
-.purchased {
+/* .purchased {
     opacity: 0.4; 
-  }
+  } */
   
   .not-purchased {
-    /* background-color: lightcoral;  */
+    opacity: 0.4; 
   }
   
 

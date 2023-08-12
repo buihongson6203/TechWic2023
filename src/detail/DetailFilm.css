@@ -4,7 +4,7 @@
   }
   .img-big{
     width: 36rem;
-    height: 15rem;
+    height: 27rem;
     object-fit: cover;
   }
   .container-detail{
@@ -91,4 +91,8 @@
         font-weight: 700;
         color: white;
       }
+  }
+
+  .red{
+    color: red;
   }

@@ -154,6 +154,8 @@
     "image": "TVShows4.jpg",
     "cate_id": 3,
     "status": "Hot",
+    "streamingProvider":"Amazon Prime",
+
     "Description": "A variety TV show about complex cases and how the investigative team solves them."
   },
   {
@@ -178,13 +180,13 @@
   },
   {
     "ID": 19,
-    "Name": "Raat Hone Ko Hai",
+    "Name": "Haunted stories",
     "image": "Horror1.jpg",
     "cate_id": 4,
     "status": "upcoming",
     "streamingProvider":"Netflix",
 
-    "Description": "Enthralling tales of horror involving Indian rural and small-town folklore, spooky myths and haunting urban legends."
+    "Description": "a four-episode short with a haunted story that brings dark things back.."
   },
   {
     "ID": 20,
@@ -232,7 +234,6 @@
     "cate_id": 4,
     "status": "upcoming",
     "streamingProvider":"Netflix",
-
     "Description": "When gifted magician Bobo finds himself assailed by hallucinations and seeks professional help, he learns he's being haunted by a sinister spirit."
   }
 ]

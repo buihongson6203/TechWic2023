@@ -3,141 +3,121 @@ import { Link } from "react-router-dom";
 import "./SiteMap.css";
 
 function SiteMap() {
+  const headingStyle = {
+    textDecoration: 'none',
+  };
   return (
     <div className="top-section">
-      <h1 className="sitemap">Site Map</h1>
-      <section className="info-section">
-        <ul>
-          <li>
+     
+      <table>
+        <tr>
+          <th>
             <Link to="/" className="sitemap-link">
-              <h2> home</h2>
+              <h3 style={headingStyle}>Home</h3>
             </Link>
-          </li>
-          <li>
-            <Link to="/films" >
-              <p className="link"> Films</p>
-            </Link>
-          </li>
-          <li>
-            <Link to="/fav">
-              <p  className="link">Favourite Films</p>
-            </Link>
-          </li>
-          <li>
-            <Link to="/FeedBack" >
-              <p className="link"> FeedBack</p>
-            </Link>
-          </li>
-          <li>
-            <Link to="/Contact" >
-              <p className="link"> Contact</p>
-            </Link>
-          </li>
-          <li>
-            <Link to="/Providers" >
-              <p className="link"> Stream Providers</p>
-            </Link>
-          </li>
-        </ul>
-      </section>
-      <section className="info-section">
-        <ul>
-          <li>
+          </th>
+          <th className="center">
             <Link to="/films" className="sitemap-link">
-              <h2> Genres </h2>
+              <h3 style={headingStyle}>Category</h3>
             </Link>
-          </li>
-          <li>
-            <Link to="/films" >
-              <p className="link"> Actions</p>
+          </th>
+          <th>
+            <Link to="/PriceList" className="sitemap-link">
+              <h3 style={headingStyle}>Supplier</h3>
             </Link>
-          </li>
-          <li>
-            <Link to="/feedback">
-              <p  className="link"> Anime</p>
+          </th>
+        </tr>
+        <tr>
+          <th>
+            <Link to="/films" className="link">
+              <p className="P">Films</p>
             </Link>
-          </li>
-          <li>
-            <Link to="/contact" >
-              <p className="link"> TV Shows</p>
+          </th>
+          <th className="center">
+            <Link to="/films" className="link">
+              <p className="P" >Anime</p>
             </Link>
-          </li>
-          <li>
-            <Link to="/sitemap" >
-              <p className="link"> Horror</p>
+          </th>
+          <th>
+            <Link to="/PriceList" className="link">
+              <p className="P">Netflix</p>
             </Link>
-          </li>
-          
-        </ul>
-      </section>
-      <section className="info-section">
-        <ul>
-          <li>
-            <Link to="/" className="sitemap-link">
-              <h2>Phim hay</h2>
+          </th>
+        </tr>
+        <tr>
+          <th>
+            <Link to="/fav" className="link">
+              <p className="P">Favourite Films</p>
             </Link>
-          </li>
-          <li>
-            <Link to="/films" >
-              <p className="link"> Phim Âu Mỹ</p>
+          </th>
+          <th className="center">
+            <Link to="/films" className="link">
+              <p className="P">Actions</p>
             </Link>
-          </li>
-          <li>
-            <Link to="/feedback" >
-              <p className="link"> Phim Hàn Quốc</p>
+          </th>
+          <th>
+            <Link to="/PriceList" className="link">
+              <p className="P" >HBO Max</p>
             </Link>
-          </li>
-          <li>
-            <Link to="/contact" >
-              <p className="link"> Phim Trung Quốc</p>
+          </th>
+        </tr>
+
+        <tr>
+          <th>
+            <Link to="/feedback" className="link">
+              <p className="P">Feedback</p>
             </Link>
-          </li>
-          <li>
-            <Link to="/sitemap" >
-              <p className="link" > Phim Nhật Bản</p>
+          </th>
+          <th className="center">
+            <Link to="/films" className="link">
+              <p className="P">TV Shows</p>
             </Link>
-          </li>
-          <li>
-            <Link to="/sitemap">
-              <p  className="link"> Phim Thái Lan</p>
+          </th>
+          <th>
+            <Link to="/PriceList" className="link">
+              <p className="P">Disney+</p>
             </Link>
-          </li>
-        </ul>
-      </section>
-      <section className ="links-section">
-        <ul>
-          <li>
-            <Link to="/" className="sitemap-link">
-              <h2>Phim mới</h2>
+          </th>
+        </tr>
+        <tr>
+          <th>
+            <Link to="/contact" className="link">
+              <p className="P" >Contact</p>
             </Link>
-          </li>
-          <li>
-            <Link to="/films" >
-              <p className="link"> Phim Khoa Học</p>
+          </th>
+          <th className="center">
+            <Link to="/films" className="link"> 
+              <p className="P">Horror</p>
             </Link>
-          </li>
-          <li>
-            <Link to="/feedback">
-              <p  className="link"> Phim Kinh Dị</p>
+          </th>
+          <th>
+            <Link to="/PriceList " className="link">
+              <p className="P">Amazon Prime</p>
             </Link>
-          </li>
-          <li>
-            <Link to="/contact" >
-              <p className="link"> Phim Chiếu Rạp</p>
+          </th>
+        </tr>
+        <tr>
+          <th>
+            <Link to="/sitemap" className="link">
+              <p className="P">SiteMap</p>
             </Link>
-          </li>
-          <li>
-            <Link to="/sitemap">
-              <p  className="link"> Phim Hình Sự</p>
+          </th>
+        </tr>
+        <tr>
+          <th>
+            <Link to="/providers" className="link">
+              <p className="P">Stream Providers</p>
             </Link>
-          </li>
-          <li>
-            <Link to="/sitemap" >
-              <p  className="link"> Phim Hành Động</p>
+          </th>
+        </tr>
+        <tr>
+          <th>
+            <Link to="/PriceList" className="link">
+              <p className="P" >PriceList</p>
             </Link>
-          </li>
-        </ul>
-      </section>
+          </th>
+        </tr>
+      </table>
     </div>
   );
 }

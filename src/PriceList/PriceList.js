@@ -73,7 +73,7 @@ class PriceList extends Component {
     }));
     Swal.fire({
       icon: "success",
-      title: "Thanks for buying a movie",
+      title: "Thanks for renewal your subscription",
     });
   };
 
@@ -86,7 +86,7 @@ class PriceList extends Component {
       <div className="ContainerPrice">
         
         <div className="price-list">
-        <h1 className="price">Price List</h1>
+        <h1 className="price">Your Subscription</h1>
           <h1 className="tille-name">Netflix</h1>
           <div className="BlockLarge">
             <div className="BlockSmall">

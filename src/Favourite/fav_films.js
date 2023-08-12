@@ -2,6 +2,10 @@ import React, { Component } from "react";
 import axios from 'axios';
 import "./fav_films.css";
 import * as icons from 'react-icons/fa';
+import { Link } from "react-router-dom";
+import {connect} from "react-redux";
+import {DECREMENT, INCREMENT} from "../redux/Action";
+
 class FavFilms extends React.Component {
     constructor(props) {
         super(props);
@@ -51,7 +55,13 @@ class FavFilms extends React.Component {
         this.props.setSharedFavFilmsState(updatedFavFilms);
         window.dispatchEvent(new Event('storage'))
         localStorage.setItem('fav_films', JSON.stringify(updatedFavFilms));
+        this.handleDecrement(ID)
     };
+
+    handleDecrement(data) {
+        this.props.DECREMENT(data);
+    }
+
 
     render() {
         const { films } = this.state;
@@ -62,14 +72,16 @@ class FavFilms extends React.Component {
                 <div className="wrapper-film">
                     {films.map((item) => {
                         return (
-                            <div key={item.ID} className="item-film">
-                                <div className="title">{item.episode} episodes</div>
-                                <img className="logo" src={'./imgs/film/' + item.image} alt={item.Name} />
-                                <div className="name">{item.Name}</div>
-                                <button className="position-absolute heart-item active" onClick={() => this.handleRemoveFavFilm(item.ID)}>
-                                    <icons.FaHeart />
-                                </button>
-                            </div>
+                            <Link to={`/detail/${item.ID}`} className="link-film" key={item.ID}>
+                                <div key={item.ID} className="item-film">
+                                    <div className="title">{item.numberOfEpisodes} episodes</div>
+                                    <img className="logo" src={'./imgs/film/' + item.image} alt={item.Name} />
+                                    <div className="name">{item.Name}</div>
+                                    <button className="position-absolute heart-item active" onClick={() => this.handleRemoveFavFilm(item.ID)}>
+                                        <icons.FaHeart />
+                                    </button>
+                                </div>
+                            </Link>
                         );
                     })}
                 </div>
@@ -77,4 +89,4 @@ class FavFilms extends React.Component {
         );
     }
 }
-export default FavFilms;
+export default connect(null, {  DECREMENT })(FavFilms)

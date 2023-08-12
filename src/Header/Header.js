@@ -1,14 +1,27 @@
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import "./Header.css"
 import * as icons from 'react-icons/fa';
 import Notification from "../Component/noti";
+import {GET} from "../redux/Action";
+import { connect } from "react-redux";
+import { useDispatch } from 'react-redux'
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const dispatch = useDispatch();
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+
+  useEffect(() => {
+    handleGet();
+  }, []);
+
+  const handleGet = () => {
+    dispatch(GET()) ;
+  }
+
 
   const closeMenu = () => {
     setIsMenuOpen(false);
@@ -63,7 +76,7 @@ function Header() {
         </li>
         <li>
           <Link to="/PriceList" className="item-link" onClick={closeMenu}>
-            <div>PriceList</div>
+            <div>Subscription</div>
           </Link>
         </li>
       </ul>
